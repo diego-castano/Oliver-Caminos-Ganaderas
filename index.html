@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganadera - Productividad, escala y visión territorial en Formosa</title>
+    <meta name="description" content="Caminos Ganadera es un complejo agropecuario de más de 44.000 Ha, conformado por más de 10 campos y estancias contiguas, las cuales actualmente cuentan cada una con sus propias cascos o áreas centrales. Todos ubicados en el centro norte de Formosa, departamento de Patiño. Es una zona ganadera extraordinariamente productiva dado su clima subtropical con inviernos muy cortos y suaves.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://caminosganadera.com/">
+    <meta property="og:title" content="Caminos Ganadera - Productividad, escala y visión territorial en Formosa">
+    <meta property="og:description" content="Caminos Ganadera es un complejo agropecuario de más de 44.000 Ha, conformado por más de 10 campos y estancias contiguas, las cuales actualmente cuentan cada una con sus propias cascos o áreas centrales. Todos ubicados en el centro norte de Formosa, departamento de Patiño. Es una zona ganadera extraordinariamente productiva dado su clima subtropical con inviernos muy cortos y suaves.">
+    <meta property="og:image" content="https://caminosganadera.com/media/fortinyunca/PRINCIPAL.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://caminosganadera.com/">
+    <meta property="twitter:title" content="Caminos Ganadera - Productividad, escala y visión territorial en Formosa">
+    <meta property="twitter:description" content="Caminos Ganadera es un complejo agropecuario de más de 44.000 Ha, conformado por más de 10 campos y estancias contiguas, las cuales actualmente cuentan cada una con sus propias cascos o áreas centrales. Todos ubicados en el centro norte de Formosa, departamento de Patiño. Es una zona ganadera extraordinariamente productiva dado su clima subtropical con inviernos muy cortos y suaves.">
+    <meta property="og:image" content="https://caminosganadera.com/media/fortinyunca/PRINCIPAL.jpg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f4c3a 0%, #1a5f3c 50%, #2d7a4f 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #0f4c3a 0%, #1a5f3c 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #1a5f3c 0%, #2d7a4f 100%);
+            transform: translateY(-2px);
+        }
+        
+        .text-high-contrast {
+            color: #1a202c !important;
+        }
+        
+        .bg-high-contrast {
+            background-color: #f7fafc !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="branding/logo.jpg" alt="Ganadera" class="h-5 sm:h-6 md:h-8 w-auto object-contain max-w-none">
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="language-toggle" class="text-sm font-medium text-gray-700 hover:text-green-700 transition-colors">
+                        EN
+                    </button>
+                    <a href="https://wa.link/gf7bfo" target="_blank" class="btn-primary text-white px-6 py-2 rounded-lg font-medium">
+                        Contacto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen overflow-hidden">
+        <img src="media/fortinyunca/PRINCIPAL.jpg" alt="Ganadera - Hero" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold text-shadow mb-6">
+                    Productividad, escala y visión territorial
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-shadow">
+                    En el corazón de Formosa, Argentina
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#estancias" class="btn-primary text-white px-8 py-4 rounded-lg font-semibold text-lg">
+                        Conocer Estancias
+                    </a>
+                    <a href="https://wa.link/gf7bfo" target="_blank" class="bg-white text-green-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                        Contactar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Sobre Ganadera
+                </h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Ganadera es un conjunto de estancias estratégicamente ubicadas en la provincia de Formosa, Argentina, dedicadas a la producción ganadera, agrícola y forestal. Abarcando más de 50.000 hectáreas operativas, este proyecto territorial integra infraestructura de alto nivel, diversidad de suelos, acceso logístico privilegiado y un enfoque moderno de gestión del campo.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        El grupo está compuesto por 10 chacras (estancias), cada una con identidad propia pero bajo un mismo estándar operativo. Ganadera no es solo una agrupación de tierras, sino una visión agroproductiva en escala, que permite adaptabilidad a distintos tipos de inversión, proyectos productivos y expansión modular.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-green-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2">50.000+</div>
+                        <div class="text-gray-600">Hectáreas</div>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2">10</div>
+                        <div class="text-gray-600">Estancias</div>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2">100+</div>
+                        <div class="text-gray-600">Km de caminos</div>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2">24/7</div>
+                        <div class="text-gray-600">Operativo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Nuestra Propuesta
+                </h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm card-hover">
+                    <div class="text-green-600 text-4xl mb-4">🌾</div>
+                    <h3 class="text-xl font-semibold mb-4 text-high-contrast">Producción Mixta</h3>
+                    <p class="text-gray-600">
+                        Ciclo ganadero completo (cría, recría y engorde), con integración agrícola para autosustento o comercialización directa.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-sm card-hover">
+                    <div class="text-green-600 text-4xl mb-4">🏗️</div>
+                    <h3 class="text-xl font-semibold mb-4 text-high-contrast">Infraestructura Desarrollada</h3>
+                    <p class="text-gray-600">
+                        Más de 100 km de caminos internos, viviendas para personal, galpones, corrales, instalaciones operativas.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-sm card-hover">
+                    <div class="text-green-600 text-4xl mb-4">📍</div>
+                    <h3 class="text-xl font-semibold mb-4 text-high-contrast">Ubicación Estratégica</h3>
+                    <p class="text-gray-600">
+                        Frente a la Ruta Nacional 86 y la Ruta Provincial 23, con acceso inmediato a pueblos cercanos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estancias Grid -->
+    <section id="estancias" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Nuestras Estancias
+                </h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-8"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Haz clic en cada una para acceder a su ficha completa, plano, fotos y descripción detallada
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Fortín Yunká -->
+                <a href="estancias/fortin-yunka.html" class="group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover border border-gray-200">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="media/fortinyunca/hero.jpg" alt="Fortín Yunká" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                        </div>
+                        <div class="p-6 bg-gradient-to-b from-white to-gray-50">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">🌾 Fortín Yunká</h3>
+                            <p class="text-gray-700 mb-3 font-medium">20.600 ha - Ganadería + agricultura, ciclo completo</p>
+                            <div class="space-y-2 text-sm">
+                                <p class="text-green-700 font-semibold">📍 Ruta Nacional 86 pavimentada</p>
+                                <p class="text-gray-600">🏠 Casa patronal de 700m²</p>
+                                <p class="text-gray-600">🐂 Capacidad: 21.000 cabezas</p>
+                                <p class="text-gray-600">🌾 6.200 ha cultivables</p>
+                                <p class="text-gray-600">💧 30 potreros funcionales</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- El Yarará -->
+                <a href="estancias/el-yarara.html" class="group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover border border-gray-200">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="media/elyarara/hero.jpg" alt="El Yarará" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                        </div>
+                        <div class="p-6 bg-gradient-to-b from-white to-gray-50">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">🐍 El Yarará</h3>
+                            <p class="text-gray-700 mb-3 font-medium">1.800 ha - Ganadería, 30 potreros, agua de calidad</p>
+                            <div class="space-y-2 text-sm">
+                                <p class="text-green-700 font-semibold">📍 Ruta 86 pavimentada</p>
+                                <p class="text-gray-600">💧 Tanque australiano 200.000 lts</p>
+                                <p class="text-gray-600">🌿 100 ha pasturas implantadas</p>
+                                <p class="text-gray-600">🐂 30 potreros subdivididos</p>
+                                <p class="text-gray-600">🏠 Hermosa casa principal</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- La Federación -->
+                <a href="estancias/la-federacion.html" class="group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover border border-gray-200">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="media/federacion/hero.jpeg" alt="La Federación" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                        </div>
+                        <div class="p-6 bg-gradient-to-b from-white to-gray-50">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">🌽 La Federación</h3>
+                            <p class="text-gray-700 mb-3 font-medium">3.100 ha - Ganadería intensiva + agricultura</p>
+                            <div class="space-y-2 text-sm">
+                                <p class="text-green-700 font-semibold">📍 Ruta 86 pavimentada</p>
+                                <p class="text-gray-600">🌾 1.500 ha agrícolas</p>
+                                <p class="text-gray-600">🌿 2.000 ha pasturas implantadas</p>
+                                <p class="text-gray-600">🏗️ 2 galpones grandes</p>
+                                <p class="text-gray-600">💧 Riacho Porteño atraviesa</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Agua Dulce -->
+                <a href="estancias/agua-dulce.html" class="group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover border border-gray-200">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="media/aguadulce/hero.jpg" alt="Agua Dulce" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                        </div>
+                        <div class="p-6 bg-gradient-to-b from-white to-gray-50">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">💧 Agua Dulce</h3>
+                            <p class="text-gray-700 mb-3 font-medium">13.500 ha - Cría y recría, praderas, ruta atravesada</p>
+                            <div class="space-y-2 text-sm">
+                                <p class="text-green-700 font-semibold">📍 Ruta Provincial 23</p>
+                                <p class="text-gray-600">🐂 4.500 cabezas capacidad</p>
+                                <p class="text-gray-600">🌿 9.000 ha pasturas naturales</p>
+                                <p class="text-gray-600">🛣️ 60 km caminos internos</p>
+                                <p class="text-gray-600">🏠 2 puestos estratégicos</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Campo Lindo -->
+                <a href="estancias/campo-lindo.html" class="group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover border border-gray-200">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="media/campolindo/hero.jpg" alt="Campo Lindo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                        </div>
+                        <div class="p-6 bg-gradient-to-b from-white to-gray-50">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">🌿 Campo Lindo</h3>
+                            <p class="text-gray-700 mb-3 font-medium">1.300 ha - Ganadero con potencial forestal</p>
+                            <div class="space-y-2 text-sm">
+                                <p class="text-green-700 font-semibold">📍 Ruta Provincial 23</p>
+                                <p class="text-gray-600">🐂 1.000 cabezas capacidad</p>
+                                <p class="text-gray-600">🌳 90-95% campo limpio</p>
+                                <p class="text-gray-600">🏠 Casa recientemente renovada</p>
+                                <p class="text-gray-600">🛣️ Sobre Ruta 23</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- El Cacuy -->
+                <a href="estancias/el-cacuy.html" class="group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover border border-gray-200">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="media/cucuy/hero.jpg" alt="El Cacuy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                        </div>
+                        <div class="p-6 bg-gradient-to-b from-white to-gray-50">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">🌾 El Cacuy</h3>
+                            <p class="text-gray-700 mb-3 font-medium">500 ha - 220 ha agrícolas (maíz, soja, algodón)</p>
+                            <div class="space-y-2 text-sm">
+                                <p class="text-green-700 font-semibold">📍 Acceso vecinal desde Ruta 86</p>
+                                <p class="text-gray-600">🌾 220 ha actualmente sembradas</p>
+                                <p class="text-gray-600">🌽 Maíz, soja, algodón, trigo</p>
+                                <p class="text-gray-600">🏠 Galpón amplio operativo</p>
+                                <p class="text-gray-600">💧 Represa y molino</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Campo Alegre -->
+                <a href="estancias/campo-alegre.html" class="group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover border border-gray-200">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="media/campoalegre/hero.jpg" alt="Campo Alegre" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                        </div>
+                        <div class="p-6 bg-gradient-to-b from-white to-gray-50">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">🌳 Campo Alegre</h3>
+                            <p class="text-gray-700 mb-3 font-medium">1.050 ha - Ganadero con 450 ha de Gatton Panic</p>
+                            <div class="space-y-2 text-sm">
+                                <p class="text-green-700 font-semibold">📍 Ruta 86 pavimentada</p>
+                                <p class="text-gray-600">🌿 450 ha Gatton Panic</p>
+                                <p class="text-gray-600">🐂 Campo limpio 90-95%</p>
+                                <p class="text-gray-600">🏠 Casa de empleado funcional</p>
+                                <p class="text-gray-600">🛣️ 2.000m frente ruta</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- La Loli -->
+                <a href="estancias/la-loli.html" class="group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover border border-gray-200">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="media/laloli/hero.jpg" alt="La Loli" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                        </div>
+                        <div class="p-6 bg-gradient-to-b from-white to-gray-50">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">🐮 La Loli</h3>
+                            <p class="text-gray-700 mb-3 font-medium">1.050 ha - Ganadero + agrícola (maíz implantado)</p>
+                            <div class="space-y-2 text-sm">
+                                <p class="text-green-700 font-semibold">📍 Ruta 86 pavimentada</p>
+                                <p class="text-gray-600">🌿 450 ha Gatton Panic</p>
+                                <p class="text-gray-600">🌽 150 ha maíz implantado</p>
+                                <p class="text-gray-600">🏠 Galpón amplio cubierto</p>
+                                <p class="text-gray-600">🛣️ 2.000m frente ruta</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Las Lantanas -->
+                <a href="estancias/las-lantanas.html" class="group">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover border border-gray-200">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="media/laslantana/hero1.jpeg" alt="Las Lantanas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                        </div>
+                        <div class="p-6 bg-gradient-to-b from-white to-gray-50">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">🌼 Las Lantanas</h3>
+                            <p class="text-gray-700 mb-3 font-medium">1.050 ha - Ganadero intensivo, campo limpio</p>
+                            <div class="space-y-2 text-sm">
+                                <p class="text-green-700 font-semibold">📍 Ruta 86 pavimentada</p>
+                                <p class="text-gray-600">🌿 450 ha Gatton Panic</p>
+                                <p class="text-gray-600">🐂 Campo limpio 90-95%</p>
+                                <p class="text-gray-600">🏠 Casa de empleado funcional</p>
+                                <p class="text-gray-600">🛣️ 2.000m frente ruta</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Invest Section -->
+    <section class="py-16 bg-green-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    ¿Por qué invertir en Ganadera?
+                </h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="flex items-start space-x-4">
+                    <div class="text-green-600 text-2xl">✅</div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Escala operativa real</h3>
+                        <p class="text-gray-600">Lista para producción inmediata</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="text-green-600 text-2xl">✅</div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Diversificación de usos</h3>
+                        <p class="text-gray-600">Rotación de cultivos y actividades</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="text-green-600 text-2xl">✅</div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Infraestructura funcional</h3>
+                        <p class="text-gray-600">Ya instalada y operativa</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="text-green-600 text-2xl">✅</div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Accesos logísticos</h3>
+                        <p class="text-gray-600">Pavimentados y conectados</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="text-green-600 text-2xl">✅</div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Recursos naturales</h3>
+                        <p class="text-gray-600">En abundancia y bien gestionados</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="text-green-600 text-2xl">✅</div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Potencial de crecimiento</h3>
+                        <p class="text-gray-600">Subdivisión y expansión modular</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Contacto
+                </h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-8"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    ¿Querés más información? ¿Estás interesado en una de las chacras? ¿Te gustaría conocer el proyecto de forma presencial?
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+                        Contáctanos
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="text-green-600 text-xl">📧</div>
+                            <div>
+                                <p class="font-medium text-gray-900">Email</p>
+                                <p class="text-gray-600">owcc@aol.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="text-green-600 text-xl">📞</div>
+                            <div>
+                                <p class="font-medium text-gray-900">Teléfono</p>
+                                <p class="text-gray-600">+1 (412) 417-6676</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="text-green-600 text-xl">🌐</div>
+                            <div>
+                                <p class="font-medium text-gray-900">Web</p>
+                                <p class="text-gray-600">www.caminosganadera.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-6 bg-green-50 rounded-lg">
+                        <h4 class="font-semibold text-gray-900 mb-3">Nuestros especialistas te brindarán:</h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• Asesoramiento completo</li>
+                            <li>• Fichas técnicas detalladas</li>
+                            <li>• Ubicación satelital</li>
+                            <li>• Condiciones de operación</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <form action="mailto:owcc@aol.com" method="post" enctype="text/plain" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Nombre</label>
+                                <input type="text" name="nombre" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Apellido</label>
+                                <input type="text" name="apellido" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
+                                <input type="tel" name="telefono" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Estancia de interés</label>
+                            <select name="estancia" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                <option value="">Seleccionar estancia</option>
+                                <option value="fortin-yunka">Fortín Yunká</option>
+                                <option value="el-yarara">El Yarará</option>
+                                <option value="la-federacion">La Federación</option>
+                                <option value="agua-dulce">Agua Dulce</option>
+                                <option value="campo-lindo">Campo Lindo</option>
+                                <option value="el-cacuy">El Cacuy</option>
+                                <option value="campo-alegre">Campo Alegre</option>
+                                <option value="la-loli">La Loli</option>
+                                <option value="las-lantanas">Las Lantanas</option>
+                                <option value="general">Información general</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
+                            <textarea name="mensaje" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="Cuéntanos sobre tu interés..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary text-white px-8 py-4 rounded-lg font-semibold text-lg w-full">
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="branding/logo.jpg" alt="Ganadera" class="h-6 sm:h-8 w-auto object-contain max-w-none">
+                        <span class="ml-3 text-lg font-semibold"></span>
+                    </div>
+                    <p class="text-gray-400">
+                        Productividad, escala y visión territorial en el corazón de Formosa, Argentina.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+                    <div class="space-y-2 text-gray-400">
+                        <p><a href="mailto:owcc@aol.com" class="hover:text-white transition-colors">📧 owcc@aol.com</a></p>
+                        <p><a href="tel:+14124176676" class="hover:text-white transition-colors">📞 +1 (412) 417-6676</a></p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Estancias</h3>
+                    <div class="grid grid-cols-2 gap-2 text-sm text-gray-400">
+                        <a href="estancias/fortin-yunka.html" class="hover:text-white transition-colors">Fortín Yunká</a>
+                        <a href="estancias/el-yarara.html" class="hover:text-white transition-colors">El Yarará</a>
+                        <a href="estancias/la-federacion.html" class="hover:text-white transition-colors">La Federación</a>
+                        <a href="estancias/agua-dulce.html" class="hover:text-white transition-colors">Agua Dulce</a>
+                        <a href="estancias/campo-lindo.html" class="hover:text-white transition-colors">Campo Lindo</a>
+                        <a href="estancias/el-cacuy.html" class="hover:text-white transition-colors">El Cacuy</a>
+                        <a href="estancias/campo-alegre.html" class="hover:text-white transition-colors">Campo Alegre</a>
+                        <a href="estancias/la-loli.html" class="hover:text-white transition-colors">La Loli</a>
+                        <a href="estancias/las-lantanas.html" class="hover:text-white transition-colors">Las Lantanas</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Caminos Ganadera. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
+        <a href="https://wa.link/gf7bfo" target="_blank" class="bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="lightbox-config.js"></script>
+
+    <script>
+        // Language toggle functionality
+        const languageToggle = document.getElementById('language-toggle');
+        let isEnglish = false;
+        
+        languageToggle.addEventListener('click', () => {
+            isEnglish = !isEnglish;
+            languageToggle.textContent = isEnglish ? 'ES' : 'EN';
+            // Here you would implement the actual language switching logic
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
