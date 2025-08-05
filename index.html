@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="ico.png">
     <title>Ganadera - Productividad, escala y visión territorial en Formosa</title>
     <meta name="description" content="Caminos Ganadera es un complejo agropecuario de más de 44.000 Ha, conformado por más de 10 campos y estancias contiguas, las cuales actualmente cuentan cada una con sus propias cascos o áreas centrales. Todos ubicados en el centro norte de Formosa, departamento de Patiño. Es una zona ganadera extraordinariamente productiva dado su clima subtropical con inviernos muy cortos y suaves.">
     
@@ -28,8 +29,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Lightbox CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    <!-- Translations -->
+    <script src="translations.js"></script>
     
     <style>
         body {
@@ -82,11 +83,11 @@
                 </div>
                 
                 <div class="flex items-center space-x-4">
-                    <button id="language-toggle" class="text-sm font-medium text-gray-700 hover:text-green-700 transition-colors">
-                        EN
+                    <button id="language-toggle" class="flex items-center space-x-2 text-sm font-medium text-gray-700 hover:text-green-700 transition-colors">
+                        <span id="flag-icon" class="text-lg">🇪🇸</span>
                     </button>
                     <a href="https://wa.link/gf7bfo" target="_blank" class="btn-primary text-white px-6 py-2 rounded-lg font-medium">
-                        Contacto
+                        <span data-translate="contact">Contacto</span>
                     </a>
                 </div>
             </div>
@@ -94,23 +95,23 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-screen overflow-hidden">
+    <section class="relative h-96 md:h-screen overflow-hidden">
         <img src="media/fortinyunca/PRINCIPAL.jpg" alt="Ganadera - Hero" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="absolute inset-0 flex items-center justify-center">
             <div class="text-center text-white">
-                <h1 class="text-4xl md:text-6xl font-bold text-shadow mb-6">
-                    Productividad, escala y visión territorial
+                <h1 class="text-3xl md:text-6xl font-bold text-shadow mb-4 md:mb-6">
+                    <span data-translate="hero_title">Productividad, escala y visión</span>
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-shadow">
-                    En el corazón de Formosa, Argentina
+                <p class="text-lg md:text-2xl mb-6 md:mb-8 max-w-3xl mx-auto text-shadow">
+                    <span data-translate="hero_subtitle">En Argentina</span>
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#estancias" class="btn-primary text-white px-8 py-4 rounded-lg font-semibold text-lg">
-                        Conocer Estancias
+                    <a href="#estancias" class="btn-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold text-base md:text-lg">
+                        <span data-translate="know_estancias">Conocer Estancias</span>
                     </a>
-                    <a href="https://wa.link/gf7bfo" target="_blank" class="bg-white text-green-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
-                        Contactar
+                    <a href="https://wa.link/gf7bfo" target="_blank" class="bg-white text-green-700 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold text-base md:text-lg hover:bg-gray-100 transition-colors">
+                        <span data-translate="contact">Contactar</span>
                     </a>
                 </div>
             </div>
@@ -122,7 +123,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Sobre Ganadera
+                    <span data-translate="about_ganadera">Sobre Ganadera</span>
                 </h2>
                 <div class="w-24 h-1 bg-green-600 mx-auto"></div>
             </div>
@@ -130,29 +131,29 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        Ganadera es un conjunto de estancias estratégicamente ubicadas en la provincia de Formosa, Argentina, dedicadas a la producción ganadera, agrícola y forestal. Abarcando más de 50.000 hectáreas operativas, este proyecto territorial integra infraestructura de alto nivel, diversidad de suelos, acceso logístico privilegiado y un enfoque moderno de gestión del campo.
+                        <span data-translate="about_ganadera_desc1">Ganadera es un conjunto de estancias estratégicamente ubicadas en la provincia de Formosa, Argentina, dedicadas a la producción ganadera, agrícola y forestal. Abarcando más de 50.000 hectáreas operativas, este proyecto territorial integra infraestructura de alto nivel, diversidad de suelos, acceso logístico privilegiado y un enfoque moderno de gestión del campo.</span>
                     </p>
                     <p class="text-lg text-gray-700 leading-relaxed">
-                        El grupo está compuesto por 10 chacras (estancias), cada una con identidad propia pero bajo un mismo estándar operativo. Ganadera no es solo una agrupación de tierras, sino una visión agroproductiva en escala, que permite adaptabilidad a distintos tipos de inversión, proyectos productivos y expansión modular.
+                        <span data-translate="about_ganadera_desc2">El grupo está compuesto por 10 chacras (estancias), cada una con identidad propia pero bajo un mismo estándar operativo. Ganadera no es solo una agrupación de tierras, sino una visión agroproductiva en escala, que permite adaptabilidad a distintos tipos de inversión, proyectos productivos y expansión modular.</span>
                     </p>
                 </div>
                 
                 <div class="grid grid-cols-2 gap-4">
                     <div class="bg-green-50 p-6 rounded-lg text-center">
                         <div class="text-3xl font-bold text-green-600 mb-2">50.000+</div>
-                        <div class="text-gray-600">Hectáreas</div>
+                        <div class="text-gray-600"><span data-translate="hectares">Hectáreas</span></div>
                     </div>
                     <div class="bg-green-50 p-6 rounded-lg text-center">
                         <div class="text-3xl font-bold text-green-600 mb-2">10</div>
-                        <div class="text-gray-600">Estancias</div>
+                        <div class="text-gray-600"><span data-translate="estates">Estancias</span></div>
                     </div>
                     <div class="bg-green-50 p-6 rounded-lg text-center">
                         <div class="text-3xl font-bold text-green-600 mb-2">100+</div>
-                        <div class="text-gray-600">Km de caminos</div>
+                        <div class="text-gray-600"><span data-translate="km_roads">Km de caminos</span></div>
                     </div>
                     <div class="bg-green-50 p-6 rounded-lg text-center">
                         <div class="text-3xl font-bold text-green-600 mb-2">24/7</div>
-                        <div class="text-gray-600">Operativo</div>
+                        <div class="text-gray-600"><span data-translate="operational">Operativo</span></div>
                     </div>
                 </div>
             </div>
@@ -164,7 +165,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Nuestra Propuesta
+                    <span data-translate="our_proposal">Nuestra Propuesta</span>
                 </h2>
                 <div class="w-24 h-1 bg-green-600 mx-auto"></div>
             </div>
@@ -172,25 +173,25 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-lg shadow-sm card-hover">
                     <div class="text-green-600 text-4xl mb-4">🌾</div>
-                    <h3 class="text-xl font-semibold mb-4 text-high-contrast">Producción Mixta</h3>
+                    <h3 class="text-xl font-semibold mb-4 text-high-contrast"><span data-translate="mixed_production_title">Producción Mixta</span></h3>
                     <p class="text-gray-600">
-                        Ciclo ganadero completo (cría, recría y engorde), con integración agrícola para autosustento o comercialización directa.
+                        <span data-translate="mixed_production_desc">Ciclo ganadero completo (cría, recría y engorde), con integración agrícola para autosustento o comercialización directa.</span>
                     </p>
                 </div>
                 
                 <div class="bg-white p-8 rounded-lg shadow-sm card-hover">
                     <div class="text-green-600 text-4xl mb-4">🏗️</div>
-                    <h3 class="text-xl font-semibold mb-4 text-high-contrast">Infraestructura Desarrollada</h3>
+                    <h3 class="text-xl font-semibold mb-4 text-high-contrast"><span data-translate="developed_infrastructure_title">Infraestructura Desarrollada</span></h3>
                     <p class="text-gray-600">
-                        Más de 100 km de caminos internos, viviendas para personal, galpones, corrales, instalaciones operativas.
+                        <span data-translate="developed_infrastructure_desc">Más de 100 km de caminos internos, viviendas para personal, galpones, corrales, instalaciones operativas.</span>
                     </p>
                 </div>
                 
                 <div class="bg-white p-8 rounded-lg shadow-sm card-hover">
                     <div class="text-green-600 text-4xl mb-4">📍</div>
-                    <h3 class="text-xl font-semibold mb-4 text-high-contrast">Ubicación Estratégica</h3>
+                    <h3 class="text-xl font-semibold mb-4 text-high-contrast"><span data-translate="strategic_location_title">Ubicación Estratégica</span></h3>
                     <p class="text-gray-600">
-                        Frente a la Ruta Nacional 86 y la Ruta Provincial 23, con acceso inmediato a pueblos cercanos.
+                        <span data-translate="strategic_location_desc">Frente a la Ruta Nacional 86 y la Ruta Provincial 23, con acceso inmediato a pueblos cercanos.</span>
                     </p>
                 </div>
             </div>
@@ -620,20 +621,28 @@
         </a>
     </div>
 
-    <!-- Lightbox JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-    <script src="lightbox-config.js"></script>
+
 
     <script>
         // Language toggle functionality
         const languageToggle = document.getElementById('language-toggle');
-        let isEnglish = false;
         
-        languageToggle.addEventListener('click', () => {
-            isEnglish = !isEnglish;
-            languageToggle.textContent = isEnglish ? 'ES' : 'EN';
-            // Here you would implement the actual language switching logic
-        });
+        function updateLanguageUI() {
+            const flagIcon = document.getElementById('flag-icon');
+            if (flagIcon) {
+                flagIcon.textContent = languages[currentLanguage].flag;
+            }
+        }
+        
+        function toggleLanguage() {
+            const nextLanguage = currentLanguage === 'es' ? 'en' : 'es';
+            setLanguage(nextLanguage);
+        }
+        
+        languageToggle.addEventListener('click', toggleLanguage);
+        
+        // Initialize UI
+        updateLanguageUI();
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

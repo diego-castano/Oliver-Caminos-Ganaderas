@@ -177,7 +177,7 @@ def generate_estancia_page(estancia_id, estancia_data):
         
         destacada_html = f"""
             <div class="mb-12">
-                <h3 class="text-2xl font-semibold text-gray-900 mb-6">Imágenes Destacadas</h3>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-6"><span data-translate="featured_images">Imágenes Destacadas</span></h3>
                 <div id="gallery-destacada" class="gallery-grid">
                     {chr(10).join(destacada_images)}
                 </div>
@@ -194,7 +194,7 @@ def generate_estancia_page(estancia_id, estancia_data):
         
         other_images_html = f"""
             <div class="mb-12">
-                <h3 class="text-2xl font-semibold text-gray-900 mb-6">Galería General</h3>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-6"><span data-translate="general_gallery">Galería General</span></h3>
                 <div id="gallery-general" class="gallery-grid">
                     {chr(10).join(other_images_list)}
                 </div>
@@ -213,23 +213,23 @@ def generate_estancia_page(estancia_id, estancia_data):
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                     <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Características del Plano</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4"><span data-translate="map_characteristics">Características del Plano</span></h3>
                         <ul class="space-y-3 text-gray-600">
                             <li class="flex items-start space-x-3">
                                 <span class="text-green-600">•</span>
-                                <span>Infraestructura distribuida estratégicamente</span>
+                                <span><span data-translate="distributed_infrastructure">Infraestructura distribuida estratégicamente</span></span>
                             </li>
                             <li class="flex items-start space-x-3">
                                 <span class="text-green-600">•</span>
-                                <span>Potreros organizados para rotación eficiente</span>
+                                <span><span data-translate="organized_paddocks">Potreros organizados para rotación eficiente</span></span>
                             </li>
                             <li class="flex items-start space-x-3">
                                 <span class="text-green-600">•</span>
-                                <span>Accesos desde múltiples puntos</span>
+                                <span><span data-translate="multiple_access">Accesos desde múltiples puntos</span></span>
                             </li>
                             <li class="flex items-start space-x-3">
                                 <span class="text-green-600">•</span>
-                                <span>Infraestructura centralizada</span>
+                                <span><span data-translate="centralized_infrastructure">Infraestructura centralizada</span></span>
                             </li>
                         </ul>
                     </div>
@@ -255,7 +255,7 @@ def generate_estancia_page(estancia_id, estancia_data):
         
         video_html = f"""
             <div>
-                <h3 class="text-2xl font-semibold text-gray-900 mb-6">🎬 Videos</h3>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-6"><span data-translate="videos">🎬 Videos</span></h3>
                 <div class="grid md:grid-cols-2 gap-8">
                     {chr(10).join(video_elements)}
                 </div>
@@ -271,6 +271,7 @@ def generate_estancia_page(estancia_id, estancia_data):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../ico.png">
             <title>{estancia_data["name"]} | {estancia_data["surface"]} hectáreas en Formosa</title>
         <meta name="description" content="{estancia_data["name"]} es una estancia ubicada en Formosa, Argentina. {estancia_data["surface"]} hectáreas dedicadas a {estancia_data["description"]}.">
         
@@ -298,6 +299,9 @@ def generate_estancia_page(estancia_id, estancia_data):
     
     <!-- Lightbox CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    
+    <!-- Translations -->
+    <script src="../translations.js"></script>
     
     <style>
         body {{
@@ -356,6 +360,33 @@ def generate_estancia_page(estancia_id, estancia_data):
         .text-high-contrast {{
             color: #1a202c !important;
         }}
+        
+        /* Mobile navigation improvements */
+        @media (max-width: 640px) {{
+            .nav-link {{
+                padding: 0.75rem 1rem;
+                margin: 0.25rem;
+                border-radius: 0.5rem;
+                font-weight: 500;
+            }}
+        }}
+        
+        /* Active navigation state */
+        .nav-link.active {{
+            background-color: #dcfce7;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+        }}
+        
+        /* Enhanced card hover effects */
+        .feature-card {{
+            transition: all 0.3s ease;
+        }}
+        
+        .feature-card:hover {{
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }}
     </style>
 </head>
 <body class="bg-gray-50 overflow-x-hidden">
@@ -371,11 +402,11 @@ def generate_estancia_page(estancia_id, estancia_data):
                 </div>
                 
                 <div class="flex items-center space-x-2 sm:space-x-4">
-                    <button id="language-toggle" class="text-xs sm:text-sm font-medium text-gray-700 hover:text-green-700 transition-colors">
-                        EN
+                    <button id="language-toggle" class="flex items-center space-x-2 text-xs sm:text-sm font-medium text-gray-700 hover:text-green-700 transition-colors">
+                        <span id="flag-icon" class="text-base sm:text-lg">🇪🇸</span>
                     </button>
                     <a href="https://wa.link/gf7bfo" target="_blank" class="btn-primary text-white px-3 sm:px-6 py-2 rounded-lg text-xs sm:text-sm font-medium">
-                        Contacto
+                        <span data-translate="contact">Contacto</span>
                     </a>
                 </div>
             </div>
@@ -399,18 +430,26 @@ def generate_estancia_page(estancia_id, estancia_data):
     </section>
 
     <!-- Navigation -->
-    <nav class="bg-white border-b">
+    <nav class="bg-white border-b sticky top-16 z-40 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row items-center justify-between py-4 space-y-4 sm:space-y-0">
-                <div class="flex items-center space-x-4 sm:space-x-8 text-sm sm:text-base">
-                    <a href="#informacion" class="text-gray-700 hover:text-green-600 transition-colors">📍 Información</a>
-                    <a href="#produccion" class="text-gray-700 hover:text-green-600 transition-colors">🌿 Producción</a>
-                    <a href="#infraestructura" class="text-gray-700 hover:text-green-600 transition-colors">🏗️ Infraestructura</a>
-                    <a href="#plano" class="text-gray-700 hover:text-green-600 transition-colors">🗺️ Plano</a>
-                    <a href="#galeria" class="text-gray-700 hover:text-green-600 transition-colors">📸 Galería</a>
+                <div class="flex items-center space-x-2 sm:space-x-4 lg:space-x-8 text-sm sm:text-base font-medium">
+                    <a href="#informacion" class="nav-link px-3 py-2 rounded-lg text-gray-700 hover:text-green-600 hover:bg-green-50 transition-all duration-200 flex items-center space-x-1">
+                        <span data-translate="info">📍 Información</span>
+                    </a>
+                    <a href="#produccion" class="nav-link px-3 py-2 rounded-lg text-gray-700 hover:text-green-600 hover:bg-green-50 transition-all duration-200 flex items-center space-x-1">
+                        <span data-translate="production">🌿 Producción</span>
+                    </a>
+                    <a href="#infraestructura" class="nav-link px-3 py-2 rounded-lg text-gray-700 hover:text-green-600 hover:bg-green-50 transition-all duration-200 flex items-center space-x-1">
+                        <span data-translate="infrastructure">🏗️ Infraestructura</span>
+                    </a>
+                    <a href="#plano" class="nav-link px-3 py-2 rounded-lg text-gray-700 hover:text-green-600 hover:bg-green-50 transition-all duration-200 flex items-center space-x-1">
+                        <span data-translate="map">🗺️ Plano</span>
+                    </a>
+                    <a href="#galeria" class="nav-link px-3 py-2 rounded-lg text-gray-700 hover:text-green-600 hover:bg-green-50 transition-all duration-200 flex items-center space-x-1">
+                        <span data-translate="gallery">📸 Galería</span>
+                    </a>
                 </div>
-                
-
             </div>
         </div>
     </nav>
@@ -421,37 +460,40 @@ def generate_estancia_page(estancia_id, estancia_data):
         <section id="informacion" class="mb-16">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    📍 Información General
+                    <span data-translate="general_info">📍 Información General</span>
                 </h2>
                 <div class="w-24 h-1 bg-green-600 mx-auto"></div>
             </div>
             
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <div class="bg-white p-8 rounded-lg shadow-sm">
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Características Principales</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center space-x-4">
-                                <div class="text-green-600 text-2xl">🌾</div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                            <span class="text-green-600 mr-3">📊</span>
+                            <span data-translate="main_characteristics">Características Principales</span>
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="feature-card flex items-center space-x-4 p-4 bg-green-50 rounded-lg border border-green-100">
+                                <div class="text-green-600 text-3xl">🌾</div>
                                 <div>
-                                    <p class="font-semibold text-gray-900">Superficie total</p>
-                                    <p class="text-gray-600">{estancia_data["surface"]} hectáreas</p>
+                                    <p class="font-bold text-gray-900 text-lg"><span data-translate="total_surface">Superficie total</span></p>
+                                    <p class="text-green-700 font-semibold text-xl">{estancia_data["surface"]} hectáreas</p>
                                 </div>
                             </div>
                             
-                            <div class="flex items-center space-x-4">
-                                <div class="text-green-600 text-2xl">📍</div>
+                            <div class="feature-card flex items-center space-x-4 p-4 bg-blue-50 rounded-lg border border-blue-100">
+                                <div class="text-blue-600 text-3xl">📍</div>
                                 <div>
-                                    <p class="font-semibold text-gray-900">Ubicación</p>
-                                    <p class="text-gray-600">{estancia_data["access"]}, Formosa, Argentina</p>
+                                    <p class="font-bold text-gray-900 text-lg"><span data-translate="location">Ubicación</span></p>
+                                    <p class="text-blue-700 font-semibold">{estancia_data["access"]}, Formosa, Argentina</p>
                                 </div>
                             </div>
                             
-                            <div class="flex items-center space-x-4">
-                                <div class="text-green-600 text-2xl">🐂</div>
+                            <div class="feature-card flex items-center space-x-4 p-4 bg-orange-50 rounded-lg border border-orange-100">
+                                <div class="text-orange-600 text-3xl">🐂</div>
                                 <div>
-                                    <p class="font-semibold text-gray-900">Uso principal</p>
-                                    <p class="text-gray-600">{estancia_data["description"]}</p>
+                                    <p class="font-bold text-gray-900 text-lg"><span data-translate="main_use">Uso principal</span></p>
+                                    <p class="text-orange-700 font-semibold">{estancia_data["description"]}</p>
                                 </div>
                             </div>
                         </div>
@@ -460,11 +502,101 @@ def generate_estancia_page(estancia_id, estancia_data):
                 
                 <div>
                     <div class="bg-green-50 p-8 rounded-lg">
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Descripción Institucional</h3>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-6"><span data-translate="institutional_description">Descripción Institucional</span></h3>
                         <p class="text-gray-700 leading-relaxed">
-                            {estancia_data["name"]} es una estancia destacada ubicada estratégicamente 
+                            <span data-translate="institutional_description_text" data-translate-params='{{"estancia": "{estancia_data["name"]}", "surface": "{estancia_data["surface"]}"}}'>{estancia_data["name"]} es una estancia destacada ubicada estratégicamente 
                             en la provincia de Formosa. Con {estancia_data["surface"]} hectáreas operativas, 
-                            representa una oportunidad única para la producción agroganadera en la provincia de Formosa.
+                            representa una oportunidad única para la producción agroganadera en la provincia de Formosa.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Producción -->
+        <section id="produccion" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    <span data-translate="production">🌿 Producción</span>
+                </h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4"><span data-translate="production_activities">Actividades Productivas</span></h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-600">•</span>
+                                <span><span data-translate="cattle_breeding">Cría ganadera</span></span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-600">•</span>
+                                <span><span data-translate="cattle_fattening">Engorde de ganado</span></span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-600">•</span>
+                                <span><span data-translate="agricultural_production">Producción agrícola</span></span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-600">•</span>
+                                <span><span data-translate="mixed_farming">Agricultura mixta</span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4"><span data-translate="production_capacity">Capacidad Productiva</span></h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            <span data-translate="production_description" data-translate-params='{{"surface": "{estancia_data["surface"]}"}}'>Esta estancia cuenta con capacidad para desarrollar actividades ganaderas y agrícolas de manera integrada, aprovechando las {estancia_data["surface"]} hectáreas disponibles para maximizar la producción y rentabilidad.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infraestructura -->
+        <section id="infraestructura" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    <span data-translate="infrastructure">🏗️ Infraestructura</span>
+                </h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4"><span data-translate="infrastructure_features">Características de Infraestructura</span></h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-600">•</span>
+                                <span><span data-translate="main_house">Casa principal</span></span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-600">•</span>
+                                <span><span data-translate="corrals">Corrales de trabajo</span></span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-600">•</span>
+                                <span><span data-translate="water_systems">Sistemas de agua</span></span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-600">•</span>
+                                <span><span data-translate="access_roads">Caminos de acceso</span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4"><span data-translate="infrastructure_quality">Calidad de Infraestructura</span></h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            <span data-translate="infrastructure_description">La infraestructura de esta estancia está diseñada para operaciones eficientes, con instalaciones modernas que permiten el desarrollo de actividades agropecuarias de alto rendimiento.</span>
                         </p>
                     </div>
                 </div>
@@ -475,7 +607,7 @@ def generate_estancia_page(estancia_id, estancia_data):
         <section id="plano" class="mb-16">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    🗺️ Plano Operativo
+                    <span data-translate="operational_map">🗺️ Plano Operativo</span>
                 </h2>
                 <div class="w-24 h-1 bg-green-600 mx-auto"></div>
             </div>
@@ -487,7 +619,7 @@ def generate_estancia_page(estancia_id, estancia_data):
         <section id="galeria" class="mb-16">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    📸 Galería Multimedia
+                    <span data-translate="multimedia_gallery">📸 Galería Multimedia</span>
                 </h2>
                 <div class="w-24 h-1 bg-green-600 mx-auto"></div>
             </div>
@@ -501,16 +633,16 @@ def generate_estancia_page(estancia_id, estancia_data):
         <section id="contact" class="bg-white rounded-lg shadow-sm p-8">
             <div class="text-center mb-8">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                    ¿Interesado en {estancia_data["name"]}?
+                    <span data-translate="interested_in_estancia" data-translate-params='{{"estancia": "{estancia_data["name"]}"}}'>¿Interesado en {estancia_data["name"]}?</span>
                 </h2>
                 <p class="text-lg text-gray-600">
-                    Contáctanos para más información sobre esta estancia
+                    <span data-translate="contact_for_info">Contáctanos para más información sobre esta estancia</span>
                 </p>
             </div>
             
             <div class="grid lg:grid-cols-2 gap-8">
                 <div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Información de Contacto</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4"><span data-translate="contact_info_title">Información de Contacto</span></h3>
                     <div class="space-y-3">
                         <div class="flex items-center space-x-3">
                             <span class="text-green-600">📧</span>
@@ -527,16 +659,16 @@ def generate_estancia_page(estancia_id, estancia_data):
                 <div>
                     <form action="mailto:owcc@aol.com" method="post" enctype="text/plain" class="space-y-4">
                         <div class="grid md:grid-cols-2 gap-4">
-                            <input type="text" name="nombre" placeholder="Nombre" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
-                            <input type="text" name="apellido" placeholder="Apellido" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+                                                    <input type="text" name="nombre" data-translate-placeholder="name_field" placeholder="Nombre" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+                        <input type="text" name="apellido" data-translate-placeholder="surname_field" placeholder="Apellido" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
                         </div>
                         <div class="grid md:grid-cols-2 gap-4">
-                            <input type="email" name="email" placeholder="Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
-                            <input type="tel" name="telefono" placeholder="Teléfono" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                                    <input type="email" name="email" data-translate-placeholder="email_field" placeholder="Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+                        <input type="tel" name="telefono" data-translate-placeholder="phone_field" placeholder="Teléfono" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
                         </div>
-                        <textarea name="mensaje" rows="4" placeholder="Mensaje sobre {estancia_data["name"]}..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"></textarea>
+                        <textarea name="mensaje" rows="4" data-translate-placeholder="message_field" data-translate-params='{{"estancia": "{estancia_data["name"]}"}}' placeholder="Mensaje sobre {estancia_data["name"]}..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"></textarea>
                         <button type="submit" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold w-full">
-                            Enviar
+                            <span data-translate="send_button">Enviar</span>
                         </button>
                     </form>
                 </div>
@@ -554,7 +686,7 @@ def generate_estancia_page(estancia_id, estancia_data):
                         <span class="ml-3 text-lg font-semibold"></span>
                     </div>
                     <p class="text-gray-400">
-                        Productividad, escala y visión territorial en el corazón de Formosa, Argentina.
+                        <span data-translate="productivity_scale_footer">Productividad, escala y visión territorial en el corazón de Formosa, Argentina.</span>
                     </p>
                 </div>
                 
@@ -567,7 +699,7 @@ def generate_estancia_page(estancia_id, estancia_data):
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Estancias</h3>
+                    <h3 class="text-lg font-semibold mb-4"><span data-translate="estancias_footer">Estancias</span></h3>
                     <div class="grid grid-cols-2 gap-2 text-sm text-gray-400">
                         <a href="fortin-yunka.html" class="hover:text-white transition-colors">Fortín Yunká</a>
                         <a href="el-yarara.html" class="hover:text-white transition-colors">El Yarará</a>
@@ -583,7 +715,7 @@ def generate_estancia_page(estancia_id, estancia_data):
             </div>
             
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Caminos Ganadera. Todos los derechos reservados.</p>
+                <p>&copy; 2025 Caminos Ganadera. <span data-translate="all_rights_reserved">Todos los derechos reservados.</span></p>
             </div>
         </div>
     </footer>
@@ -629,24 +761,65 @@ def generate_estancia_page(estancia_id, estancia_data):
     <script>
         // Language toggle functionality
         const languageToggle = document.getElementById('language-toggle');
-        let isEnglish = false;
         
-        languageToggle.addEventListener('click', () => {{
-            isEnglish = !isEnglish;
-            languageToggle.textContent = isEnglish ? 'ES' : 'EN';
-            // Here you would implement the actual language switching logic
-        }});
+        function updateLanguageUI() {{
+            const flagIcon = document.getElementById('flag-icon');
+            if (flagIcon) {{
+                flagIcon.textContent = languages[currentLanguage].flag;
+            }}
+        }}
         
-        // Smooth scrolling for anchor links
+        function toggleLanguage() {{
+            const nextLanguage = currentLanguage === 'es' ? 'en' : 'es';
+            setLanguage(nextLanguage);
+        }}
+        
+        languageToggle.addEventListener('click', toggleLanguage);
+        
+        // Initialize UI
+        updateLanguageUI();
+        
+        // Smooth scrolling for anchor links with active state
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {{
             anchor.addEventListener('click', function (e) {{
                 e.preventDefault();
+                
+                // Remove active class from all nav links
+                document.querySelectorAll('.nav-link').forEach(link => {{
+                    link.classList.remove('active');
+                }});
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {{
                     target.scrollIntoView({{
                         behavior: 'smooth',
                         block: 'start'
                     }});
+                }}
+            }});
+        }});
+        
+        // Highlight current section on scroll
+        window.addEventListener('scroll', () => {{
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {{
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {{
+                    current = section.getAttribute('id');
+                }}
+            }});
+            
+            navLinks.forEach(link => {{
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${{current}}`) {{
+                    link.classList.add('active');
                 }}
             }});
         }});
