@@ -137,7 +137,11 @@ const translations = {
             "¿Estás interesado en una de las chacras?",
             "¿Te gustaría conocer el proyecto de forma presencial?"
         ],
-        contact_description: "Contáctanos y uno de nuestros especialistas agrocomerciales te brindará asesoramiento completo, fichas técnicas, ubicación satelital y condiciones de operación."
+        contact_description: "Contáctanos y uno de nuestros especialistas agrocomerciales te brindará asesoramiento completo, fichas técnicas, ubicación satelital y condiciones de operación.",
+        
+        // Mobile Notice
+        mobile_notice_title: "📱 Experiencia Optimizada",
+        mobile_notice_text: "Para una mejor visualización de imágenes, planos e información detallada de Caminos Ganadera, te recomendamos acceder desde una computadora."
     },
     
     en: {
@@ -277,7 +281,11 @@ const translations = {
             "Are you interested in one of the estates?",
             "Would you like to know the project in person?"
         ],
-        contact_description: "Contact us and one of our agricultural commercial specialists will provide you with complete advice, technical files, satellite location and operating conditions."
+        contact_description: "Contact us and one of our agricultural commercial specialists will provide you with complete advice, technical files, satellite location and operating conditions.",
+        
+        // Mobile Notice
+        mobile_notice_title: "📱 Optimized Experience",
+        mobile_notice_text: "For better visualization of images, maps and detailed information about Caminos Ganadera, we recommend accessing from a computer."
     }
 };
 
