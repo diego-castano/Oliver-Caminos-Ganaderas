@@ -119,6 +119,44 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
+        
+        /* Language button styles */
+        .language-btn {
+            background-color: #f3f4f6;
+            color: #6b7280;
+            border: 1px solid #d1d5db;
+        }
+        
+        .language-btn:hover {
+            background-color: #e5e7eb;
+            color: #374151;
+            transform: translateY(-1px);
+        }
+        
+        .language-btn.active {
+            font-weight: 600;
+        }
+        
+        /* Spanish button */
+        .language-btn[data-lang="es"].active {
+            background-color: #dc2626;
+            color: white;
+            border-color: #dc2626;
+        }
+        
+        /* English button */
+        .language-btn[data-lang="en"].active {
+            background-color: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+        
+        /* Portuguese button */
+        .language-btn[data-lang="pt"].active {
+            background-color: #059669;
+            color: white;
+            border-color: #059669;
+        }
     </style>
 </head>
 <body class="bg-gray-50 overflow-x-hidden">
@@ -151,9 +189,17 @@
                 </div>
                 
                 <div class="flex items-center space-x-2 sm:space-x-4">
-                    <button id="language-toggle" class="flex items-center space-x-2 text-xs sm:text-sm font-medium text-gray-700 hover:text-green-700 transition-colors">
-                        <span id="flag-icon" class="text-base sm:text-lg">🇪🇸</span>
-                    </button>
+                    <div class="flex items-center space-x-2">
+                        <button id="language-es" class="language-btn px-3 py-1 text-xs font-medium rounded-md transition-all duration-200" data-lang="es">
+                            Versión en español
+                        </button>
+                        <button id="language-en" class="language-btn px-3 py-1 text-xs font-medium rounded-md transition-all duration-200" data-lang="en">
+                            Versión en inglés
+                        </button>
+                        <button id="language-pt" class="language-btn px-3 py-1 text-xs font-medium rounded-md transition-all duration-200" data-lang="pt">
+                            Versão em português
+                        </button>
+                    </div>
                     <a href="https://wa.link/gf7bfo" target="_blank" class="btn-primary text-white px-3 sm:px-6 py-2 rounded-lg text-xs sm:text-sm font-medium">
                         <span data-translate="contact">Contacto</span>
                     </a>
@@ -621,21 +667,30 @@
 
     <script>
         // Language toggle functionality
-        const languageToggle = document.getElementById('language-toggle');
-        
         function updateLanguageUI() {
-            const flagIcon = document.getElementById('flag-icon');
-            if (flagIcon) {
-                flagIcon.textContent = languages[currentLanguage].flag;
+            // Remove active class from all language buttons
+            document.querySelectorAll('.language-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Add active class to current language button
+            const currentBtn = document.getElementById(`language-${currentLanguage}`);
+            if (currentBtn) {
+                currentBtn.classList.add('active');
             }
         }
         
-        function toggleLanguage() {
-            const nextLanguage = currentLanguage === 'es' ? 'en' : 'es';
-            setLanguage(nextLanguage);
+        function setLanguageFromButton(lang) {
+            setLanguage(lang);
         }
         
-        languageToggle.addEventListener('click', toggleLanguage);
+        // Add event listeners to language buttons
+        document.querySelectorAll('.language-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                setLanguageFromButton(lang);
+            });
+        });
         
         // Initialize UI
         updateLanguageUI();

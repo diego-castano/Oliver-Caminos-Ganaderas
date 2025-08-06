@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="ico.png">
-    <title>Ganadera - Productividad, escala y visión territorial en Formosa</title>
+    <title>Caminos Ganadera - Estancias Formosenas</title>
     <meta name="description" content="Caminos Ganadera es un complejo agropecuario de más de 44.000 Ha, conformado por más de 10 campos y estancias contiguas, las cuales actualmente cuentan cada una con sus propias cascos o áreas centrales. Todos ubicados en el centro norte de Formosa, departamento de Patiño. Es una zona ganadera extraordinariamente productiva dado su clima subtropical con inviernos muy cortos y suaves.">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://caminosganadera.com/">
-    <meta property="og:title" content="Caminos Ganadera - Productividad, escala y visión territorial en Formosa">
+    <meta property="og:title" content="Caminos Ganadera - Estancias Formosenas">
     <meta property="og:description" content="Caminos Ganadera es un complejo agropecuario de más de 44.000 Ha, conformado por más de 10 campos y estancias contiguas, las cuales actualmente cuentan cada una con sus propias cascos o áreas centrales. Todos ubicados en el centro norte de Formosa, departamento de Patiño. Es una zona ganadera extraordinariamente productiva dado su clima subtropical con inviernos muy cortos y suaves.">
     <meta property="og:image" content="https://caminosganadera.com/media/fortinyunca/PRINCIPAL.jpg">
     <meta property="og:image:width" content="1200">
@@ -19,7 +19,7 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://caminosganadera.com/">
-    <meta property="twitter:title" content="Caminos Ganadera - Productividad, escala y visión territorial en Formosa">
+    <meta property="twitter:title" content="Caminos Ganadera - Estancias Formosenas">
     <meta property="twitter:description" content="Caminos Ganadera es un complejo agropecuario de más de 44.000 Ha, conformado por más de 10 campos y estancias contiguas, las cuales actualmente cuentan cada una con sus propias cascos o áreas centrales. Todos ubicados en el centro norte de Formosa, departamento de Patiño. Es una zona ganadera extraordinariamente productiva dado su clima subtropical con inviernos muy cortos y suaves.">
     <meta property="og:image" content="https://caminosganadera.com/media/fortinyunca/PRINCIPAL.jpg">
     
@@ -35,6 +35,46 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        /* Accessibility improvements for elderly users */
+        @media (max-width: 768px) {
+            /* Larger base font size for mobile */
+            html {
+                font-size: 18px;
+            }
+            
+            /* Improved touch targets */
+            button, a {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            /* Better contrast for all text */
+            .text-gray-600 {
+                color: #4b5563 !important;
+            }
+            
+            .text-gray-500 {
+                color: #6b7280 !important;
+            }
+            
+            /* Larger headings */
+            h1, h2, h3, h4, h5, h6 {
+                font-weight: 700;
+                line-height: 1.3;
+            }
+            
+            /* Improved spacing */
+            .space-y-3 > * + * {
+                margin-top: 1rem;
+            }
+            
+            .space-y-4 > * + * {
+                margin-top: 1.5rem;
+            }
         }
         
         .hero-gradient {
@@ -71,24 +111,205 @@
         .bg-high-contrast {
             background-color: #f7fafc !important;
         }
+        
+        .estancia-item {
+            transition: all 0.3s ease;
+        }
+        
+        .estancia-item:hover {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            transform: translateX(5px) scale(1.02);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .estancia-item.clickable {
+            cursor: pointer;
+        }
+        
+        .estancia-item.clickable:hover {
+            border-color: #4a640c;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            transform: translateY(-2px);
+        }
+        
+        .estancia-item:hover {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.15), 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+            border-color: #4a640c;
+        }
+        
+        .estancia-item:hover h3 {
+            color: #4a640c;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+        
+        .language-btn {
+            background-color: #f3f4f6;
+            color: #6b7280;
+            border: 1px solid #d1d5db;
+        }
+        
+        .language-btn:hover {
+            background-color: #e5e7eb;
+            color: #374151;
+            transform: translateY(-1px);
+        }
+        
+        .language-btn.active {
+            font-weight: 600;
+        }
+        
+        /* Spanish button */
+        .language-btn[data-lang="es"].active {
+            background-color: #dc2626;
+            color: white;
+            border-color: #dc2626;
+        }
+        
+        /* English button */
+        .language-btn[data-lang="en"].active {
+            background-color: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+        
+        /* Portuguese button */
+        .language-btn[data-lang="pt"].active {
+            background-color: #059669;
+            color: white;
+            border-color: #059669;
+        }
+        
+        /* Mobile specific styles */
+        @media (max-width: 768px) {
+            .language-btn {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.75rem;
+                min-width: 2rem;
+            }
+            
+            .btn-primary {
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+            }
+            
+            /* Mobile estancia item improvements */
+            .estancia-item {
+                padding: 1.25rem;
+            }
+            
+            .estancia-item:hover {
+                transform: translateY(-2px) scale(1.01);
+            }
+            
+            .estancia-item h3 {
+                font-size: 1.25rem;
+                line-height: 1.4;
+                font-weight: 700;
+            }
+            
+            .estancia-item p {
+                font-size: 0.875rem;
+                line-height: 1.5;
+            }
+            
+            /* Accessibility improvements for elderly users */
+            .language-btn {
+                min-height: 2.5rem;
+                font-weight: 600;
+            }
+            
+            .btn-primary {
+                min-height: 2.75rem;
+                font-weight: 600;
+            }
+            
+            /* Larger touch targets */
+            .estancia-item.clickable {
+                min-height: 4rem;
+            }
+            
+            /* Better contrast for text */
+            .text-gray-700 {
+                color: #374151 !important;
+            }
+            
+            .text-gray-600 {
+                color: #4b5563 !important;
+            }
+            
+            /* Larger font sizes for better readability */
+            body {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+            
+            /* Improved spacing for mobile */
+            .space-y-2 > * + * {
+                margin-top: 0.75rem;
+            }
+            
+            .space-y-4 > * + * {
+                margin-top: 1.25rem;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
+            <!-- Desktop Layout -->
+            <div class="hidden md:flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <img src="branding/logo.jpg" alt="Ganadera" class="h-5 sm:h-6 md:h-8 w-auto object-contain max-w-none">
+                    <img src="branding/logo.jpg" alt="Ganadera" class="h-6 md:h-8 w-auto object-contain max-w-none">
                 </div>
                 
                 <div class="flex items-center space-x-4">
-                    <button id="language-toggle" class="flex items-center space-x-2 text-sm font-medium text-gray-700 hover:text-green-700 transition-colors">
-                        <span id="flag-icon" class="text-lg">🇪🇸</span>
-                    </button>
+                    <div class="flex items-center space-x-2">
+                        <button id="language-es-desktop" class="language-btn px-3 py-1 text-xs font-medium rounded-md transition-all duration-200" data-lang="es">
+                            Versión en español
+                        </button>
+                        <button id="language-en-desktop" class="language-btn px-3 py-1 text-xs font-medium rounded-md transition-all duration-200" data-lang="en">
+                            Versión en inglés
+                        </button>
+                        <button id="language-pt-desktop" class="language-btn px-3 py-1 text-xs font-medium rounded-md transition-all duration-200" data-lang="pt">
+                            Versão em português
+                        </button>
+                    </div>
                     <a href="https://wa.link/gf7bfo" target="_blank" class="btn-primary text-white px-6 py-2 rounded-lg font-medium">
                         <span data-translate="contact">Contacto</span>
                     </a>
+                </div>
+            </div>
+            
+            <!-- Mobile Layout -->
+            <div class="md:hidden">
+                <!-- Top row: Logo and Contact -->
+                <div class="flex justify-between items-center py-3">
+                    <div class="flex items-center">
+                        <img src="branding/logo.jpg" alt="Ganadera" class="h-5 w-auto object-contain max-w-none">
+                    </div>
+                    <a href="https://wa.link/gf7bfo" target="_blank" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium">
+                        <span data-translate="contact">Contacto</span>
+                    </a>
+                </div>
+                
+                <!-- Bottom row: Language buttons -->
+                <div class="flex justify-center items-center py-2 border-t border-gray-100">
+                    <div class="flex items-center space-x-1">
+                        <button id="language-es-mobile" class="language-btn px-2 py-1 text-xs font-medium rounded-md transition-all duration-200" data-lang="es">
+                            ES
+                        </button>
+                        <button id="language-en-mobile" class="language-btn px-2 py-1 text-xs font-medium rounded-md transition-all duration-200" data-lang="en">
+                            EN
+                        </button>
+                        <button id="language-pt-mobile" class="language-btn px-2 py-1 text-xs font-medium rounded-md transition-all duration-200" data-lang="pt">
+                            PT
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -111,112 +332,95 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="relative h-96 md:h-screen overflow-hidden">
-        <img src="media/fortinyunca/PRINCIPAL.jpg" alt="Ganadera - Hero" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="absolute inset-0 flex items-center justify-center">
-            <div class="text-center text-white">
-                <h1 class="text-3xl md:text-6xl font-bold text-shadow mb-4 md:mb-6">
-                    <span data-translate="hero_title">Productividad, escala y visión</span>
-                </h1>
-                <p class="text-lg md:text-2xl mb-6 md:mb-8 max-w-3xl mx-auto text-shadow">
-                    <span data-translate="hero_subtitle">En Argentina</span>
+    <!-- Main Content -->
+    <main class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Title -->
+            <div class="text-center mb-16 bg-gradient-to-br from-green-600 via-green-700 to-green-800 rounded-2xl p-8 md:p-12 shadow-xl border-4 border-green-500">
+                <div class="max-w-5xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-black text-white mb-4 drop-shadow-lg">
+                        <span data-translate="main_title">CAMINOS GANADERA:</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-bold text-green-100 mb-6 drop-shadow-md">
+                        <span data-translate="subtitle">ESTANCIAS FORMOSENAS:</span>
+                    </h2>
+                    <p class="text-lg md:text-xl text-white leading-relaxed max-w-4xl mx-auto font-semibold drop-shadow-md">
+                        <span data-translate="main_description">PRODUCTORES DE LOS MEJORES ANIMALES DE RAZAS BRAFORD, BRANGUS Y BRAHMÁ CRIADOS EN EL NORTE DE ARGENTINA Y EN LA PROVINCIA SUBTROPICAL DE FORMOSA.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="prose prose-lg max-w-none mb-12">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    <span data-translate="about_text">Caminos Ganadera es un complejo agropecuario y ganadero de más de 44,000 hectáreas (o 109,000 acres), que consiste en más de 10 estancias contiguas, su oficina central de gestión y administración local actualmente en la Estancia Yarara. Formosa. Todas ubicadas en la parte norte-central de Formosa, en el departamento Patiño. Es una zona ganadera extraordinariamente productiva debido a su clima subtropical con inviernos muy cortos y suaves. Nuestros animales son conocidos por obtener los mejores precios del Norte Argentino en ferias y subastas.</span>
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#estancias" class="btn-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold text-base md:text-lg">
-                        <span data-translate="know_estancias">Conocer Estancias</span>
-                    </a>
-                    <a href="https://wa.link/gf7bfo" target="_blank" class="bg-white text-green-700 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold text-base md:text-lg hover:bg-gray-100 transition-colors">
-                        <span data-translate="contact">Contactar</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    <span data-translate="about_ganadera">Sobre Ganadera</span>
-                </h2>
-                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        <span data-translate="about_ganadera_desc1">Ganadera es un conjunto de estancias estratégicamente ubicadas en la provincia de Formosa, Argentina, dedicadas a la producción ganadera, agrícola y forestal. Abarcando más de 50.000 hectáreas operativas, este proyecto territorial integra infraestructura de alto nivel, diversidad de suelos, acceso logístico privilegiado y un enfoque moderno de gestión del campo.</span>
-                    </p>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        <span data-translate="about_ganadera_desc2">El grupo está compuesto por 10 chacras (estancias), cada una con identidad propia pero bajo un mismo estándar operativo. Ganadera no es solo una agrupación de tierras, sino una visión agroproductiva en escala, que permite adaptabilidad a distintos tipos de inversión, proyectos productivos y expansión modular.</span>
-                    </p>
-                </div>
                 
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-green-50 p-6 rounded-lg text-center">
-                        <div class="text-3xl font-bold text-green-600 mb-2">50.000+</div>
-                        <div class="text-gray-600"><span data-translate="hectares">Hectáreas</span></div>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    <span data-translate="facilities_text">Excelentes multiples instalaciones Ganaderas de "quebracho". Producción importante propia de quebracho Colorado , Algarrobo, Palo blanco, etc</span>
+                </p>
+            </div>
+
+            <!-- Pastures Section -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-green-800 mb-4">
+                    <span data-translate="pastures_title">PASTOS</span>
+                </h3>
+                <p class="text-gray-700 leading-relaxed">
+                    <span data-translate="pastures_text">Pasturas subtropicales de alta calidad de Gatton Panic, Dichanthium, Pangola, pasto Tangola, extensas áreas de Tanzania y Grama Rhodes, etc., junto con amplios pastos naturales como Pasto Estrella, etc. Más de 5000 hectáreas aptas para maíz, soja, sorgo, y varios miles más de acres de tierra con claro potencial agrícola, etc.</span>
+                </p>
+            </div>
+
+            <!-- Infrastructure Section -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-green-800 mb-4">
+                    <span data-translate="infrastructure_title">INFRAESTRUCTURA</span>
+                </h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    <span data-translate="infrastructure_text">Excelentes cercas y alambrados bien mantenidas; múltiples molinos de viento y con energia solar funcionando con sus tanques y represas en cada estancia. Paneles solares en puestos remotos con sistemas de carga para teléfonos celulares de la empresa. Conexión a internet STARLINK en varias de las estancias. Galpones, silos y multiples corrales totalmente equipados, ubicados estratégicamente.</span>
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    <span data-translate="infrastructure_text2">la mayoria de las estancias están sobre pavimento con acceso a internet via local providers and Starlink. Oficina central en Formosa en una de las estancias (El Yarara) y Estudio Contable en Buenos Aires. Tres cascos "patronales"importantes con hernias Construcciones y parques.</span>
+                </p>
+            </div>
+
+            <!-- Estancias List -->
+            <div class="mb-12">
+                <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                    <div class="bg-black text-white px-6 py-4">
+                        <h4 class="text-lg font-semibold text-center"><span data-translate="estancias_header">Nuestras Estancias</span></h4>
                     </div>
-                    <div class="bg-green-50 p-6 rounded-lg text-center">
-                        <div class="text-3xl font-bold text-green-600 mb-2">10</div>
-                        <div class="text-gray-600"><span data-translate="estates">Estancias</span></div>
-                    </div>
-                    <div class="bg-green-50 p-6 rounded-lg text-center">
-                        <div class="text-3xl font-bold text-green-600 mb-2">100+</div>
-                        <div class="text-gray-600"><span data-translate="km_roads">Km de caminos</span></div>
-                    </div>
-                    <div class="bg-green-50 p-6 rounded-lg text-center">
-                        <div class="text-3xl font-bold text-green-600 mb-2">24/7</div>
-                        <div class="text-gray-600"><span data-translate="operational">Operativo</span></div>
+                    <div class="p-6">
+                        <div id="estancias-list" class="space-y-4">
+                            <!-- Estancias will be populated by JavaScript -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <!-- Features Section -->
+    <!-- Videos Section -->
     <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    <span data-translate="our_proposal">Nuestra Propuesta</span>
+                    <span data-translate="videos_title">🎬 Videos de Nuestras Estancias</span>
                 </h2>
-                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-8"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    <span data-translate="videos_description">Descubre nuestras estancias a través de videos que muestran las actividades diarias, el ganado, las instalaciones y la belleza natural de cada propiedad.</span>
+                </p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-sm card-hover">
-                    <div class="text-green-600 text-4xl mb-4">🌾</div>
-                    <h3 class="text-xl font-semibold mb-4 text-high-contrast"><span data-translate="mixed_production_title">Producción Mixta</span></h3>
-                    <p class="text-gray-600">
-                        <span data-translate="mixed_production_desc">Ciclo ganadero completo (cría, recría y engorde), con integración agrícola para autosustento o comercialización directa.</span>
-                    </p>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-sm card-hover">
-                    <div class="text-green-600 text-4xl mb-4">🏗️</div>
-                    <h3 class="text-xl font-semibold mb-4 text-high-contrast"><span data-translate="developed_infrastructure_title">Infraestructura Desarrollada</span></h3>
-                    <p class="text-gray-600">
-                        <span data-translate="developed_infrastructure_desc">Más de 100 km de caminos internos, viviendas para personal, galpones, corrales, instalaciones operativas.</span>
-                    </p>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-sm card-hover">
-                    <div class="text-green-600 text-4xl mb-4">📍</div>
-                    <h3 class="text-xl font-semibold mb-4 text-high-contrast"><span data-translate="strategic_location_title">Ubicación Estratégica</span></h3>
-                    <p class="text-gray-600">
-                        <span data-translate="strategic_location_desc">Frente a la Ruta Nacional 86 y la Ruta Provincial 23, con acceso inmediato a pueblos cercanos.</span>
-                    </p>
-                </div>
+            <div id="videos-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Videos will be populated by JavaScript -->
             </div>
         </div>
     </section>
 
     <!-- Estancias Grid -->
-    <section id="estancias" class="py-16 bg-white">
+    <section id="estancias" class="py-16 bg-gray-50 hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -413,178 +617,6 @@
         </div>
     </section>
 
-    <!-- Why Invest Section -->
-    <section class="py-16 bg-green-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    ¿Por qué invertir en Ganadera?
-                </h2>
-                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="flex items-start space-x-4">
-                    <div class="text-green-600 text-2xl">✅</div>
-                    <div>
-                        <h3 class="font-semibold text-gray-900 mb-2">Escala operativa real</h3>
-                        <p class="text-gray-600">Lista para producción inmediata</p>
-                    </div>
-                </div>
-                
-                <div class="flex items-start space-x-4">
-                    <div class="text-green-600 text-2xl">✅</div>
-                    <div>
-                        <h3 class="font-semibold text-gray-900 mb-2">Diversificación de usos</h3>
-                        <p class="text-gray-600">Rotación de cultivos y actividades</p>
-                    </div>
-                </div>
-                
-                <div class="flex items-start space-x-4">
-                    <div class="text-green-600 text-2xl">✅</div>
-                    <div>
-                        <h3 class="font-semibold text-gray-900 mb-2">Infraestructura funcional</h3>
-                        <p class="text-gray-600">Ya instalada y operativa</p>
-                    </div>
-                </div>
-                
-                <div class="flex items-start space-x-4">
-                    <div class="text-green-600 text-2xl">✅</div>
-                    <div>
-                        <h3 class="font-semibold text-gray-900 mb-2">Accesos logísticos</h3>
-                        <p class="text-gray-600">Pavimentados y conectados</p>
-                    </div>
-                </div>
-                
-                <div class="flex items-start space-x-4">
-                    <div class="text-green-600 text-2xl">✅</div>
-                    <div>
-                        <h3 class="font-semibold text-gray-900 mb-2">Recursos naturales</h3>
-                        <p class="text-gray-600">En abundancia y bien gestionados</p>
-                    </div>
-                </div>
-                
-                <div class="flex items-start space-x-4">
-                    <div class="text-green-600 text-2xl">✅</div>
-                    <div>
-                        <h3 class="font-semibold text-gray-900 mb-2">Potencial de crecimiento</h3>
-                        <p class="text-gray-600">Subdivisión y expansión modular</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Contacto
-                </h2>
-                <div class="w-24 h-1 bg-green-600 mx-auto mb-8"></div>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    ¿Querés más información? ¿Estás interesado en una de las chacras? ¿Te gustaría conocer el proyecto de forma presencial?
-                </p>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">
-                        Contáctanos
-                    </h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="text-green-600 text-xl">📧</div>
-                            <div>
-                                <p class="font-medium text-gray-900">Email</p>
-                                <p class="text-gray-600">owcc@aol.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center space-x-4">
-                            <div class="text-green-600 text-xl">📞</div>
-                            <div>
-                                <p class="font-medium text-gray-900">Teléfono</p>
-                                <p class="text-gray-600">+1 (412) 417-6676</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center space-x-4">
-                            <div class="text-green-600 text-xl">🌐</div>
-                            <div>
-                                <p class="font-medium text-gray-900">Web</p>
-                                <p class="text-gray-600">www.caminosganadera.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8 p-6 bg-green-50 rounded-lg">
-                        <h4 class="font-semibold text-gray-900 mb-3">Nuestros especialistas te brindarán:</h4>
-                        <ul class="space-y-2 text-gray-600">
-                            <li>• Asesoramiento completo</li>
-                            <li>• Fichas técnicas detalladas</li>
-                            <li>• Ubicación satelital</li>
-                            <li>• Condiciones de operación</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div>
-                    <form action="mailto:owcc@aol.com" method="post" enctype="text/plain" class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Nombre</label>
-                                <input type="text" name="nombre" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Apellido</label>
-                                <input type="text" name="apellido" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
-                            </div>
-                        </div>
-                        
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                                <input type="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
-                                <input type="tel" name="telefono" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Estancia de interés</label>
-                            <select name="estancia" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
-                                <option value="">Seleccionar estancia</option>
-                                <option value="fortin-yunka">Fortín Yunká</option>
-                                <option value="el-yarara">El Yarará</option>
-                                <option value="la-federacion">La Federación</option>
-                                <option value="agua-dulce">Agua Dulce</option>
-                                <option value="campo-lindo">Campo Lindo</option>
-                                <option value="el-cacuy">El Cacuy</option>
-                                <option value="campo-alegre">Campo Alegre</option>
-                                <option value="la-loli">La Loli</option>
-                                <option value="las-lantanas">Las Lantanas</option>
-                                <option value="general">Información general</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
-                            <textarea name="mensaje" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="Cuéntanos sobre tu interés..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn-primary text-white px-8 py-4 rounded-lg font-semibold text-lg w-full">
-                            Enviar
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -638,28 +670,424 @@
         </a>
     </div>
 
-
-
     <script>
         // Language toggle functionality
         const languageToggle = document.getElementById('language-toggle');
         
         function updateLanguageUI() {
-            const flagIcon = document.getElementById('flag-icon');
-            if (flagIcon) {
-                flagIcon.textContent = languages[currentLanguage].flag;
+            // Remove active class from all language buttons
+            document.querySelectorAll('.language-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Add active class to current language button (both desktop and mobile)
+            const currentBtnDesktop = document.getElementById(`language-${currentLanguage}-desktop`);
+            const currentBtnMobile = document.getElementById(`language-${currentLanguage}-mobile`);
+            
+            if (currentBtnDesktop) {
+                currentBtnDesktop.classList.add('active');
+            }
+            if (currentBtnMobile) {
+                currentBtnMobile.classList.add('active');
             }
         }
         
-        function toggleLanguage() {
-            const nextLanguage = currentLanguage === 'es' ? 'en' : 'es';
-            setLanguage(nextLanguage);
+        function setLanguageFromButton(lang) {
+            setLanguage(lang);
         }
         
-        languageToggle.addEventListener('click', toggleLanguage);
+        function updateEstanciasList() {
+            console.log('updateEstanciasList called');
+            const estanciasList = document.getElementById('estancias-list');
+            console.log('estanciasList element:', estanciasList);
+            if (estanciasList) {
+                const estancias = getText('estancias_list');
+                console.log('estancias from translations:', estancias);
+                estanciasList.innerHTML = '';
+                
+                // Mapeo de nombres de estancias a URLs y datos adicionales
+                const estanciaData = {
+                    'Fortin Yunca': {
+                        url: 'estancias/fortin-yunka.html',
+                        image: 'media/fortinyunca/hero.jpg',
+                        details: [
+                            '📍 Ruta Nacional 86 pavimentada',
+                            '🏠 Casa patronal de 700m²',
+                            '🐂 Capacidad: 21.000 cabezas',
+                            '🌾 6.200 ha cultivables',
+                            '💧 30 potreros funcionales',
+                            '🏗️ Infraestructura completa',
+                            '🌿 Pasturas subtropicales'
+                        ]
+                    },
+                    'Cacuy': {
+                        url: 'estancias/el-cacuy.html',
+                        image: 'media/cucuy/hero.jpg',
+                        details: [
+                            '📍 Acceso vecinal desde Ruta 86',
+                            '🌾 220 ha actualmente sembradas',
+                            '🌽 Maíz, soja, algodón, trigo',
+                            '🏠 Galpón amplio operativo',
+                            '💧 Represa y molino',
+                            '🌿 Producción agrícola intensiva'
+                        ]
+                    },
+                    'Federacion': {
+                        url: 'estancias/la-federacion.html',
+                        image: 'media/federacion/hero.jpeg',
+                        details: [
+                            '📍 Ruta 86 pavimentada',
+                            '🌾 1.500 ha agrícolas',
+                            '🌿 2.000 ha pasturas implantadas',
+                            '🏗️ 2 galpones grandes',
+                            '💧 Riacho Porteño atraviesa',
+                            '🐂 Ganadería intensiva',
+                            '🏠 Casa principal operativa'
+                        ]
+                    },
+                    'Gallo Blanco': {
+                        url: null,
+                        image: 'ico.png',
+                        details: [
+                            '📍 Ubicado en La Federación',
+                            '🌿 Pasturas implantadas',
+                            '🏗️ Infraestructura ganadera',
+                            '💧 Sistemas de agua'
+                        ]
+                    },
+                    'Las Lantanas': {
+                        url: 'estancias/las-lantanas.html',
+                        image: 'media/laslantana/hero1.jpeg',
+                        details: [
+                            '📍 Ruta 86 pavimentada',
+                            '🌿 450 ha Gatton Panic',
+                            '🐂 Campo limpio 90-95%',
+                            '🏠 Casa de empleado funcional',
+                            '🛣️ 2.000m frente ruta',
+                            '💧 Tanques australianos',
+                            '🏗️ Corrales funcionales'
+                        ]
+                    },
+                    'La Loli': {
+                        url: 'estancias/la-loli.html',
+                        image: 'media/laloli/hero.jpg',
+                        details: [
+                            '📍 Ruta 86 pavimentada',
+                            '🌿 450 ha Gatton Panic',
+                            '🌽 150 ha maíz implantado',
+                            '🏠 Galpón amplio cubierto',
+                            '🛣️ 2.000m frente ruta',
+                            '🐂 Producción mixta',
+                            '💧 Sistemas de riego'
+                        ]
+                    },
+                    'Campo Alegre': {
+                        url: 'estancias/campo-alegre.html',
+                        image: 'media/campoalegre/hero.jpg',
+                        details: [
+                            '📍 Ruta 86 pavimentada',
+                            '🌿 450 ha Gatton Panic',
+                            '🐂 Campo limpio 90-95%',
+                            '🏠 Casa de empleado funcional',
+                            '🛣️ 2.000m frente ruta',
+                            '🏗️ Infraestructura completa',
+                            '💧 Agua de calidad'
+                        ]
+                    },
+                    'Urbana grande': {
+                        url: null,
+                        image: 'ico.png',
+                        details: [
+                            '📍 Ubicación estratégica',
+                            '🌿 Potencial ganadero',
+                            '🏗️ Infraestructura básica'
+                        ]
+                    },
+                    'El Tucan y Ex Romero': {
+                        url: null,
+                        image: 'ico.png',
+                        details: [
+                            '📍 Acceso rural',
+                            '🌿 Campo natural',
+                            '🏗️ Instalaciones básicas'
+                        ]
+                    },
+                    'El Yarara': {
+                        url: 'estancias/el-yarara.html',
+                        image: 'media/elyarara/hero.jpg',
+                        details: [
+                            '📍 Ruta 86 pavimentada',
+                            '💧 Tanque australiano 200.000 lts',
+                            '🌿 100 ha pasturas implantadas',
+                            '🐂 30 potreros subdivididos',
+                            '🏠 Hermosa casa principal',
+                            '🏗️ Oficina central',
+                            '🌾 Producción agrícola'
+                        ]
+                    },
+                    'Agua Norte': {
+                        url: null,
+                        image: 'ico.png',
+                        details: [
+                            '📍 Ubicación estratégica',
+                            '💧 Recursos hídricos',
+                            '🌿 Potencial ganadero',
+                            '🏗️ Infraestructura básica'
+                        ]
+                    },
+                    'Campo Lindo': {
+                        url: 'estancias/campo-lindo.html',
+                        image: 'media/campolindo/hero.jpg',
+                        details: [
+                            '📍 Ruta Provincial 23',
+                            '🐂 1.000 cabezas capacidad',
+                            '🌳 90-95% campo limpio',
+                            '🏠 Casa recientemente renovada',
+                            '🛣️ Sobre Ruta 23',
+                            '🌿 Pasturas naturales',
+                            '💧 Sistemas de agua'
+                        ]
+                    },
+                    'Agua Dulce': {
+                        url: 'estancias/agua-dulce.html',
+                        image: 'media/aguadulce/hero.jpg',
+                        details: [
+                            '📍 Ruta Provincial 23',
+                            '🐂 4.500 cabezas capacidad',
+                            '🌿 9.000 ha pasturas naturales',
+                            '🛣️ 60 km caminos internos',
+                            '🏠 2 puestos estratégicos',
+                            '💧 Riacho Porteño',
+                            '🏗️ Infraestructura completa'
+                        ]
+                    }
+                };
+                
+                estancias.forEach((estancia, index) => {
+                    const div = document.createElement('div');
+                    div.className = 'estancia-item p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-300 hover:shadow-lg';
+                    
+                    // Extraer número, nombre y tamaño - soporte para múltiples idiomas
+                    const match = estancia.match(/(\d+)\)\s*(.+?)\s*(\d+[,\d.]*)\s*(hectáreas|hectares)/);
+                    console.log('Processing estancia:', estancia);
+                    console.log('Match result:', match);
+                    if (match) {
+                        const [, numero, nombre, tamaño, unidad] = match;
+                        // Limpiar el nombre de caracteres extra como dos puntos
+                        const cleanNombre = nombre.trim().replace(/[:]/g, '').trim();
+                        console.log('Extracted nombre:', cleanNombre);
+                        
+                        // Mapeo de nombres en diferentes idiomas
+                        const nameMapping = {
+                            'Fortin Yunca': 'Fortin Yunca',
+                            'Fortin Yunca:': 'Fortin Yunca',
+                            'Cacuy': 'Cacuy',
+                            'Cacuy:': 'Cacuy',
+                            'Federacion': 'Federacion',
+                            'Federacion:': 'Federacion',
+                            'Gallo Blanco': 'Gallo Blanco',
+                            'Gallo Blanco:': 'Gallo Blanco',
+                            'Las Lantanas': 'Las Lantanas',
+                            'La Loli': 'La Loli',
+                            'La Loli:': 'La Loli',
+                            'Campo Alegre': 'Campo Alegre',
+                            'Campo Alegre:': 'Campo Alegre',
+                            'Urbana grande': 'Urbana grande',
+                            'Urbana grande:': 'Urbana grande',
+                            'El Tucan and Ex Romero': 'El Tucan y Ex Romero',
+                            'El Tucan e Ex Romero': 'El Tucan y Ex Romero',
+                            'El Yarara': 'El Yarara',
+                            'El Yarara:': 'El Yarara',
+                            'Agua Norte': 'Agua Norte',
+                            'Campo Lindo': 'Campo Lindo',
+                            'Campo Lindo:': 'Campo Lindo',
+                            'Agua Dulce': 'Agua Dulce',
+                            'Agua Dulce:': 'Agua Dulce'
+                        };
+                        
+                        const mappedNombre = nameMapping[cleanNombre] || cleanNombre;
+                        console.log('Mapped nombre:', mappedNombre);
+                        const data = estanciaData[mappedNombre];
+                        console.log('Found data for', mappedNombre, ':', data);
+                        const hasLink = data && data.url !== null;
+                        
+                        if (hasLink) {
+                            div.classList.add('clickable');
+                            div.addEventListener('click', () => {
+                                window.location.href = data.url;
+                            });
+                        }
+                        
+                        div.innerHTML = `
+                            <!-- Desktop Layout -->
+                            <div class="hidden md:flex space-x-4">
+                                <div class="flex-shrink-0">
+                                    <img src="${data ? data.image : 'ico.png'}" alt="${cleanNombre}" class="w-20 h-20 object-cover rounded-lg shadow-md">
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h3 class="text-xl font-bold text-gray-900">${cleanNombre}</h3>
+                                        ${hasLink ? `
+                                        <div class="text-[#4a640c] flex items-center bg-[#4a640c] bg-opacity-10 px-3 py-2 rounded-lg border border-[#4a640c] border-opacity-30">
+                                            <span class="text-base font-semibold text-[#4a640c] mr-2">Ver ficha</span>
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            </svg>
+                                        </div>
+                                        ` : `
+                                        <span class="text-sm text-gray-500">${getText('estancias_no_link')}</span>
+                                        `}
+                                    </div>
+                                    <div class="mb-3">
+                                        <span class="font-black text-[#4a640c] text-lg">${tamaño}</span>
+                                        <span class="text-gray-600 ml-1">${unidad}</span>
+                                    </div>
+                                    ${data && data.details.length > 0 ? `
+                                    <div class="space-y-1">
+                                        ${data.details.map(detail => `
+                                            <p class="text-sm text-gray-600">${detail}</p>
+                                        `).join('')}
+                                    </div>
+                                    ` : ''}
+                                </div>
+                            </div>
+                            
+                            <!-- Mobile Layout -->
+                            <div class="md:hidden space-y-3">
+                                <!-- Top row: Image and Title -->
+                                <div class="flex items-center space-x-3">
+                                    <div class="flex-shrink-0">
+                                        <img src="${data ? data.image : 'ico.png'}" alt="${cleanNombre}" class="w-16 h-16 object-cover rounded-lg shadow-md">
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-xl font-bold text-gray-900 mb-2">${cleanNombre}</h3>
+                                        <div class="mb-2">
+                                            <span class="font-black text-[#4a640c] text-lg">${tamaño}</span>
+                                            <span class="text-gray-700 ml-1 font-medium">${unidad}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Middle row: Details -->
+                                ${data && data.details.length > 0 ? `
+                                <div class="space-y-2 pl-0">
+                                    ${data.details.map(detail => `
+                                        <p class="text-sm text-gray-700 leading-relaxed">${detail}</p>
+                                    `).join('')}
+                                </div>
+                                ` : ''}
+                                
+                                <!-- Bottom row: Action button -->
+                                <div class="flex justify-end pt-2 border-t border-gray-100">
+                                    ${hasLink ? `
+                                    <div class="text-[#4a640c] flex items-center bg-[#4a640c] bg-opacity-10 px-4 py-3 rounded-lg border border-[#4a640c] border-opacity-30 min-h-[3rem]">
+                                        <span class="text-base font-bold text-[#4a640c] mr-2">Ver ficha</span>
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </div>
+                                    ` : `
+                                    <span class="text-sm text-gray-600 font-medium">${getText('estancias_no_link')}</span>
+                                    `}
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        div.innerHTML = `<span class="font-medium text-gray-800">${estancia}</span>`;
+                    }
+                    
+                    estanciasList.appendChild(div);
+                });
+            }
+        }
+        
+        // Función para obtener todos los vídeos de la carpeta media
+        function getAllVideos() {
+            const videos = [
+                // Fortín Yunká
+                { src: 'media/fortinyunca/Retamar en Fortin Yunca 1,200 hectáreas.mp4', title: 'Fortín Yunká - Vista aérea', estancia: 'Fortín Yunká' },
+                { src: 'media/fortinyunca/WhatsApp Video 2025-08-02 at 16.57.45.mp4', title: 'Fortín Yunká - Actividades', estancia: 'Fortín Yunká' },
+                { src: 'media/fortinyunca/lotetres/WhatsApp Video 2025-08-02 at 16.50.22.mp4', title: 'Fortín Yunká - Lote Tres', estancia: 'Fortín Yunká' },
+                
+                // El Yarará
+                { src: 'media/elyarara/WhatsApp Video 2025-07-24 at 07.15.52.mp4', title: 'El Yarará - Recorrido', estancia: 'El Yarará' },
+                { src: 'media/elyarara/WhatsApp Video 2025-07-24 at 07.15.52 (1).mp4', title: 'El Yarará - Instalaciones', estancia: 'El Yarará' },
+                { src: 'media/elyarara/WhatsApp Video 2025-07-24 at 07.25.41.mp4', title: 'El Yarará - Ganado', estancia: 'El Yarará' },
+                { src: 'media/elyarara/WhatsApp Video 2025-07-24 at 07.41.10.mp4', title: 'El Yarará - Infraestructura', estancia: 'El Yarará' },
+                
+                // La Federación
+                { src: 'media/federacion/WhatsApp Video 2025-08-02 at 16.29.13.mp4', title: 'La Federación - Producción', estancia: 'La Federación' },
+                { src: 'media/federacion/FederacionGATONPanic/WhatsApp Video 2025-08-02 at 16.25.25.mp4', title: 'La Federación - Actividades', estancia: 'La Federación' },
+                { src: 'media/federacion/galloblanco/VIDEO-2025-07-26-08-24-45.mp4', title: 'La Federación - Gallo Blanco', estancia: 'La Federación' },
+                
+                // Agua Dulce (videos están en subcarpeta aguanorte)
+                { src: 'media/aguadulce/aguanorte/VIDEO-2025-08-02-17-11-47.mp4', title: 'Agua Dulce - Vista general', estancia: 'Agua Dulce' },
+                { src: 'media/aguadulce/aguanorte/VIDEO-2025-08-02-17-11-47 2.mp4', title: 'Agua Dulce - Recorrido', estancia: 'Agua Dulce' },
+                { src: 'media/aguadulce/aguanorte/VIDEO-2025-08-02-17-11-47 3.mp4', title: 'Agua Dulce - Actividades', estancia: 'Agua Dulce' },
+                
+                // La Loli
+                { src: 'media/laloli/Salen 65 novillos de la loli venta destino santiago del estero.mp4', title: 'La Loli - Novillos', estancia: 'La Loli' },
+                { src: 'media/laloli/WhatsApp Video 2025-07-26 at 16.40.28.mp4', title: 'La Loli - Actividades', estancia: 'La Loli' },
+                { src: 'media/laloli/WhatsApp Video 2025-07-26 at 16.40.29.mp4', title: 'La Loli - Ganado', estancia: 'La Loli' },
+                
+                // Las Lantanas
+                { src: 'media/laslantana/VIDEO-2025-08-02-17-02-31.mp4', title: 'Las Lantanas - Vista general', estancia: 'Las Lantanas' }
+            ];
+            return videos;
+        }
+        
+        // Función para actualizar la sección de vídeos
+        function updateVideosSection() {
+            const videosContainer = document.getElementById('videos-container');
+            if (videosContainer) {
+                const videos = getAllVideos();
+                videosContainer.innerHTML = '';
+                
+                videos.forEach((video, index) => {
+                    const videoCard = document.createElement('div');
+                    videoCard.className = 'bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2';
+                    
+                    videoCard.innerHTML = `
+                        <div class="relative">
+                            <video class="w-full h-48 object-cover" controls preload="metadata">
+                                <source src="${video.src}" type="video/mp4">
+                                Tu navegador no soporta el elemento video.
+                            </video>
+                            <div class="absolute top-2 left-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-xs">
+                                ${video.estancia}
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">${video.title}</h3>
+                            <p class="text-sm text-gray-600">${video.estancia}</p>
+                        </div>
+                    `;
+                    
+                    videosContainer.appendChild(videoCard);
+                });
+            }
+        }
+        
+        // Override updatePageContent to include estancias list
+        const originalUpdatePageContent = updatePageContent;
+        updatePageContent = function() {
+            originalUpdatePageContent();
+            updateEstanciasList();
+            updateVideosSection(); // Call the new function here
+        };
+        
+        // Add event listeners to language buttons
+        document.querySelectorAll('.language-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                setLanguageFromButton(lang);
+            });
+        });
         
         // Initialize UI
         updateLanguageUI();
+        updateEstanciasList();
+        updateVideosSection(); // Initialize the videos section
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

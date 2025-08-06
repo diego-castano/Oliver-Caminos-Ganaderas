@@ -141,7 +141,37 @@ const translations = {
         
         // Mobile Notice
         mobile_notice_title: "📱 Experiencia Optimizada",
-        mobile_notice_text: "Para una mejor visualización de imágenes, planos e información detallada de Caminos Ganadera, te recomendamos acceder desde una computadora."
+        mobile_notice_text: "Para una mejor visualización de imágenes, planos e información detallada de Caminos Ganadera, te recomendamos acceder desde una computadora.",
+        
+        // Main Content
+        main_title: "CAMINOS GANADERA:",
+        subtitle: "ESTANCIAS FORMOSENAS:",
+        main_description: "PRODUCTORES DE LOS MEJORES ANIMALES DE RAZAS BRAFORD, BRANGUS Y BRAHMÁ CRIADOS EN EL NORTE DE ARGENTINA Y EN LA PROVINCIA SUBTROPICAL DE FORMOSA.",
+        about_text: "Caminos Ganadera es un complejo agropecuario y ganadero de más de 44,000 hectáreas (o 109,000 acres), que consiste en más de 10 estancias contiguas, su oficina central de gestión y administración local actualmente en la Estancia Yarara. Formosa. Todas ubicadas en la parte norte-central de Formosa, en el departamento Patiño. Es una zona ganadera extraordinariamente productiva debido a su clima subtropical con inviernos muy cortos y suaves. Nuestros animales son conocidos por obtener los mejores precios del Norte Argentino en ferias y subastas.",
+        facilities_text: "Excelentes multiples instalaciones Ganaderas de \"quebracho\". Producción importante propia de quebracho Colorado , Algarrobo, Palo blanco, etc",
+        pastures_title: "PASTOS",
+        pastures_text: "Pasturas subtropicales de alta calidad de Gatton Panic, Dichanthium, Pangola, pasto Tangola, extensas áreas de Tanzania y Grama Rhodes, etc., junto con amplios pastos naturales como Pasto Estrella, etc. Más de 5000 hectáreas aptas para maíz, soja, sorgo, y varios miles más de acres de tierra con claro potencial agrícola, etc.",
+        infrastructure_title: "INFRAESTRUCTURA",
+        infrastructure_text: "Excelentes cercas y alambrados bien mantenidas; múltiples molinos de viento y con energia solar funcionando con sus tanques y represas en cada estancia. Paneles solares en puestos remotos con sistemas de carga para teléfonos celulares de la empresa. Conexión a internet STARLINK en varias de las estancias. Galpones, silos y multiples corrales totalmente equipados, ubicados estratégicamente.",
+        infrastructure_text2: "la mayoria de las estancias están sobre pavimento con acceso a internet via local providers and Starlink. Oficina central en Formosa en una de las estancias (El Yarara) y Estudio Contable en Buenos Aires. Tres cascos \"patronales\"importantes con hernias Construcciones y parques.",
+        estancias_title: "Estancias:",
+        estancias_header: "Nuestras Estancias",
+        estancias_no_link: "Sin ficha disponible",
+        estancias_list: [
+            "1) Fortin Yunca 21,000 hectáreas",
+            "2) Cacuy: 500 hectáreas",
+            "3) Federacion: 1,420 hectáreas",
+            "4) Gallo Blanco: 1,600 hectáreas",
+            "5) Las Lantanas 1,090 hectáreas",
+            "6) La Loli: 1,055 hectáreas",
+            "7) Campo Alegre: 1,061 hectáreas",
+            "8) Urbana grande: 190 hectáreas",
+            "9) El Tucan y Ex Romero 115 hectáreas",
+            "10) El Yarara: 1,500 hectáreas",
+            "11) Agua Norte 5,250 hectáreas",
+            "12) Campo Lindo: 2,000 hectáreas",
+            "13) Agua Dulce: 6,000 hectáreas"
+        ]
     },
     
     en: {
@@ -285,7 +315,167 @@ const translations = {
         
         // Mobile Notice
         mobile_notice_title: "📱 Optimized Experience",
-        mobile_notice_text: "For better visualization of images, maps and detailed information about Caminos Ganadera, we recommend accessing from a computer."
+        mobile_notice_text: "For better visualization of images, maps and detailed information about Caminos Ganadera, we recommend accessing from a computer.",
+        
+        // Main Content
+        main_title: "CAMINOS GANADERA",
+        subtitle: "FORMOSA PROVINCE ESTANCIAS IN ARGENTINA",
+        main_description: "PRODUCERS OF THE BEST BRAFORD, BRANGUS, AND BRAHMA BREEDS RAISED IN THE NORTH OF ARGENTINA AND IN THE SUBTROPICAL PROVINCE OF FORMOSA.",
+        about_text: "Caminos Ganadera is an agricultural and cattle complex of over 44,000 hectares (or 109,000 acres), consisting of more than 12 contiguous estancias, with its local management and administration headquarters currently at Estancia Yarara. Formosa. Central office in Buenos Aires. All are located in the north-central part of Formosa, in the Patiño department. It is an extraordinarily productive cattle area due to its subtropical climate with very short and mild winters. Our animals are known for fetching the best prices in Northern Argentina at fairs and auctions.",
+        facilities_text: "Excellent various cattle facilities made of \"quebracho.\" Significant own production of quebracho Colorado, Algarrobo, Palo blanco, etc.",
+        pastures_title: "PASTURES",
+        pastures_text: "High-quality subtropical pastures of Gatton Panic, Dichanthium, Pangola, Tangola grass, extensive areas of Tanzania, and Rhodes Grass, etc., alongside vast natural pastures such as Pasto Estrella, etc. Over 5,000 hectares suitable for corn, soybeans, sorghum, and several thousand more acres of land with clear agricultural potential, etc.",
+        infrastructure_title: "INFRASTRUCTURE",
+        infrastructure_text: "Excellent fences and well-maintained wire enclosures; multiple windmills and solar-powered systems functioning with their tanks and reservoirs at each estancia. Solar panels in remote posts with charging systems for company mobile phones. STARLINK internet connection in several of the estancias. Fully equipped barns, silos, and multiple pens, strategically located.",
+        infrastructure_text2: "Most of the estancias are on pavement with internet access via local providers and Starlink. Central office in Formosa at one of the estancias (El Yarara) and Accounting offices in Buenos Aires. Three significant \"patronal\" estates with grand buildings and parks.",
+        rain_info: "Rain average 800 to 1000 mm annually",
+        estancias_title: "Estancias:",
+        estancias_header: "Our Estancias",
+        estancias_no_link: "No file available",
+        videos_title: "🎬 Videos of Our Estancias",
+        videos_description: "Discover our estancias through videos that show daily activities, livestock, facilities and the natural beauty of each property.",
+        estancias_list: [
+            "1) Fortin Yunca 21,000 hectares",
+            "2) Cacuy: 500 hectares",
+            "3) Federacion: 1,420 hectares",
+            "4) Gallo Blanco: 1,600 hectares",
+            "5) Las Lantanas 1,090 hectares",
+            "6) La Loli: 1,055 hectares",
+            "7) Campo Alegre: 1,061 hectares",
+            "8) Urbana grande: 190 hectares",
+            "9) El Tucan and Ex Romero 115 hectares",
+            "10) El Yarara: 1,500 hectares",
+            "11) Agua Norte 5,250 hectares",
+            "12) Campo Lindo: 2,000 hectares",
+            "13) Agua Dulce: 6,000 hectares"
+        ]
+    },
+    
+    pt: {
+        // Header
+        contact: "Contato",
+        
+        // Hero Section
+        hero_title: "Produtividade, escala e visão",
+        hero_subtitle: "Na Argentina",
+        
+        // Navigation
+        info: "📍 Informação",
+        production: "🌿 Produção",
+        infrastructure: "🏗️ Infraestrutura",
+        map: "🗺️ Mapa",
+        gallery: "📸 Galeria",
+        
+        // Production Section
+        production_activities: "Atividades de Produção",
+        cattle_breeding: "Criação de gado",
+        cattle_fattening: "Engorda de gado",
+        agricultural_production: "Produção agrícola",
+        mixed_farming: "Agricultura mista",
+        production_capacity: "Capacidade de Produção",
+        production_description: "Esta propriedade tem a capacidade de desenvolver atividades pecuárias e agrícolas de forma integrada, aproveitando as {surface} hectares disponíveis para maximizar a produção e rentabilidade.",
+        
+        // Infrastructure Section
+        infrastructure_features: "Características da Infraestrutura",
+        main_house: "Casa principal",
+        corrals: "Currais de trabalho",
+        water_systems: "Sistemas de água",
+        access_roads: "Estradas de acesso",
+        infrastructure_quality: "Qualidade da Infraestrutura",
+        infrastructure_description: "A infraestrutura desta propriedade é projetada para operações eficientes, com instalações modernas que permitem o desenvolvimento de atividades agrícolas de alto desempenho.",
+        
+        // Main Content
+        general_info: "📍 Informação Geral",
+        main_characteristics: "Características Principais",
+        total_surface: "Superfície total",
+        location: "Localização",
+        main_use: "Uso principal",
+        institutional_description: "Descrição Institucional",
+        institutional_description_text: "{estancia} é uma propriedade proeminente estrategicamente localizada na província de Formosa. Com {surface} hectares operacionais, representa uma oportunidade única para produção agrícola na província de Formosa.",
+        
+        // Map Section
+        operational_map: "🗺️ Mapa Operacional",
+        map_characteristics: "Características do Mapa",
+        distributed_infrastructure: "Infraestrutura estrategicamente distribuída",
+        organized_paddocks: "Piquetes organizados para rotação eficiente",
+        multiple_access: "Acesso de múltiplos pontos",
+        centralized_infrastructure: "Infraestrutura centralizada",
+        
+        // Gallery Section
+        multimedia_gallery: "📸 Galeria Multimídia",
+        featured_images: "Imagens Destacadas",
+        general_gallery: "Galeria Geral",
+        videos: "🎬 Vídeos",
+        
+        // Contact Section
+        interested_in: "Interessado em {estancia}?",
+        contact_info: "Informações de Contato",
+        contact_message: "Entre em contato para mais informações sobre esta propriedade",
+        send: "Enviar",
+        
+        // Form Fields
+        name: "Nome",
+        surname: "Sobrenome",
+        email: "Email",
+        phone: "Telefone",
+        message: "Mensagem sobre {estancia}...",
+        
+        // Footer
+        productivity_scale: "Produtividade, escala e visão territorial no coração de Formosa, Argentina.",
+        estancias: "Propriedades",
+        all_rights_reserved: "Todos os direitos reservados.",
+        
+        // Estancia specific
+        hectares: "hectares",
+        hectares_in_formosa: "hectares em Formosa",
+        is_an_estancia: "é uma propriedade localizada em Formosa, Argentina.",
+        hectares_dedicated_to: "hectares dedicados a",
+        interested_in_estancia: "Interessado em {estancia}?",
+        contact_for_info: "Entre em contato para mais informações sobre esta propriedade",
+        name_field: "Nome",
+        surname_field: "Sobrenome",
+        email_field: "Email",
+        phone_field: "Telefone",
+        estancia_interest: "Propriedade de interesse",
+        select_estancia: "Selecionar propriedade",
+        message_field: "Mensagem sobre {estancia}...",
+        
+        // Mobile Notice
+        mobile_notice_title: "📱 Experiência Otimizada",
+        mobile_notice_text: "Para uma melhor visualização de imagens, mapas e informações detalhadas sobre Caminos Ganadera, recomendamos acessar de um computador.",
+        
+        // Main Content
+        main_title: "CAMINOS GANADERA",
+        subtitle: "PROPRIEDADES FORMOSENSES NA ARGENTINA",
+        main_description: "PRODUTORES DOS MELHORES ANIMAIS DAS RAÇAS BRAFORD, BRANGUS E BRAHMÁ CRIADOS NO NORTE DA ARGENTINA E NA PROVÍNCIA SUBTROPICAL DE FORMOSA.",
+        about_text: "Caminos Ganadera é um complexo agrícola e pecuário de mais de 44.000 hectares (ou 109.000 acres), consistindo em mais de 12 propriedades contíguas, com sua sede de gestão e administração local atualmente na Estância Yarara. Formosa. Escritório central em Buenos Aires. Todas estão localizadas na parte centro-norte de Formosa, no departamento Patiño. É uma área pecuária extraordinariamente produtiva devido ao seu clima subtropical com invernos muito curtos e suaves. Nossos animais são conhecidos por obter os melhores preços no Norte da Argentina em feiras e leilões.",
+        facilities_text: "Excelentes instalações pecuárias variadas feitas de \"quebracho\". Produção própria significativa de quebracho Colorado, Algarrobo, Palo branco, etc.",
+        pastures_title: "PASTAGENS",
+        pastures_text: "Pastagens subtropicais de alta qualidade de Gatton Panic, Dichanthium, Pangola, capim Tangola, extensas áreas de Tanzânia e Capim Rhodes, etc., junto com vastas pastagens naturais como Capim Estrela, etc. Mais de 5.000 hectares adequados para milho, soja, sorgo, e vários milhares a mais de acres de terra com claro potencial agrícola, etc.",
+        infrastructure_title: "INFRAESTRUTURA",
+        infrastructure_text: "Excelentes cercas e cercas de arame bem mantidas; múltiplos moinhos de vento e sistemas movidos a energia solar funcionando com seus tanques e reservatórios em cada propriedade. Painéis solares em postos remotos com sistemas de carregamento para telefones celulares da empresa. Conexão de internet STARLINK em várias das propriedades. Celeiros, silos e múltiplos currais totalmente equipados, estrategicamente localizados.",
+        infrastructure_text2: "A maioria das propriedades está sobre pavimento com acesso à internet via provedores locais e Starlink. Escritório central em Formosa em uma das propriedades (El Yarara) e escritórios contábeis em Buenos Aires. Três propriedades \"patronais\" significativas com grandes construções e parques.",
+        rain_info: "Média de chuva 800 a 1000 mm anualmente",
+        estancias_title: "Propriedades:",
+        estancias_header: "Nossas Propriedades",
+        estancias_no_link: "Arquivo não disponível",
+        videos_title: "🎬 Vídeos de Nossas Propriedades",
+        videos_description: "Descubra nossas propriedades através de vídeos que mostram as atividades diárias, o gado, as instalações e a beleza natural de cada propriedade.",
+        estancias_list: [
+            "1) Fortin Yunca 21.000 hectares",
+            "2) Cacuy: 500 hectares",
+            "3) Federacion: 1.420 hectares",
+            "4) Gallo Blanco: 1.600 hectares",
+            "5) Las Lantanas 1.090 hectares",
+            "6) La Loli: 1.055 hectares",
+            "7) Campo Alegre: 1.061 hectares",
+            "8) Urbana grande: 190 hectares",
+            "9) El Tucan e Ex Romero 115 hectares",
+            "10) El Yarara: 1.500 hectares",
+            "11) Agua Norte 5.250 hectares",
+            "12) Campo Lindo: 2.000 hectares",
+            "13) Agua Dulce: 6.000 hectares"
+        ]
     }
 };
 
@@ -295,10 +485,10 @@ let currentLanguage = 'es';
 // Language configuration
 const languages = {
     es: { flag: '🇪🇸', name: 'Español' },
-    en: { flag: '🇺🇸', name: 'English' }
+    en: { flag: '🇺🇸', name: 'English' },
+    pt: { flag: '🇧🇷', name: 'Português' }
     // To add a new language, add it here:
     // fr: { flag: '🇫🇷', name: 'Français' },
-    // pt: { flag: '🇧🇷', name: 'Português' },
     // de: { flag: '🇩🇪', name: 'Deutsch' }
 };
 
