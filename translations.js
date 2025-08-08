@@ -7,6 +7,11 @@ const translations = {
         // Hero Section
         hero_title: "Productividad, escala y visión",
         hero_subtitle: "En Argentina",
+        hero_main_title: "ESTANCIAS FORMOSENAS",
+        hero_subtitle_new: "CAMINOS GANADERA",
+        hero_description_part1: "Productores de los mejores animales de razas Braford, Brangus y Brahmá criados",
+        hero_description_part2: "en el Norte de Argentina y en la provincia subtropical de Formosa.",
+        hero_cta: "Ver Nuestras Estancias",
         
         // Navigation
         info: "📍 Información",
@@ -181,6 +186,11 @@ const translations = {
         // Hero Section
         hero_title: "Productivity, scale and vision",
         hero_subtitle: "In Argentina",
+        hero_main_title: "FORMOSA ESTATES",
+        hero_subtitle_new: "CAMINOS GANADERA",
+        hero_description_part1: "Producers of the best Braford, Brangus and Brahma breed animals raised",
+        hero_description_part2: "in Northern Argentina and in the subtropical province of Formosa.",
+        hero_cta: "View Our Estates",
         
         // Navigation
         info: "📍 Information",
@@ -358,6 +368,11 @@ const translations = {
         // Hero Section
         hero_title: "Produtividade, escala e visão",
         hero_subtitle: "Na Argentina",
+        hero_main_title: "PROPRIEDADES FORMOSENSES",
+        hero_subtitle_new: "CAMINOS GANADERA",
+        hero_description_part1: "Produtores dos melhores animais das raças Braford, Brangus e Brahmá criados",
+        hero_description_part2: "no Norte da Argentina e na província subtropical de Formosa.",
+        hero_cta: "Ver Nossas Propriedades",
         
         // Navigation
         info: "📍 Informação",

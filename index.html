@@ -29,6 +29,10 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Fancybox for Lightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    
     <!-- Translations -->
     <script src="translations.js"></script>
     
@@ -332,24 +336,62 @@
         </div>
     </div>
 
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-green-600 via-green-700 to-green-800 overflow-hidden">
+        <!-- Background Images -->
+        <div class="absolute inset-0">
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full">
+                <!-- Left Image -->
+                <div class="relative h-64 md:h-full">
+                    <img src="introavenida.jpeg" alt="Avenida de entrada" class="w-full h-full object-cover">
+                </div>
+                <!-- Right Image -->
+                <div class="relative h-64 md:h-full">
+                    <img src="introcasa.jpg" alt="Casa principal" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Black Overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+        
+        <!-- Content Overlay -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <div class="text-center">
+                <!-- Main Title -->
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-6 drop-shadow-2xl leading-tight" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">
+                    <span data-translate="hero_main_title">ESTANCIAS FORMOSENAS</span>
+                </h1>
+                
+                <!-- Subtitle -->
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8" style="color: #fff67c; text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">
+                    <span data-translate="hero_subtitle_new">CAMINOS GANADERA</span>
+                </h2>
+                
+                <!-- Description -->
+                <div class="max-w-5xl mx-auto">
+                    <p class="text-base md:text-lg lg:text-xl text-white leading-relaxed font-normal" style="text-shadow: 2px 2px 6px rgba(0,0,0,0.8);">
+                        <span data-translate="hero_description_part1">Productores de los mejores animales de razas Braford, Brangus y Brahmá criados</span><br>
+                        <span data-translate="hero_description_part2">en el Norte de Argentina y en la provincia subtropical de Formosa.</span>
+                    </p>
+                </div>
+                
+                <!-- Call to Action -->
+                <div class="mt-12">
+                    <a href="#estancias" class="inline-flex items-center px-8 py-4 bg-white text-green-800 font-bold text-lg rounded-lg shadow-xl hover:bg-green-50 transition-all duration-300 transform hover:scale-105">
+                        <span data-translate="hero_cta">Ver Nuestras Estancias</span>
+                        <svg class="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Content -->
     <main class="py-12 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Main Title -->
-            <div class="text-center mb-16 bg-gradient-to-br from-green-600 via-green-700 to-green-800 rounded-2xl p-8 md:p-12 shadow-xl border-4 border-green-500">
-                <div class="max-w-5xl mx-auto">
-                    <h1 class="text-4xl md:text-6xl font-black text-white mb-4 drop-shadow-lg">
-                        <span data-translate="main_title">CAMINOS GANADERA:</span>
-                    </h1>
-                    <h2 class="text-2xl md:text-3xl font-bold text-green-100 mb-6 drop-shadow-md">
-                        <span data-translate="subtitle">ESTANCIAS FORMOSENAS:</span>
-                    </h2>
-                    <p class="text-lg md:text-xl text-white leading-relaxed max-w-4xl mx-auto font-semibold drop-shadow-md">
-                        <span data-translate="main_description">PRODUCTORES DE LOS MEJORES ANIMALES DE RAZAS BRAFORD, BRANGUS Y BRAHMÁ CRIADOS EN EL NORTE DE ARGENTINA Y EN LA PROVINCIA SUBTROPICAL DE FORMOSA.</span>
-                    </p>
-                </div>
-            </div>
-
             <!-- About Section -->
             <div class="prose prose-lg max-w-none mb-12">
                 <p class="text-gray-700 leading-relaxed mb-6">
@@ -372,8 +414,8 @@
             </div>
 
             <!-- Infrastructure Section -->
-            <div class="mb-12">
-                <h3 class="text-2xl font-bold text-green-800 mb-4">
+            <div class="mb-4">
+                <h3 class="text-3xl font-bold text-green-800 mb-4">
                     <span data-translate="infrastructure_title">INFRAESTRUCTURA</span>
                 </h3>
                 <p class="text-gray-700 leading-relaxed mb-4">
@@ -383,9 +425,23 @@
                     <span data-translate="infrastructure_text2">la mayoria de las estancias están sobre pavimento con acceso a internet via local providers and Starlink. Oficina central en Formosa en una de las estancias (El Yarara) y Estudio Contable en Buenos Aires. Tres cascos "patronales"importantes con hernias Construcciones y parques.</span>
                 </p>
             </div>
+        </div>
+    </main>
 
+    <!-- Image Carousel Section -->
+    <section class="py-4 bg-gray-50">
+        <div class="w-full overflow-hidden">
+            <div id="image-carousel" class="flex gap-4 transition-transform duration-1000 ease-in-out" style="width: max-content;">
+                <!-- Images will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Estancias List -->
-            <div class="mb-12">
+            <div id="estancias" class="mb-12">
                 <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
                     <div class="bg-black text-white px-6 py-4">
                         <h4 class="text-lg font-semibold text-center"><span data-translate="estancias_header">Nuestras Estancias</span></h4>
@@ -393,7 +449,7 @@
                     <div class="p-6">
                         <div id="estancias-list" class="space-y-4">
                             <!-- Estancias will be populated by JavaScript -->
-                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -1084,10 +1140,145 @@
             });
         });
         
+        // Image Carousel Functions
+        function getAllImages() {
+            const images = [
+                // Fortín Yunká
+                'media/fortinyunca/hero.jpg',
+                'media/fortinyunca/destacada.jpg',
+                'media/fortinyunca/destacada3.jpg',
+                'media/fortinyunca/destacada4.jpg',
+                'media/fortinyunca/destacada5.jpeg',
+                'media/fortinyunca/destacada6.jpeg',
+                'media/fortinyunca/destacada7.jpeg',
+                'media/fortinyunca/PRINCIPAL.jpg',
+                'media/fortinyunca/hero2.jpeg',
+                
+                // El Yarará
+                'media/elyarara/hero.jpg',
+                'media/elyarara/destacada.jpeg',
+                'media/elyarara/destacada6.jpeg',
+                'media/elyarara/destacada7.jpeg',
+                'media/elyarara/cascocasa/destacada.jpg',
+                'media/elyarara/cascocasa/destacada2.jpg',
+                'media/elyarara/cascocasa/destacada3.jpg',
+                'media/elyarara/cascocasa/destacada4.jpg',
+                
+                // La Federación
+                'media/federacion/hero.jpeg',
+                'media/federacion/destacada.jpeg',
+                'media/federacion/destacada2.jpeg',
+                'media/federacion/destacada3.jpeg',
+                'media/federacion/galloblanco/destacada.jpg',
+                
+                // Agua Dulce
+                'media/aguadulce/hero.jpg',
+                'media/aguadulce/destacada.jpeg',
+                'media/aguadulce/destacada2.jpeg',
+                'media/aguadulce/destacada3.jpeg',
+                'media/aguadulce/cascoaguadulce.jpeg',
+                'media/aguadulce/rianchoaguadulce/destacada4.jpg',
+                
+                // Campo Lindo
+                'media/campolindo/hero.jpg',
+                'media/campolindo/destacada.jpg',
+                'media/campolindo/destacada2.jpeg',
+                'media/campolindo/destacada3.jpg',
+                
+                // El Cacuy
+                'media/cucuy/hero.jpg',
+                'media/cucuy/destacada.jpg',
+                'media/cucuy/destacada2.jpg',
+                'media/cucuy/destacada3.jpg',
+                'media/cucuy/destacada4.jpg',
+                'media/cucuy/destacada5.jpeg',
+                
+                // Campo Alegre
+                'media/campoalegre/hero.jpg',
+                'media/campoalegre/destacada.jpeg',
+                'media/campoalegre/destacada2.jpeg',
+                'media/campoalegre/destacada3.jpeg',
+                
+                // La Loli
+                'media/laloli/hero.jpg',
+                'media/laloli/destacada.jpg',
+                'media/laloli/destacada2.jpeg',
+                'media/laloli/destacada4.jpeg',
+                'media/laloli/destacada5.jpeg',
+                'media/laloli/destacada6.jpeg',
+                
+                // Las Lantanas
+                'media/laslantana/hero1.jpeg',
+                'media/laslantana/destacada.jpg',
+                'media/laslantana/destacada4.jpeg',
+                'media/laslantana/destacada5.jpeg'
+            ];
+            return images;
+        }
+        
+        function initializeCarousel() {
+            const carousel = document.getElementById('image-carousel');
+            if (!carousel) return;
+            
+            const images = getAllImages();
+            // Shuffle images for random order
+            const shuffledImages = images.sort(() => Math.random() - 0.5);
+            
+            // Create a horizontal carousel with all images in a single row
+            shuffledImages.forEach(imageSrc => {
+                const imgDiv = document.createElement('div');
+                imgDiv.className = 'flex-shrink-0 w-32 h-24 md:w-40 md:h-32 p-2 relative z-10';
+                imgDiv.innerHTML = `
+                    <a href="${imageSrc}" data-fancybox="carousel" class="block w-full h-full cursor-pointer">
+                        <img src="${imageSrc}" alt="Estancia" class="w-full h-full object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    </a>
+                `;
+                carousel.appendChild(imgDiv);
+            });
+            
+            // Duplicate images for seamless loop
+            shuffledImages.forEach(imageSrc => {
+                const imgDiv = document.createElement('div');
+                imgDiv.className = 'flex-shrink-0 w-32 h-24 md:w-40 md:h-32 p-2 relative z-10';
+                imgDiv.innerHTML = `
+                    <a href="${imageSrc}" data-fancybox="carousel" class="block w-full h-full cursor-pointer">
+                        <img src="${imageSrc}" alt="Estancia" class="w-full h-full object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    </a>
+                `;
+                carousel.appendChild(imgDiv);
+            });
+            
+            // Auto-scroll animation with smooth continuous movement
+            let scrollPosition = 0;
+            const scrollSpeed = 0.8; // pixels per frame - slower speed
+            let animationId;
+            
+            function animateCarousel() {
+                scrollPosition += scrollSpeed;
+                
+                // Reset position when reaching the end
+                if (scrollPosition >= carousel.scrollWidth / 2) {
+                    scrollPosition = 0;
+                }
+                
+                carousel.style.transform = `translateX(-${scrollPosition}px)`;
+                animationId = requestAnimationFrame(animateCarousel);
+            }
+            
+            // Start animation immediately
+            animateCarousel();
+            
+            // Initialize Fancybox
+            Fancybox.bind("[data-fancybox]", {
+                // Your custom options
+            });
+        }
+        
         // Initialize UI
         updateLanguageUI();
         updateEstanciasList();
         updateVideosSection(); // Initialize the videos section
+        initializeCarousel(); // Initialize the carousel
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
