@@ -319,72 +319,28 @@
         </div>
     </header>
 
-    <!-- Mobile Notice -->
-    <div class="md:hidden bg-blue-50 border-b border-blue-200 py-3 px-4">
-        <div class="max-w-7xl mx-auto flex items-center justify-center">
-            <div class="flex items-center space-x-3 text-blue-800">
-                <div class="flex-shrink-0">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
-                    </svg>
-                </div>
-                <div class="text-sm">
-                    <div class="font-medium"><span data-translate="mobile_notice_title">📱 Experiencia Optimizada</span></div>
-                    <div class="text-blue-700"><span data-translate="mobile_notice_text">Para una mejor visualización de imágenes, planos e información detallada de Caminos Ganadera, te recomendamos acceder desde una computadora.</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-green-600 via-green-700 to-green-800 overflow-hidden">
-        <!-- Background Images -->
-        <div class="absolute inset-0">
-            <div class="grid grid-cols-1 md:grid-cols-2 h-full">
-                <!-- Left Image -->
-                <div class="relative h-64 md:h-full">
-                    <img src="introavenida.jpeg" alt="Avenida de entrada" class="w-full h-full object-cover">
-                </div>
-                <!-- Right Image -->
-                <div class="relative h-64 md:h-full">
-                    <img src="introcasa.jpg" alt="Casa principal" class="w-full h-full object-cover">
-                </div>
-            </div>
+    <section class="relative overflow-hidden">
+        <!-- Background Image -->
+        <div class="w-full h-80 md:h-[425px] lg:h-[510px] relative">
+            <img src="imagenes-homepage/entrada.jpeg" alt="Entrada de la estancia" class="w-full h-full object-cover">
         </div>
         
-        <!-- Black Overlay -->
-        <div class="absolute inset-0 bg-black/60"></div>
-        
-        <!-- Content Overlay -->
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-            <div class="text-center">
-                <!-- Main Title -->
-                <h1 class="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-6 drop-shadow-2xl leading-tight" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">
-                    <span data-translate="hero_main_title">ESTANCIAS FORMOSENAS</span>
+        <!-- Content below image -->
+        <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-black py-8 md:py-12" id="hero-content">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight" data-translate="hero_main_title">
+                    ESTANCIAS FORMOSENAS
                 </h1>
-                
-                <!-- Subtitle -->
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8" style="color: #fff67c; text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">
-                    <span data-translate="hero_subtitle_new">CAMINOS GANADERA</span>
+                <h2 class="text-xl md:text-3xl lg:text-4xl font-bold mb-6 text-[#fff67c]" data-translate="hero_subtitle_new">
+                    CAMINOS GANADERA
                 </h2>
-                
-                <!-- Description -->
-                <div class="max-w-5xl mx-auto">
-                    <p class="text-base md:text-lg lg:text-xl text-white leading-relaxed font-normal" style="text-shadow: 2px 2px 6px rgba(0,0,0,0.8);">
-                        <span data-translate="hero_description_part1">Productores de los mejores animales de razas Braford, Brangus y Brahmá criados</span><br>
-                        <span data-translate="hero_description_part2">en el Norte de Argentina y en la provincia subtropical de Formosa.</span>
-                    </p>
-                </div>
-                
-                <!-- Call to Action -->
-                <div class="mt-12">
-                    <a href="#estancias" class="inline-flex items-center px-8 py-4 bg-white text-green-800 font-bold text-lg rounded-lg shadow-xl hover:bg-green-50 transition-all duration-300 transform hover:scale-105">
-                        <span data-translate="hero_cta">Ver Nuestras Estancias</span>
-                        <svg class="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                        </svg>
-                    </a>
-                </div>
+                <p class="text-base md:text-lg lg:text-xl text-white max-w-4xl mx-auto leading-relaxed" data-translate="hero_description">
+                    Productores de los mejores animales de razas Braford, Brangus y Brahmá criados<br>
+                    en el Norte de Argentina y en la provincia subtropical de Formosa.
+                </p>
             </div>
         </div>
     </section>
@@ -461,12 +417,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    <span data-translate="videos_title">🎬 Videos de Nuestras Estancias</span>
+                    <span data-translate="videos_title">🎬 VIDEOS DE LAS ESTANCIAS</span>
                 </h2>
                 <div class="w-24 h-1 bg-green-600 mx-auto mb-8"></div>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    <span data-translate="videos_description">Descubre nuestras estancias a través de videos que muestran las actividades diarias, el ganado, las instalaciones y la belleza natural de cada propiedad.</span>
-                </p>
             </div>
             
             <div id="videos-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1143,75 +1096,22 @@
         // Image Carousel Functions
         function getAllImages() {
             const images = [
-                // Fortín Yunká
-                'media/fortinyunca/hero.jpg',
-                'media/fortinyunca/destacada.jpg',
-                'media/fortinyunca/destacada3.jpg',
-                'media/fortinyunca/destacada4.jpg',
-                'media/fortinyunca/destacada5.jpeg',
-                'media/fortinyunca/destacada6.jpeg',
-                'media/fortinyunca/destacada7.jpeg',
-                'media/fortinyunca/PRINCIPAL.jpg',
-                'media/fortinyunca/hero2.jpeg',
-                
-                // El Yarará
-                'media/elyarara/hero.jpg',
-                'media/elyarara/destacada.jpeg',
-                'media/elyarara/destacada6.jpeg',
-                'media/elyarara/destacada7.jpeg',
-                'media/elyarara/cascocasa/destacada.jpg',
-                'media/elyarara/cascocasa/destacada2.jpg',
-                'media/elyarara/cascocasa/destacada3.jpg',
-                'media/elyarara/cascocasa/destacada4.jpg',
-                
-                // La Federación
-                'media/federacion/hero.jpeg',
-                'media/federacion/destacada.jpeg',
-                'media/federacion/destacada2.jpeg',
-                'media/federacion/destacada3.jpeg',
-                'media/federacion/galloblanco/destacada.jpg',
-                
-                // Agua Dulce
-                'media/aguadulce/hero.jpg',
-                'media/aguadulce/destacada.jpeg',
-                'media/aguadulce/destacada2.jpeg',
-                'media/aguadulce/destacada3.jpeg',
-                'media/aguadulce/cascoaguadulce.jpeg',
-                'media/aguadulce/rianchoaguadulce/destacada4.jpg',
-                
-                // Campo Lindo
-                'media/campolindo/hero.jpg',
-                'media/campolindo/destacada.jpg',
-                'media/campolindo/destacada2.jpeg',
-                'media/campolindo/destacada3.jpg',
-                
-                // El Cacuy
-                'media/cucuy/hero.jpg',
-                'media/cucuy/destacada.jpg',
-                'media/cucuy/destacada2.jpg',
-                'media/cucuy/destacada3.jpg',
-                'media/cucuy/destacada4.jpg',
-                'media/cucuy/destacada5.jpeg',
-                
-                // Campo Alegre
-                'media/campoalegre/hero.jpg',
-                'media/campoalegre/destacada.jpeg',
-                'media/campoalegre/destacada2.jpeg',
-                'media/campoalegre/destacada3.jpeg',
-                
-                // La Loli
-                'media/laloli/hero.jpg',
-                'media/laloli/destacada.jpg',
-                'media/laloli/destacada2.jpeg',
-                'media/laloli/destacada4.jpeg',
-                'media/laloli/destacada5.jpeg',
-                'media/laloli/destacada6.jpeg',
-                
-                // Las Lantanas
-                'media/laslantana/hero1.jpeg',
-                'media/laslantana/destacada.jpg',
-                'media/laslantana/destacada4.jpeg',
-                'media/laslantana/destacada5.jpeg'
+                // Imágenes de la carpeta imagenes-homepage
+                'imagenes-homepage/entrada.jpeg',
+                'imagenes-homepage/casa.jpeg',
+                'imagenes-homepage/WhatsApp Image 2025-08-09 at 19.28.38.jpeg',
+                'imagenes-homepage/WhatsApp Image 2025-08-09 at 19.28.38 (1).jpeg',
+                'imagenes-homepage/WhatsApp Image 2025-08-09 at 19.28.38 (2).jpeg',
+                'imagenes-homepage/WhatsApp Image 2025-08-09 at 19.28.38 (3).jpeg',
+                'imagenes-homepage/WhatsApp Image 2025-08-09 at 19.28.38 (4).jpeg',
+                'imagenes-homepage/WhatsApp Image 2025-08-09 at 19.31.59.jpeg',
+                'imagenes-homepage/WhatsApp Image 2025-08-09 at 19.31.59 (2).jpeg',
+                'imagenes-homepage/WhatsApp Image 2025-08-09 at 19.31.59 (3).jpeg',
+                'imagenes-homepage/WhatsApp Image 2025-08-09 at 19.31.59 (4).jpeg',
+                'imagenes-homepage/WhatsApp Image 2025-08-09 at 19.31.59 (5).jpeg',
+                'imagenes-homepage/WhatsApp Image 2025-08-09 at 19.31.59 (6).jpeg',
+                'imagenes-homepage/WhatsApp Image 2025-08-09 at 19.45.33.jpeg',
+                'imagenes-homepage/WhatsApp Image 2025-08-09 at 19.45.33 (3).jpeg'
             ];
             return images;
         }

@@ -11,6 +11,7 @@ const translations = {
         hero_subtitle_new: "CAMINOS GANADERA",
         hero_description_part1: "Productores de los mejores animales de razas Braford, Brangus y Brahmá criados",
         hero_description_part2: "en el Norte de Argentina y en la provincia subtropical de Formosa.",
+        hero_description: "Productores de los mejores animales de razas Braford, Brangus y Brahmá criados en el Norte de Argentina y en la provincia subtropical de Formosa.",
         hero_cta: "Ver Nuestras Estancias",
         
         // Navigation
@@ -190,6 +191,7 @@ const translations = {
         hero_subtitle_new: "CAMINOS GANADERA",
         hero_description_part1: "Producers of the best Braford, Brangus and Brahma breed animals raised",
         hero_description_part2: "in Northern Argentina and in the subtropical province of Formosa.",
+        hero_description: "Producers of the best Braford, Brangus and Brahma breed animals raised in Northern Argentina and in the subtropical province of Formosa.",
         hero_cta: "View Our Estates",
         
         // Navigation
@@ -342,7 +344,7 @@ const translations = {
         estancias_title: "Estancias:",
         estancias_header: "Our Estancias",
         estancias_no_link: "No file available",
-        videos_title: "🎬 Videos of Our Estancias",
+        videos_title: "🎬 VIDEOS DE LAS ESTANCIAS",
         videos_description: "Discover our estancias through videos that show daily activities, livestock, facilities and the natural beauty of each property.",
         estancias_list: [
             "1) Fortin Yunca 21,000 hectares",
@@ -372,6 +374,7 @@ const translations = {
         hero_subtitle_new: "CAMINOS GANADERA",
         hero_description_part1: "Produtores dos melhores animais das raças Braford, Brangus e Brahmá criados",
         hero_description_part2: "no Norte da Argentina e na província subtropical de Formosa.",
+        hero_description: "Produtores dos melhores animais das raças Braford, Brangus e Brahmá criados no Norte da Argentina e na província subtropical de Formosa.",
         hero_cta: "Ver Nossas Propriedades",
         
         // Navigation
@@ -474,7 +477,7 @@ const translations = {
         estancias_title: "Propriedades:",
         estancias_header: "Nossas Propriedades",
         estancias_no_link: "Arquivo não disponível",
-        videos_title: "🎬 Vídeos de Nossas Propriedades",
+        videos_title: "🎬 VIDEOS DE LAS ESTANCIAS",
         videos_description: "Descubra nossas propriedades através de vídeos que mostram as atividades diárias, o gado, as instalações e a beleza natural de cada propriedade.",
         estancias_list: [
             "1) Fortin Yunca 21.000 hectares",
