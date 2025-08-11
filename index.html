@@ -1180,6 +1180,11 @@
         updateVideosSection(); // Initialize the videos section
         initializeCarousel(); // Initialize the carousel
         
+        // Initialize translations
+        if (typeof updatePageContent === 'function') {
+            updatePageContent();
+        }
+        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {

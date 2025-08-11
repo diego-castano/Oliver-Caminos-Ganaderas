@@ -163,6 +163,8 @@ const translations = {
         estancias_title: "Estancias:",
         estancias_header: "Nuestras Estancias",
         estancias_no_link: "Sin ficha disponible",
+        videos_title: "🎬 VIDEOS DE LAS ESTANCIAS",
+        videos_description: "Descubre nuestras estancias a través de videos que muestran las actividades diarias, el ganado, las instalaciones y la belleza natural de cada propiedad.",
         estancias_list: [
             "1) Fortin Yunca 21,000 hectáreas",
             "2) Cacuy: 500 hectáreas",
