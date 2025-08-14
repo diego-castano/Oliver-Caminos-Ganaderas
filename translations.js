@@ -163,6 +163,14 @@ const translations = {
         estancias_title: "Estancias:",
         estancias_header: "Nuestras Estancias",
         estancias_no_link: "Sin ficha disponible",
+        maps_coordinates_title: "🗺️ MAPAS Y COORDENADAS",
+        maps_coordinates_description: "Descubre la ubicación exacta y los planos de cada una de nuestras estancias. Todas las coordenadas están registradas en AFIP según la normativa vigente.",
+        coordinates_header: "Coordenadas GPS",
+        maps_header: "Planos de las Estancias",
+        maps_click_info: "💡 Haz clic en cualquier plano para verlo en pantalla completa",
+        coordinates_section_title: "🗺️ Coordenadas GPS",
+        coordinates_section_description: "Coordenadas oficiales registradas en AFIP según la normativa vigente",
+        coordinates_afip_note: "Todas las coordenadas están registradas en AFIP según la normativa vigente",
         videos_title: "🎬 VIDEOS DE LAS ESTANCIAS",
         videos_description: "Descubre nuestras estancias a través de videos que muestran las actividades diarias, el ganado, las instalaciones y la belleza natural de cada propiedad.",
         estancias_list: [
@@ -243,6 +251,16 @@ const translations = {
         featured_images: "Featured Images",
         general_gallery: "General Gallery",
         videos: "🎬 Videos",
+        
+        // Maps and Coordinates Section
+        maps_coordinates_title: "🗺️ MAPS AND COORDINATES",
+        maps_coordinates_description: "Discover the exact location and plans of each of our estates. All coordinates are registered with AFIP according to current regulations.",
+        coordinates_header: "GPS Coordinates",
+        maps_header: "Estate Plans",
+        maps_click_info: "💡 Click on any plan to view it in full screen",
+        coordinates_section_title: "🗺️ GPS Coordinates",
+        coordinates_section_description: "Official coordinates registered with AFIP according to current regulations",
+        coordinates_afip_note: "All coordinates are registered with AFIP according to current regulations",
         
         // Contact Section
         interested_in: "Interested in {estancia}?",
@@ -479,6 +497,14 @@ const translations = {
         estancias_title: "Propriedades:",
         estancias_header: "Nossas Propriedades",
         estancias_no_link: "Arquivo não disponível",
+        maps_coordinates_title: "🗺️ MAPAS E COORDENADAS",
+        maps_coordinates_description: "Descubra a localização exata e os planos de cada uma de nossas propriedades. Todas as coordenadas estão registradas na AFIP de acordo com as regulamentações vigentes.",
+        coordinates_header: "Coordenadas GPS",
+        maps_header: "Planos das Propriedades",
+        maps_click_info: "💡 Clique em qualquer plano para vê-lo em tela cheia",
+        coordinates_section_title: "🗺️ Coordenadas GPS",
+        coordinates_section_description: "Coordenadas oficiais registradas na AFIP de acordo com as regulamentações vigentes",
+        coordinates_afip_note: "Todas as coordenadas estão registradas na AFIP de acordo com as regulamentações vigentes",
         videos_title: "🎬 VIDEOS DE LAS ESTANCIAS",
         videos_description: "Descubra nossas propriedades através de vídeos que mostram as atividades diárias, o gado, as instalações e a beleza natural de cada propriedade.",
         estancias_list: [
