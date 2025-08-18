@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../ico.png">
+    <title>Gallo Blanco | Estancia Ganadera 1.400 Ha - Formosa, Argentina</title>
+    <meta name="description" content="Gallo Blanco es una estancia ganadera de 1.400 hectáreas en Formosa, Argentina. Lindero con Federación y Lite 10, sobre Ruta 86 pavimentada, atravesado por el Riacho Porteño con excelentes pasturas subtropicales.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://caminosganadera.com/estancias/gallo-blanco.html">
+    <meta property="og:title" content="Gallo Blanco | Estancia Ganadera 1.400 Ha - Formosa, Argentina">
+    <meta property="og:description" content="Gallo Blanco es una estancia ganadera de 1.400 hectáreas en Formosa, Argentina. Lindero con Federación y Lite 10, sobre Ruta 86 pavimentada, atravesado por el Riacho Porteño con excelentes pasturas subtropicales.">
+    <meta property="og:image" content="https://caminosganadera.com/media/galloblanco/destacada1.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://caminosganadera.com/estancias/gallo-blanco.html">
+    <meta property="twitter:title" content="Gallo Blanco | Estancia Ganadera 1.400 Ha - Formosa, Argentina">
+    <meta property="twitter:description" content="Gallo Blanco es una estancia ganadera de 1.400 hectáreas en Formosa, Argentina. Lindero con Federación y Lite 10, sobre Ruta 86 pavimentada, atravesado por el Riacho Porteño con excelentes pasturas subtropicales.">
+    <meta property="twitter:image" content="https://caminosganadera.com/media/galloblanco/destacada1.jpeg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    
+    <!-- Translations -->
+    <script src="../translations.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f4c3a 0%, #1a5f3c 50%, #2d7a4f 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #0f4c3a 0%, #1a5f3c 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #1a5f3c 0%, #2d7a4f 100%);
+            transform: translateY(-2px);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        }
+        
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .text-high-contrast {
+            color: #1a202c !important;
+        }
+        
+        /* Mobile navigation improvements */
+        @media (max-width: 640px) {
+            .nav-link {
+                padding: 0.75rem 1rem;
+                margin: 0.25rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex items-center">
+                        <img src="../branding/logo.jpg" alt="Oliver Caminos Ganaderas" class="h-8 w-auto object-contain">
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                                    <a href="../index.html" class="nav-link text-gray-700 hover:text-green-600 transition-colors">Inicio</a>
+                <a href="../index.html#estancias" class="nav-link text-gray-700 hover:text-green-600 transition-colors">Estancias</a>
+                    <a href="../index.html#contact" class="nav-link text-gray-700 hover:text-green-600 transition-colors">Contacto</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-green-600">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="../index.html" class="nav-link block text-gray-700 hover:text-green-600 transition-colors">Inicio</a>
+                    <a href="../index.html#estancias" class="nav-link block text-gray-700 hover:text-green-600 transition-colors">Estancias</a>
+                    <a href="../index.html#contact" class="nav-link block text-gray-700 hover:text-green-600 transition-colors">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Hero Section -->
+        <section class="mb-16">
+            <div class="hero-gradient rounded-2xl overflow-hidden shadow-xl">
+                <div class="relative h-96 md:h-[500px]">
+                    <img src="../media/galloblanco/destacada1.jpeg" alt="Gallo Blanco - Estancia Ganadera" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-shadow">
+                                Gallo Blanco
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-6 text-shadow max-w-3xl mx-auto">
+                                Estancia Ganadera de 1.400 hectáreas en Formosa, Argentina
+                            </p>
+                            <div class="flex flex-wrap justify-center gap-4 text-lg">
+                                                <span class="bg-green-600 bg-opacity-80 px-4 py-2 rounded-full">Ruta 86 pavimentada</span>
+                <span class="bg-green-600 bg-opacity-80 px-4 py-2 rounded-full">Riacho Porteño</span>
+                <span class="bg-green-600 bg-opacity-80 px-4 py-2 rounded-full">Pasturas subtropicales</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="mb-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Superficie</h3>
+                    <p class="text-2xl font-bold text-green-600">1.400 ha</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Ubicación</h3>
+                    <p class="text-lg text-gray-700">Ruta 86 pavimentada</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Agua</h3>
+                    <p class="text-lg text-gray-700">Riacho Porteño</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Pasturas</h3>
+                    <p class="text-lg text-gray-700">Subtropicales</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Description -->
+        <section class="mb-16">
+            <div class="bg-white rounded-lg shadow-sm p-8 border border-gray-200">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Descripción de la Estancia</h2>
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-gray-700 mb-4">
+                        <strong>Gallo Blanco</strong> es una estancia ganadera de <strong>1.400 hectáreas</strong> ubicada estratégicamente en Formosa, Argentina. 
+                        Esta propiedad se destaca por su excelente ubicación y características naturales únicas.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mt-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4 border-b border-gray-300 pb-2">Ubicación Estratégica</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li>• Lindero con <strong>Federación</strong> y <strong>Lite 10</strong></li>
+                                <li>• Sobre <strong>Ruta 86 pavimentada</strong></li>
+                                <li>• Acceso directo y fácil comunicación</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4 border-b border-gray-300 pb-2">Recursos Hídricos</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li>• Atravesado por el <strong>Riacho Porteño</strong></li>
+                                <li>• Múltiples <strong>represas</strong> y <strong>tanques australianos</strong></li>
+                                <li>• Excelente disponibilidad de agua todo el año</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mt-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4 border-b border-gray-300 pb-2">Características del Campo</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li>• <strong>Excelentes pasturas subtropicales</strong></li>
+                                <li>• <strong>Buen apotreramiento</strong></li>
+                                <li>• Campo limpio y bien mantenido</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4 border-b border-gray-300 pb-2">Infraestructura</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li>• <strong>Puesto de trabajo para encargado</strong></li>
+                                <li>• Instalaciones funcionales</li>
+                                <li>• <strong>Potencialmente agrícola en un 70%</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="mb-16">
+            <div class="bg-white rounded-lg shadow-sm p-8 border border-gray-200">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-green-600 pb-2">Plano de la Estancia</h2>
+                <div class="text-center">
+                    <a href="../media/galloblanco/plano.jpg" data-fancybox="plano-gallo-blanco" data-caption="Plano Gallo Blanco">
+                        <img src="../media/galloblanco/plano.jpg" alt="Plano Gallo Blanco" class="max-w-full h-auto rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity" loading="lazy">
+                    </a>
+                    <p class="text-gray-600 mt-4">Haz clic en la imagen para ver el plano en pantalla completa</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soil Analysis Section -->
+        <section class="mb-16">
+            <div class="bg-white rounded-lg shadow-sm p-8 border border-gray-200">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-green-600 pb-2"><span data-translate="soil_analysis_individual_title">Análisis de Suelos</span></h2>
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-gray-700 mb-6">
+                        <span data-translate="gallo_blanco_soil_intro">Gallo Blanco presenta una variedad de tipos de suelos según el estudio realizado por el Ing. Heitor Gabohao Pino en marzo de 2006. 
+                        La estancia cuenta con diferentes ambientes que permiten una gestión integral agroganadera.</span>
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mt-8">
+                        <div class="bg-green-50 rounded-lg p-6 border border-green-200">
+                            <h4 class="text-lg font-semibold text-green-800 mb-3 border-b border-green-300 pb-2">Suelos de Alta Aptitud (Tipo 1)</h4>
+                            <p class="text-gray-700 text-sm">
+                                Terrenos altos en posición de loma, bien drenados, con capa superficial fértil de 36 cm. 
+                                <strong>Capacidad de Uso: II o III</strong> - Excelente para agricultura y pasturas de alta producción.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-orange-50 rounded-lg p-6 border border-orange-200">
+                            <h4 class="text-lg font-semibold text-orange-800 mb-3 border-b border-orange-300 pb-2">Suelos para Pasturas (Tipo 4)</h4>
+                            <p class="text-gray-700 text-sm">
+                                Antiguo monte quebrachal desmontado con excelente implantación de Gatton Panic. 
+                                <strong>Capacidad de Uso: V sw</strong> - Ideal para ganadería con pasturas implantadas.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-3 border-b border-gray-300 pb-2"><span data-translate="gallo_blanco_recommendations_title">Recomendaciones para Gallo Blanco</span></h4>
+                        <div class="space-y-2 text-gray-700 text-sm">
+                            <p><strong><span data-translate="gallo_blanco_rec_1">• Zonas altas: Máximo aprovechamiento agrícola y pasturas de alta producción</span></strong></p>
+                            <p><strong><span data-translate="gallo_blanco_rec_2">• Áreas desmontadas: Excelente para ganadería con pasturas implantadas</span></strong></p>
+                            <p><strong><span data-translate="gallo_blanco_rec_3">• Potencial agrícola: 70% de la superficie con aptitud para agricultura</span></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería -->
+        <section id="galeria" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 border-b-2 border-green-600 pb-2">
+                    <span data-translate="multimedia_gallery">Galería Multimedia</span>
+                </h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-6"><span data-translate="featured_images">Imágenes Destacadas</span></h3>
+                <div id="gallery-destacada" class="gallery-grid">
+                    <a href="../media/galloblanco/destacada1.jpeg" data-fancybox="destacada-gallo-blanco" data-caption="Gallo Blanco - Imagen Destacada"><img src="../media/galloblanco/destacada1.jpeg" alt="Gallo Blanco - Destacada" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/destacada2.jpeg" data-fancybox="destacada-gallo-blanco" data-caption="Gallo Blanco - Imagen Destacada"><img src="../media/galloblanco/destacada2.jpeg" alt="Gallo Blanco - Destacada" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/destacada3.jpeg" data-fancybox="destacada-gallo-blanco" data-caption="Gallo Blanco - Imagen Destacada"><img src="../media/galloblanco/destacada3.jpeg" alt="Gallo Blanco - Destacada" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                </div>
+            </div>
+        
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-6"><span data-translate="general_gallery">Galería General</span></h3>
+                <div id="gallery-general" class="gallery-grid">
+
+                    <a href="../media/galloblanco/PHOTO-2025-08-10-18-49-32.jpg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/PHOTO-2025-08-10-18-49-32.jpg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/PHOTO-2025-08-10-18-53-20.jpg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/PHOTO-2025-08-10-18-53-20.jpg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/PHOTO-2025-08-10-18-56-31.jpg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/PHOTO-2025-08-10-18-56-31.jpg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/PHOTO-2025-08-10-18-56-31 2.jpg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/PHOTO-2025-08-10-18-56-31 2.jpg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/PHOTO-2025-08-10-18-56-31 3.jpg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/PHOTO-2025-08-10-18-56-31 3.jpg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/PHOTO-2025-08-10-18-56-31 4.jpg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/PHOTO-2025-08-10-18-56-31 4.jpg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/PHOTO-2025-08-10-19-08-36.jpg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/PHOTO-2025-08-10-19-08-36.jpg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/PHOTO-2025-08-10-19-11-58.jpg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/PHOTO-2025-08-10-19-11-58.jpg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/PHOTO-2025-08-10-19-14-51.jpg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/PHOTO-2025-08-10-19-14-51.jpg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/WhatsApp Image 2025-08-10 at 19.11.58 (1).jpeg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/WhatsApp Image 2025-08-10 at 19.11.58 (1).jpeg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/WhatsApp Image 2025-08-10 at 19.11.58 (2).jpeg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/WhatsApp Image 2025-08-10 at 19.11.58 (2).jpeg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/WhatsApp Image 2025-08-10 at 19.11.58 (3).jpeg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/WhatsApp Image 2025-08-10 at 19.11.58 (3).jpeg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/WhatsApp Image 2025-08-14 at 19.19.58.jpeg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/WhatsApp Image 2025-08-14 at 19.19.58.jpeg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/WhatsApp Image 2025-08-14 at 19.20.02.jpeg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/WhatsApp Image 2025-08-14 at 19.20.02.jpeg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/WhatsApp Image 2025-08-14 at 19.20.02 (1).jpeg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/WhatsApp Image 2025-08-14 at 19.20.02 (1).jpeg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/WhatsApp Image 2025-08-14 at 19.20.04.jpeg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/WhatsApp Image 2025-08-14 at 19.20.04.jpeg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                    <a href="../media/galloblanco/WhatsApp Image 2025-08-14 at 19.20.07.jpeg" data-fancybox="general-gallo-blanco" data-caption="Gallo Blanco - Galería"><img src="../media/galloblanco/WhatsApp Image 2025-08-14 at 19.20.07.jpeg" alt="Gallo Blanco - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+                </div>
+            </div>
+        
+            <div>
+                                    <h3 class="text-2xl font-semibold text-gray-900 mb-6 border-b border-gray-300 pb-2"><span data-translate="videos">Videos</span></h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+            <div class="video-container">
+                <video controls>
+                    <source src="../media/galloblanco/VIDEO-2025-08-10-18-04-22.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento video.
+                </video>
+            </div>
+
+            <div class="video-container">
+                <video controls>
+                    <source src="../media/galloblanco/VIDEO-2025-08-10-18-52-51.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento video.
+                </video>
+            </div>
+
+            <div class="video-container">
+                <video controls>
+                    <source src="../media/galloblanco/VIDEO-2025-08-10-19-20-29.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento video.
+                </video>
+            </div>
+
+            <div class="video-container">
+                <video controls>
+                    <source src="../media/galloblanco/VIDEO-2025-08-10-19-20-29 2.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento video.
+                </video>
+            </div>
+
+            <div class="video-container">
+                <video controls>
+                    <source src="../media/galloblanco/WhatsApp Video 2025-08-14 at 19.20.01.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento video.
+                </video>
+            </div>
+
+            <div class="video-container">
+                <video controls>
+                    <source src="../media/galloblanco/WhatsApp Video 2025-08-14 at 19.20.05.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento video.
+                </video>
+            </div>
+
+            <div class="video-container">
+                <video controls>
+                    <source src="../media/galloblanco/WhatsApp Video 2025-08-14 at 19.20.08.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento video.
+                </video>
+            </div>
+                </div>
+            </div>
+        
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white rounded-lg shadow-sm p-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    <span data-translate="interested_in_estancia" data-translate-params='{"estancia": "Gallo Blanco"}'>¿Interesado en Gallo Blanco?</span>
+                </h2>
+                <p class="text-lg text-gray-600">
+                    <span data-translate="contact_for_info">Contáctanos para más información sobre esta estancia</span>
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4"><span data-translate="contact_info_title">Información de Contacto</span></h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-gray-700">owcc@aol.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-gray-700">+1 (412) 417-6676</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form action="mailto:owcc@aol.com" method="post" enctype="text/plain" class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="text" name="nombre" data-translate-placeholder="name_field" placeholder="Nombre" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+                            <input type="text" name="apellido" data-translate-placeholder="surname_field" placeholder="Apellido" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="email" name="email" data-translate-placeholder="email_field" placeholder="Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+                            <input type="tel" name="telefono" data-translate-placeholder="phone_field" placeholder="Teléfono" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                        </div>
+                        <textarea name="mensaje" rows="4" data-translate-placeholder="message_field" data-translate-params='{"estancia": "Gallo Blanco"}' placeholder="Mensaje sobre Gallo Blanco..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"></textarea>
+                        <button type="submit" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold w-full">
+                            <span data-translate="send_button">Enviar</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="../branding/logo.jpg" alt="" class="h-6 sm:h-8 w-auto object-contain max-w-none">
+                        <span class="ml-3 text-lg font-semibold"></span>
+                    </div>
+                    <p class="text-gray-400">
+                        <span data-translate="productivity_scale_footer">Productividad, escala y visión territorial en el corazón de Formosa, Argentina.</span>
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+                    <div class="space-y-2 text-gray-400">
+                                        <p><a href="mailto:owcc@aol.com" class="hover:text-white transition-colors">owcc@aol.com</a></p>
+                <p><a href="tel:+14124176676" class="hover:text-white transition-colors">+1 (412) 417-6676</a></p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4"><span data-translate="estancias_footer">Estancias</span></h3>
+                    <div class="grid grid-cols-2 gap-2 text-sm text-gray-400">
+                        <a href="fortin-yunka.html" class="hover:text-white transition-colors">Fortín Yunká</a>
+                        <a href="el-yarara.html" class="hover:text-white transition-colors">El Yarará</a>
+                        <a href="la-federacion.html" class="hover:text-white transition-colors">La Federación</a>
+                        <a href="agua-dulce.html" class="hover:text-white transition-colors">Agua Dulce</a>
+                        <a href="campo-lindo.html" class="hover:text-white transition-colors">Campo Lindo</a>
+                        <a href="el-cacuy.html" class="hover:text-white transition-colors">El Cacuy</a>
+                        <a href="campo-alegre.html" class="hover:text-white transition-colors">Campo Alegre</a>
+                        <a href="la-loli.html" class="hover:text-white transition-colors">La Loli</a>
+                        <a href="las-lantanas.html" class="hover:text-white transition-colors">Las Lantanas</a>
+                        <a href="gallo-blanco.html" class="hover:text-white transition-colors">Gallo Blanco</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Oliver Caminos Ganaderas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    
+    <!-- Mobile menu script -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

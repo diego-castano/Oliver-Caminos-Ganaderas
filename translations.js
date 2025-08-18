@@ -15,10 +15,10 @@ const translations = {
         hero_cta: "Ver Nuestras Estancias",
         
         // Navigation
-        info: "📍 Información",
-        production: "🌿 Producción", 
-        infrastructure: "🏗️ Infraestructura",
-        map: "🗺️ Plano",
+                info: "Información",
+        production: "Producción",
+        infrastructure: "Infraestructura",
+        map: "Plano",
         gallery: "📸 Galería",
         
         // Production Section
@@ -40,7 +40,7 @@ const translations = {
         infrastructure_description: "La infraestructura de esta estancia está diseñada para operaciones eficientes, con instalaciones modernas que permiten el desarrollo de actividades agropecuarias de alto rendimiento.",
         
         // Main Content
-        general_info: "📍 Información General",
+        general_info: "Información General",
         main_characteristics: "Características Principales",
         total_surface: "Superficie total",
         location: "Ubicación",
@@ -49,7 +49,7 @@ const translations = {
         institutional_description_text: "{estancia} es una estancia destacada ubicada estratégicamente en la provincia de Formosa. Con {surface} hectáreas operativas, representa una oportunidad única para la producción agroganadera en la provincia de Formosa.",
         
         // Map Section
-        operational_map: "🗺️ Plano Operativo",
+        operational_map: "Plano Operativo",
         map_characteristics: "Características del Plano",
         distributed_infrastructure: "Infraestructura distribuida estratégicamente",
         organized_paddocks: "Potreros organizados para rotación eficiente",
@@ -60,7 +60,7 @@ const translations = {
         multimedia_gallery: "📸 Galería Multimedia",
         featured_images: "Imágenes Destacadas",
         general_gallery: "Galería General",
-        videos: "🎬 Videos",
+        videos: "Videos",
         
         // Contact Section
         interested_in: "¿Interesado en {estancia}?",
@@ -74,6 +74,78 @@ const translations = {
         email: "Email",
         phone: "Teléfono",
         message: "Mensaje sobre {estancia}...",
+        
+        // Soil Analysis Section
+        soil_analysis_title: "ANÁLISIS DE SUELOS",
+        soil_analysis_subtitle: "Estudio técnico realizado por el Ing. Heitor Gabohao Pino en marzo de 2006, analizando la composición y aptitud de los suelos de todas nuestras estancias",
+        soil_analysis_report_title: "INFORME ANÁLISIS SUELOS",
+        soil_analysis_intro_1: "Se realizó el recorrido de reconocimiento tomando puntos de referencia con GPS y con apoyo de imagen satelital y posteriormente se realizaron calicatas (pozos de alrededor de 1 m de profundidad) en los lugares considerados representativos de los paisajes.",
+        soil_analysis_intro_2: "La imagen computarizada de base es del satélite LANSAT 7, pancromática (escala de grises), de resolución de 15 metros de píxel (el doble de resolución de las usadas por INTA Saenz Peña), de fecha de 2 de octubre de 2001, apta para realizar mediciones de distancias y superficies.",
+        soil_analysis_intro_3: "Básicamente se pudieron diferenciar 4 ambientes o paisajes bien definidos, que representan 4 tipos de suelos que se marcan sobre la imagen con números: 1 - 2 - 3 y 4.",
+        
+        // Soil Types
+        soil_type_1_title: "1. ENTRADA",
+        soil_type_1_description: "Se trata de un terreno alto en posición de loma, bien drenado, sin ningún peligro de anegamiento, permeable.",
+        soil_type_1_capacity: "Capacidad de Uso: II o III (los mejores de la provincia)",
+        soil_type_1_aptitude: "Excelente para agricultura y pasturas de alta producción",
+        soil_type_1_characteristics: "36 cm de capa superficial fértil, estructura migajosa y granular",
+        
+        soil_type_2_title: "2. MONTE RALO BAJO CON GATTON PANIC",
+        soil_type_2_description: "Ubicado en posición de relieve de media loma baja con microrrelieves y depresiones que forman charcos en épocas lluviosas.",
+        soil_type_2_capacity: "Capacidad de Uso: VI sw (Clase 5)",
+        soil_type_2_aptitude: "Solo para pasturas adaptadas a sequías y anegamientos",
+        soil_type_2_recommended: "Gatton Panic, Tanzania, Dicantium, Grama Rhodes",
+        
+        soil_type_3_title: "3. PALEOCAUCE O RÍO MUERTO",
+        soil_type_3_description: "Se trata de antiguos cauces del Río Pilcomayo colmatados que presentan vegetación de pastizal de gramíneas y leguminosas.",
+        soil_type_3_capacity: "Capacidad de Uso: III w o IV w (Clase 3 o 4)",
+        soil_type_3_aptitude: "Medianamente apto para agricultura",
+        soil_type_3_limitation: "Peligro de excesos de humedad temporarios",
+        
+        soil_type_4_title: "4. ANTIGUO MONTE QUEBRACHAL",
+        soil_type_4_description: "Desmontado extensamente con muy buena implantación de Gatton Panic y cortinas de monte mediano de quebracho.",
+        soil_type_4_capacity: "Capacidad de Uso: V sw",
+        soil_type_4_aptitude: "Limitaciones moderadas para agricultura",
+        soil_type_4_recommended: "Implantación de pasturas y ganadería",
+        
+        // Conclusions
+        soil_conclusions_title: "Conclusiones y Recomendaciones",
+        soil_conclusion_1: "• Suelos Tipo 1: Máxima aptitud agrícola y para pasturas de alta producción",
+        soil_conclusion_2: "• Suelos Tipo 2: Mejor vocación ganadera con pasturas adaptadas a condiciones extremas",
+        soil_conclusion_3: "• Suelos Tipo 3: Apto para agricultura con manejo cuidadoso de la humedad",
+        soil_conclusion_4: "• Suelos Tipo 4: Excelente para ganadería con pasturas implantadas",
+        
+        // Individual Estancia Soil Analysis
+        soil_analysis_individual_title: "Análisis de Suelos",
+        soil_analysis_individual_intro: "presenta una variedad de tipos de suelos según el estudio realizado por el Ing. Heitor Gabohao Pino en marzo de 2006. La estancia cuenta con diferentes ambientes que permiten",
+        
+        // Fortin Yunka specific
+        fortin_yunka_soil_intro: "Fortín Yunká presenta una diversidad de tipos de suelos según el estudio realizado por el Ing. Heitor Gabohao Pino en marzo de 2006. La estancia cuenta con diferentes ambientes que van desde suelos de alta aptitud agrícola hasta áreas especializadas para ganadería.",
+        fortin_yunka_recommendations_title: "Recomendaciones para Fortín Yunká",
+        fortin_yunka_rec_1: "• Zonas altas: Máximo aprovechamiento agrícola y pasturas de alta producción",
+        fortin_yunka_rec_2: "• Paleocauces: Agricultura con manejo cuidadoso de la humedad",
+        fortin_yunka_rec_3: "• Gestión integral: Combinación de agricultura y ganadería según aptitud del suelo",
+        
+        // Gallo Blanco specific
+        gallo_blanco_soil_intro: "Gallo Blanco presenta una variedad de tipos de suelos según el estudio realizado por el Ing. Heitor Gabohao Pino en marzo de 2006. La estancia cuenta con diferentes ambientes que permiten una gestión integral agroganadera.",
+        gallo_blanco_recommendations_title: "Recomendaciones para Gallo Blanco",
+        gallo_blanco_rec_1: "• Zonas altas: Máximo aprovechamiento agrícola y pasturas de alta producción",
+        gallo_blanco_rec_2: "• Áreas desmontadas: Excelente para ganadería con pasturas implantadas",
+        gallo_blanco_rec_3: "• Potencial agrícola: 70% de la superficie con aptitud para agricultura",
+        
+        // El Tucan specific
+        el_tucan_soil_intro: "El Tucán presenta una variedad de tipos de suelos según el estudio realizado por el Ing. Heitor Gabohao Pino en marzo de 2006. La estancia cuenta con diferentes ambientes que permiten una gestión ganadera especializada.",
+        el_tucan_recommendations_title: "Recomendaciones para El Tucán",
+        el_tucan_rec_1: "• Zonas altas: Máximo aprovechamiento para pasturas de alta producción",
+        el_tucan_rec_2: "• Áreas con microrrelieves: Pasturas adaptadas a sequías y anegamientos",
+        el_tucan_rec_3: "• Gestión ganadera: Enfoque en ganadería intensiva con pasturas de calidad",
+        
+        // Las Lantanas specific
+        las_lantanas_soil_intro: "Las Lantanas presenta una variedad de tipos de suelos según el estudio realizado por el Ing. Heitor Gabohao Pino en marzo de 2006. La estancia cuenta con diferentes ambientes que permiten una gestión ganadera intensiva y eficiente.",
+        las_lantanas_recommendations_title: "Recomendaciones para Las Lantanas",
+        las_lantanas_rec_1: "• Zonas altas: Máximo aprovechamiento para pasturas de alta producción",
+        las_lantanas_rec_2: "• Áreas desmontadas: Excelente para ganadería intensiva con pasturas de calidad",
+        las_lantanas_rec_3: "• Campo limpio: Gestión eficiente para ganadería intensiva",
         
         // Footer
         productivity_scale: "Productividad, escala y visión territorial en el corazón de Formosa, Argentina.",
@@ -107,7 +179,7 @@ const translations = {
         estates: "Estancias",
         km_roads: "Km de caminos",
         operational: "Operativo",
-        our_proposal: "🌿 Nuestra propuesta",
+        our_proposal: "Nuestra propuesta",
         mixed_production: "🔹 Producción mixta de alto rendimiento",
         mixed_production_title: "Producción Mixta",
         mixed_production_desc: "Ciclo ganadero completo (cría, recría y engorde), con integración agrícola para autosustento o comercialización directa.",
@@ -119,7 +191,7 @@ const translations = {
         strategic_location_desc: "Frente a la Ruta Nacional 86 y la Ruta Provincial 23, con acceso inmediato a pueblos cercanos.",
         long_term_vision: "🔹 Visión de largo plazo",
         long_term_vision_desc: "Caminos Ganadera fue pensada como una plataforma territorial modular, con posibilidades de expansión, subdivisión operativa o explotación unificada. Ideal para fondos de inversión, productores, empresas del agro y esquemas asociativos.",
-        estancias_comprising: "🗺️ Las estancias que conforman Caminos Ganadera",
+        estancias_comprising: "Las estancias que conforman Caminos Ganadera",
         click_each: "Haz clic en cada una para acceder a su ficha completa, plano, fotos y descripción detallada:",
         multimedia_visualization: "📸 Multimedia y visualización",
         multimedia_items: [
@@ -163,15 +235,15 @@ const translations = {
         estancias_title: "Estancias:",
         estancias_header: "Nuestras Estancias",
         estancias_no_link: "Sin ficha disponible",
-        maps_coordinates_title: "🗺️ MAPAS Y COORDENADAS",
+        maps_coordinates_title: "MAPAS Y COORDENADAS",
         maps_coordinates_description: "Descubre la ubicación exacta y los planos de cada una de nuestras estancias. Todas las coordenadas están registradas en AFIP según la normativa vigente.",
         coordinates_header: "Coordenadas GPS",
         maps_header: "Planos de las Estancias",
-        maps_click_info: "💡 Haz clic en cualquier plano para verlo en pantalla completa",
-        coordinates_section_title: "🗺️ Coordenadas GPS",
+        maps_click_info: "Haz clic en cualquier plano para verlo en pantalla completa",
+        coordinates_section_title: "Coordenadas GPS",
         coordinates_section_description: "Coordenadas oficiales registradas en AFIP según la normativa vigente",
         coordinates_afip_note: "Todas las coordenadas están registradas en AFIP según la normativa vigente",
-        videos_title: "🎬 VIDEOS DE LAS ESTANCIAS",
+        videos_title: "VIDEOS DE LAS ESTANCIAS",
         videos_description: "Descubre nuestras estancias a través de videos que muestran las actividades diarias, el ganado, las instalaciones y la belleza natural de cada propiedad.",
         estancias_list: [
             "1) Fortin Yunca 21,000 hectáreas",
@@ -205,10 +277,10 @@ const translations = {
         hero_cta: "View Our Estates",
         
         // Navigation
-        info: "📍 Information",
-        production: "🌿 Production",
-                infrastructure: "🏗️ Infrastructure",
-        map: "🗺️ Map",
+                info: "Information",
+        production: "Production",
+        infrastructure: "Infrastructure",
+        map: "Map",
         gallery: "📸 Gallery",
         
         // Production Section
@@ -230,7 +302,7 @@ const translations = {
         infrastructure_description: "The infrastructure of this estate is designed for efficient operations, with modern facilities that allow the development of high-performance agricultural activities.",
         
         // Main Content
-        general_info: "📍 General Information",
+        general_info: "General Information",
         main_characteristics: "Main Characteristics",
         total_surface: "Total surface",
         location: "Location",
@@ -239,7 +311,7 @@ const translations = {
         institutional_description_text: "{estancia} is a prominent estate strategically located in the province of Formosa. With {surface} operational hectares, it represents a unique opportunity for agricultural production in the province of Formosa.",
         
         // Map Section
-        operational_map: "🗺️ Operational Map",
+        operational_map: "Operational Map",
         map_characteristics: "Map Characteristics",
         distributed_infrastructure: "Strategically distributed infrastructure",
         organized_paddocks: "Organized paddocks for efficient rotation",
@@ -250,15 +322,15 @@ const translations = {
         multimedia_gallery: "📸 Multimedia Gallery",
         featured_images: "Featured Images",
         general_gallery: "General Gallery",
-        videos: "🎬 Videos",
+        videos: "Videos",
         
         // Maps and Coordinates Section
-        maps_coordinates_title: "🗺️ MAPS AND COORDINATES",
+        maps_coordinates_title: "MAPS AND COORDINATES",
         maps_coordinates_description: "Discover the exact location and plans of each of our estates. All coordinates are registered with AFIP according to current regulations.",
         coordinates_header: "GPS Coordinates",
         maps_header: "Estate Plans",
-        maps_click_info: "💡 Click on any plan to view it in full screen",
-        coordinates_section_title: "🗺️ GPS Coordinates",
+        maps_click_info: "Click on any plan to view it in full screen",
+        coordinates_section_title: "GPS Coordinates",
         coordinates_section_description: "Official coordinates registered with AFIP according to current regulations",
         coordinates_afip_note: "All coordinates are registered with AFIP according to current regulations",
         
@@ -274,6 +346,78 @@ const translations = {
         email: "Email",
         phone: "Phone",
         message: "Message about {estancia}...",
+        
+        // Soil Analysis Section
+        soil_analysis_title: "SOIL ANALYSIS",
+        soil_analysis_subtitle: "Technical study conducted by Eng. Heitor Gabohao Pino in March 2006, analyzing the composition and suitability of soils from all our estates",
+        soil_analysis_report_title: "SOIL ANALYSIS REPORT",
+        soil_analysis_intro_1: "A reconnaissance tour was conducted taking GPS reference points with satellite image support and subsequently test pits (pits of approximately 1 m depth) were made in places considered representative of the landscapes.",
+        soil_analysis_intro_2: "The base computerized image is from LANDSAT 7 satellite, panchromatic (grayscale), with 15-meter pixel resolution (double the resolution used by INTA Saenz Peña), dated October 2, 2001, suitable for distance and surface measurements.",
+        soil_analysis_intro_3: "Basically, 4 well-defined environments or landscapes could be differentiated, representing 4 soil types marked on the image with numbers: 1 - 2 - 3 and 4.",
+        
+        // Soil Types
+        soil_type_1_title: "1. ENTRANCE",
+        soil_type_1_description: "This is high ground in ridge position, well-drained, with no risk of waterlogging, permeable.",
+        soil_type_1_capacity: "Use Capacity: II or III (the best in the province)",
+        soil_type_1_aptitude: "Excellent for agriculture and high-production pastures",
+        soil_type_1_characteristics: "36 cm fertile surface layer, crumbly and granular structure",
+        
+        soil_type_2_title: "2. SPARSE LOW FOREST WITH GATTON PANIC",
+        soil_type_2_description: "Located in medium-low ridge relief position with microreliefs and depressions that form puddles in rainy seasons.",
+        soil_type_2_capacity: "Use Capacity: VI sw (Class 5)",
+        soil_type_2_aptitude: "Only for pastures adapted to drought and waterlogging conditions",
+        soil_type_2_recommended: "Gatton Panic, Tanzania, Dicantium, Rhodes Grass",
+        
+        soil_type_3_title: "3. PALEOCAHNEL OR DEAD RIVER",
+        soil_type_3_description: "These are ancient Pilcomayo River channels filled with grassland vegetation of grasses and legumes.",
+        soil_type_3_capacity: "Use Capacity: III w or IV w (Class 3 or 4)",
+        soil_type_3_aptitude: "Moderately suitable for agriculture",
+        soil_type_3_limitation: "Risk of temporary excess moisture",
+        
+        soil_type_4_title: "4. OLD QUEBRACHO FOREST",
+        soil_type_4_description: "Extensively cleared with very good Gatton Panic implantation and medium quebracho forest curtains.",
+        soil_type_4_capacity: "Use Capacity: V sw",
+        soil_type_4_aptitude: "Moderate limitations for agriculture",
+        soil_type_4_recommended: "Pasture implantation and livestock",
+        
+        // Conclusions
+        soil_conclusions_title: "Conclusions and Recommendations",
+        soil_conclusion_1: "• Soil Type 1: Maximum agricultural suitability and for high-production pastures",
+        soil_conclusion_2: "• Soil Type 2: Better livestock vocation with pastures adapted to extreme conditions",
+        soil_conclusion_3: "• Soil Type 3: Suitable for agriculture with careful moisture management",
+        soil_conclusion_4: "• Soil Type 4: Excellent for livestock with implanted pastures",
+        
+        // Individual Estancia Soil Analysis
+        soil_analysis_individual_title: "Soil Analysis",
+        soil_analysis_individual_intro: "presents a variety of soil types according to the study conducted by Eng. Heitor Gabohao Pino in March 2006. The estate has different environments that allow",
+        
+        // Fortin Yunka specific
+        fortin_yunka_soil_intro: "Fortín Yunká presents a diversity of soil types according to the study conducted by Eng. Heitor Gabohao Pino in March 2006. The estate has different environments ranging from high agricultural suitability soils to specialized livestock areas.",
+        fortin_yunka_recommendations_title: "Recommendations for Fortín Yunká",
+        fortin_yunka_rec_1: "• High areas: Maximum agricultural use and high-production pastures",
+        fortin_yunka_rec_2: "• Paleochannels: Agriculture with careful moisture management",
+        fortin_yunka_rec_3: "• Integral management: Combination of agriculture and livestock according to soil suitability",
+        
+        // Gallo Blanco specific
+        gallo_blanco_soil_intro: "Gallo Blanco presents a variety of soil types according to the study conducted by Eng. Heitor Gabohao Pino in March 2006. The estate has different environments that allow integrated agricultural-livestock management.",
+        gallo_blanco_recommendations_title: "Recommendations for Gallo Blanco",
+        gallo_blanco_rec_1: "• High areas: Maximum agricultural use and high-production pastures",
+        gallo_blanco_rec_2: "• Cleared areas: Excellent for livestock with implanted pastures",
+        gallo_blanco_rec_3: "• Agricultural potential: 70% of the surface suitable for agriculture",
+        
+        // El Tucan specific
+        el_tucan_soil_intro: "El Tucán presents a variety of soil types according to the study conducted by Eng. Heitor Gabohao Pino in March 2006. The estate has different environments that allow specialized livestock management.",
+        el_tucan_recommendations_title: "Recommendations for El Tucán",
+        el_tucan_rec_1: "• High areas: Maximum use for high-production pastures",
+        el_tucan_rec_2: "• Areas with microreliefs: Pastures adapted to drought and waterlogging",
+        el_tucan_rec_3: "• Livestock management: Focus on intensive livestock with quality pastures",
+        
+        // Las Lantanas specific
+        las_lantanas_soil_intro: "Las Lantanas presents a variety of soil types according to the study conducted by Eng. Heitor Gabohao Pino in March 2006. The estate has different environments that allow intensive and efficient livestock management.",
+        las_lantanas_recommendations_title: "Recommendations for Las Lantanas",
+        las_lantanas_rec_1: "• High areas: Maximum use for high-production pastures",
+        las_lantanas_rec_2: "• Cleared areas: Excellent for intensive livestock with quality pastures",
+        las_lantanas_rec_3: "• Clean field: Efficient management for intensive livestock",
         
         // Footer
         productivity_scale: "Productivity, scale and territorial vision in the heart of Formosa, Argentina.",
@@ -307,7 +451,7 @@ const translations = {
         estates: "Estates",
         km_roads: "Km of roads",
         operational: "Operational",
-        our_proposal: "🌿 Our proposal",
+        our_proposal: "Our proposal",
         mixed_production: "🔹 High-performance mixed production",
         mixed_production_title: "Mixed Production",
         mixed_production_desc: "Complete livestock cycle (breeding, rearing and fattening), with agricultural integration for self-sufficiency or direct commercialization.",
@@ -319,7 +463,7 @@ const translations = {
         strategic_location_desc: "Facing National Route 86 and Provincial Route 23, with immediate access to nearby towns.",
         long_term_vision: "🔹 Long-term vision",
         long_term_vision_desc: "Caminos Ganadera was conceived as a modular territorial platform, with possibilities for expansion, operational subdivision or unified exploitation. Ideal for investment funds, producers, agribusiness companies and associative schemes.",
-        estancias_comprising: "🗺️ The estates that make up Caminos Ganadera",
+        estancias_comprising: "The estates that make up Caminos Ganadera",
         click_each: "Click on each one to access its complete file, map, photos and detailed description:",
         multimedia_visualization: "📸 Multimedia and visualization",
         multimedia_items: [
@@ -364,7 +508,7 @@ const translations = {
         estancias_title: "Estancias:",
         estancias_header: "Our Estancias",
         estancias_no_link: "No file available",
-        videos_title: "🎬 VIDEOS DE LAS ESTANCIAS",
+        videos_title: "VIDEOS DE LAS ESTANCIAS",
         videos_description: "Discover our estancias through videos that show daily activities, livestock, facilities and the natural beauty of each property.",
         estancias_list: [
             "1) Fortin Yunca 21,000 hectares",
@@ -398,10 +542,10 @@ const translations = {
         hero_cta: "Ver Nossas Propriedades",
         
         // Navigation
-        info: "📍 Informação",
-        production: "🌿 Produção",
-        infrastructure: "🏗️ Infraestrutura",
-        map: "🗺️ Mapa",
+        info: "Informação",
+        production: "Produção",
+        infrastructure: "Infraestrutura",
+        map: "Mapa",
         gallery: "📸 Galeria",
         
         // Production Section
@@ -423,7 +567,7 @@ const translations = {
         infrastructure_description: "A infraestrutura desta propriedade é projetada para operações eficientes, com instalações modernas que permitem o desenvolvimento de atividades agrícolas de alto desempenho.",
         
         // Main Content
-        general_info: "📍 Informação Geral",
+        general_info: "Informação Geral",
         main_characteristics: "Características Principais",
         total_surface: "Superfície total",
         location: "Localização",
@@ -432,7 +576,7 @@ const translations = {
         institutional_description_text: "{estancia} é uma propriedade proeminente estrategicamente localizada na província de Formosa. Com {surface} hectares operacionais, representa uma oportunidade única para produção agrícola na província de Formosa.",
         
         // Map Section
-        operational_map: "🗺️ Mapa Operacional",
+        operational_map: "Mapa Operacional",
         map_characteristics: "Características do Mapa",
         distributed_infrastructure: "Infraestrutura estrategicamente distribuída",
         organized_paddocks: "Piquetes organizados para rotação eficiente",
@@ -443,7 +587,7 @@ const translations = {
         multimedia_gallery: "📸 Galeria Multimídia",
         featured_images: "Imagens Destacadas",
         general_gallery: "Galeria Geral",
-        videos: "🎬 Vídeos",
+        videos: "Vídeos",
         
         // Contact Section
         interested_in: "Interessado em {estancia}?",
@@ -457,6 +601,78 @@ const translations = {
         email: "Email",
         phone: "Telefone",
         message: "Mensagem sobre {estancia}...",
+        
+        // Soil Analysis Section
+        soil_analysis_title: "ANÁLISE DE SOLOS",
+        soil_analysis_subtitle: "Estudo técnico realizado pelo Eng. Heitor Gabohao Pino em março de 2006, analisando a composição e aptidão dos solos de todas as nossas propriedades",
+        soil_analysis_report_title: "RELATÓRIO DE ANÁLISE DE SOLOS",
+        soil_analysis_intro_1: "Foi realizado um percurso de reconhecimento tomando pontos de referência com GPS e com apoio de imagem satelital e posteriormente foram realizadas calicatas (poços de aproximadamente 1 m de profundidade) nos lugares considerados representativos das paisagens.",
+        soil_analysis_intro_2: "A imagem computadorizada de base é do satélite LANDSAT 7, pancromática (escala de cinzas), com resolução de 15 metros de pixel (o dobro da resolução usada pelo INTA Saenz Peña), de data de 2 de outubro de 2001, apta para realizar medições de distâncias e superfícies.",
+        soil_analysis_intro_3: "Basicamente foram diferenciados 4 ambientes ou paisagens bem definidos, que representam 4 tipos de solos que se marcam sobre a imagem com números: 1 - 2 - 3 e 4.",
+        
+        // Soil Types
+        soil_type_1_title: "1. ENTRADA",
+        soil_type_1_description: "Trata-se de um terreno alto em posição de loma, bem drenado, sem nenhum perigo de alagamento, permeável.",
+        soil_type_1_capacity: "Capacidade de Uso: II ou III (os melhores da província)",
+        soil_type_1_aptitude: "Excelente para agricultura e pastagens de alta produção",
+        soil_type_1_characteristics: "36 cm de camada superficial fértil, estrutura migajosa e granular",
+        
+        soil_type_2_title: "2. MONTE RALO BAIXO COM GATTON PANIC",
+        soil_type_2_description: "Localizado em posição de relevo de meia loma baixa com microrelevos e depressões que formam poças em épocas chuvosas.",
+        soil_type_2_capacity: "Capacidade de Uso: VI sw (Classe 5)",
+        soil_type_2_aptitude: "Apenas para pastagens adaptadas a condições de seca e alagamento",
+        soil_type_2_recommended: "Gatton Panic, Tanzania, Dicantium, Grama Rhodes",
+        
+        soil_type_3_title: "3. PALEOCAUCE OU RIO MORTO",
+        soil_type_3_description: "Tratam-se de antigos canais do Rio Pilcomayo colmatados que apresentam vegetação de pastagem de gramíneas e leguminosas.",
+        soil_type_3_capacity: "Capacidade de Uso: III w ou IV w (Classe 3 ou 4)",
+        soil_type_3_aptitude: "Medianamente apto para agricultura",
+        soil_type_3_limitation: "Perigo de excessos de umidade temporários",
+        
+        soil_type_4_title: "4. ANTIGO MONTE QUEBRACHO",
+        soil_type_4_description: "Desmatado extensivamente com muito boa implantação de Gatton Panic e cortinas de monte médio de quebracho.",
+        soil_type_4_capacity: "Capacidade de Uso: V sw",
+        soil_type_4_aptitude: "Limitações moderadas para agricultura",
+        soil_type_4_recommended: "Implantação de pastagens e pecuária",
+        
+        // Conclusions
+        soil_conclusions_title: "Conclusões e Recomendações",
+        soil_conclusion_1: "• Solos Tipo 1: Máxima aptidão agrícola e para pastagens de alta produção",
+        soil_conclusion_2: "• Solos Tipo 2: Melhor vocação pecuária com pastagens adaptadas a condições extremas",
+        soil_conclusion_3: "• Solos Tipo 3: Apto para agricultura com manejo cuidadoso da umidade",
+        soil_conclusion_4: "• Solos Tipo 4: Excelente para pecuária com pastagens implantadas",
+        
+        // Individual Estancia Soil Analysis
+        soil_analysis_individual_title: "Análise de Solos",
+        soil_analysis_individual_intro: "apresenta uma variedade de tipos de solos segundo o estudo realizado pelo Eng. Heitor Gabohao Pino em março de 2006. A propriedade conta com diferentes ambientes que permitem",
+        
+        // Fortin Yunka specific
+        fortin_yunka_soil_intro: "Fortín Yunká apresenta uma diversidade de tipos de solos segundo o estudo realizado pelo Eng. Heitor Gabohao Pino em março de 2006. A propriedade conta com diferentes ambientes que vão desde solos de alta aptidão agrícola até áreas especializadas para pecuária.",
+        fortin_yunka_recommendations_title: "Recomendações para Fortín Yunká",
+        fortin_yunka_rec_1: "• Zonas altas: Máximo aproveitamento agrícola e pastagens de alta produção",
+        fortin_yunka_rec_2: "• Paleocanais: Agricultura com manejo cuidadoso da umidade",
+        fortin_yunka_rec_3: "• Gestão integral: Combinação de agricultura e pecuária segundo aptidão do solo",
+        
+        // Gallo Blanco specific
+        gallo_blanco_soil_intro: "Gallo Blanco apresenta uma variedade de tipos de solos segundo o estudo realizado pelo Eng. Heitor Gabohao Pino em março de 2006. A propriedade conta com diferentes ambientes que permitem uma gestão integral agropecuária.",
+        gallo_blanco_recommendations_title: "Recomendações para Gallo Blanco",
+        gallo_blanco_rec_1: "• Zonas altas: Máximo aproveitamento agrícola e pastagens de alta produção",
+        gallo_blanco_rec_2: "• Áreas desmatadas: Excelente para pecuária com pastagens implantadas",
+        gallo_blanco_rec_3: "• Potencial agrícola: 70% da superfície com aptidão para agricultura",
+        
+        // El Tucan specific
+        el_tucan_soil_intro: "El Tucán apresenta uma variedade de tipos de solos segundo o estudo realizado pelo Eng. Heitor Gabohao Pino em março de 2006. A propriedade conta com diferentes ambientes que permitem uma gestão pecuária especializada.",
+        el_tucan_recommendations_title: "Recomendações para El Tucán",
+        el_tucan_rec_1: "• Zonas altas: Máximo aproveitamento para pastagens de alta produção",
+        el_tucan_rec_2: "• Áreas com microrelevos: Pastagens adaptadas a secas e alagamentos",
+        el_tucan_rec_3: "• Gestão pecuária: Foco em pecuária intensiva com pastagens de qualidade",
+        
+        // Las Lantanas specific
+        las_lantanas_soil_intro: "Las Lantanas apresenta uma variedade de tipos de solos segundo o estudo realizado pelo Eng. Heitor Gabohao Pino em março de 2006. A propriedade conta com diferentes ambientes que permitem uma gestão pecuária intensiva e eficiente.",
+        las_lantanas_recommendations_title: "Recomendações para Las Lantanas",
+        las_lantanas_rec_1: "• Zonas altas: Máximo aproveitamento para pastagens de alta produção",
+        las_lantanas_rec_2: "• Áreas desmatadas: Excelente para pecuária intensiva com pastagens de qualidade",
+        las_lantanas_rec_3: "• Campo limpo: Gestão eficiente para pecuária intensiva",
         
         // Footer
         productivity_scale: "Produtividade, escala e visão territorial no coração de Formosa, Argentina.",
@@ -497,15 +713,15 @@ const translations = {
         estancias_title: "Propriedades:",
         estancias_header: "Nossas Propriedades",
         estancias_no_link: "Arquivo não disponível",
-        maps_coordinates_title: "🗺️ MAPAS E COORDENADAS",
+        maps_coordinates_title: "MAPAS E COORDENADAS",
         maps_coordinates_description: "Descubra a localização exata e os planos de cada uma de nossas propriedades. Todas as coordenadas estão registradas na AFIP de acordo com as regulamentações vigentes.",
         coordinates_header: "Coordenadas GPS",
         maps_header: "Planos das Propriedades",
-        maps_click_info: "💡 Clique em qualquer plano para vê-lo em tela cheia",
-        coordinates_section_title: "🗺️ Coordenadas GPS",
+        maps_click_info: "Clique em qualquer plano para vê-lo em tela cheia",
+        coordinates_section_title: "Coordenadas GPS",
         coordinates_section_description: "Coordenadas oficiais registradas na AFIP de acordo com as regulamentações vigentes",
         coordinates_afip_note: "Todas as coordenadas estão registradas na AFIP de acordo com as regulamentações vigentes",
-        videos_title: "🎬 VIDEOS DE LAS ESTANCIAS",
+        videos_title: "VIDEOS DE LAS ESTANCIAS",
         videos_description: "Descubra nossas propriedades através de vídeos que mostram as atividades diárias, o gado, as instalações e a beleza natural de cada propriedade.",
         estancias_list: [
             "1) Fortin Yunca 21.000 hectares",
