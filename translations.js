@@ -243,6 +243,7 @@ const translations = {
         coordinates_section_title: "Coordenadas GPS",
         coordinates_section_description: "Coordenadas oficiales registradas en AFIP según la normativa vigente",
         coordinates_afip_note: "Todas las coordenadas están registradas en AFIP según la normativa vigente",
+        estancias_general_info: "INFORMACIÓN GENERAL DE ESTANCIAS",
         videos_title: "VIDEOS DE LAS ESTANCIAS",
         videos_description: "Descubre nuestras estancias a través de videos que muestran las actividades diarias, el ganado, las instalaciones y la belleza natural de cada propiedad.",
         estancias_list: [
@@ -333,6 +334,7 @@ const translations = {
         coordinates_section_title: "GPS Coordinates",
         coordinates_section_description: "Official coordinates registered with AFIP according to current regulations",
         coordinates_afip_note: "All coordinates are registered with AFIP according to current regulations",
+        estancias_general_info: "GENERAL ESTATE INFORMATION",
         
         // Contact Section
         interested_in: "Interested in {estancia}?",
@@ -721,6 +723,7 @@ const translations = {
         coordinates_section_title: "Coordenadas GPS",
         coordinates_section_description: "Coordenadas oficiais registradas na AFIP de acordo com as regulamentações vigentes",
         coordinates_afip_note: "Todas as coordenadas estão registradas na AFIP de acordo com as regulamentações vigentes",
+        estancias_general_info: "INFORMAÇÃO GERAL DAS ESTÂNCIAS",
         videos_title: "VIDEOS DE LAS ESTANCIAS",
         videos_description: "Descubra nossas propriedades através de vídeos que mostram as atividades diárias, o gado, as instalações e a beleza natural de cada propriedade.",
         estancias_list: [

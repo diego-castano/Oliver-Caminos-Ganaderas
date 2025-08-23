@@ -76,17 +76,16 @@
         .video-container {
             position: relative;
             width: 100%;
-            height: 0;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: auto;
+            max-height: 400px;
         }
         
         .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            background-color: #000;
         }
         
         .text-high-contrast {
@@ -253,39 +252,27 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <!-- Información General -->
         <section id="informacion" class="mb-16">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 border-b-2 border-green-600 pb-2">
-                    <span data-translate="general_info">Información General</span>
-                </h2>
-                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
-            </div>
             
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center border-b-2 border-green-600 pb-2">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4 border-b border-gray-300 pb-2">
                             <span data-translate="main_characteristics">Características Principales</span>
                         </h3>
-                        <div class="space-y-6">
-                            <div class="feature-card flex items-center space-x-4 p-4 bg-green-50 rounded-lg border border-green-100">
-                                <div>
-                                    <p class="font-bold text-gray-900 text-lg"><span data-translate="total_surface">Superficie total</span></p>
-                                    <p class="text-green-700 font-semibold text-xl">20.600 hectáreas</p>
-                                </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between py-2 border-b border-gray-100">
+                                <span class="text-gray-700 font-medium"><span data-translate="total_surface">Superficie total</span></span>
+                                <span class="text-gray-900 font-semibold">20.600 hectáreas</span>
                             </div>
                             
-                            <div class="feature-card flex items-center space-x-4 p-4 bg-blue-50 rounded-lg border border-blue-100">
-                                <div>
-                                    <p class="font-bold text-gray-900 text-lg"><span data-translate="location">Ubicación</span></p>
-                                    <p class="text-blue-700 font-semibold">Ruta Nacional 86 pavimentada, Formosa, Argentina</p>
-                                </div>
+                            <div class="flex items-center justify-between py-2 border-b border-gray-100">
+                                <span class="text-gray-700 font-medium"><span data-translate="location">Ubicación</span></span>
+                                <span class="text-gray-900 font-semibold">Ruta Nacional 86 pavimentada, Formosa, Argentina</span>
                             </div>
                             
-                            <div class="feature-card flex items-center space-x-12 p-4 bg-orange-50 rounded-lg border border-orange-100">
-                                <div>
-                                    <p class="font-bold text-gray-900 text-lg"><span data-translate="main_use">Uso principal</span></p>
-                                    <p class="text-orange-700 font-semibold">Ganadería + agricultura, ciclo completo</p>
-                                </div>
+                            <div class="flex items-center justify-between py-2">
+                                <span class="text-gray-700 font-medium"><span data-translate="main_use">Uso principal</span></span>
+                                <span class="text-gray-900 font-semibold">Ganadería + agricultura, ciclo completo</span>
                             </div>
                         </div>
                     </div>
@@ -293,7 +280,7 @@
                 
                 <div>
                     <div class="bg-green-50 p-8 rounded-lg">
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-6"><span data-translate="institutional_description">Descripción Institucional</span></h3>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-6"><span data-translate="institutional_description">Descripción</span></h3>
                         <p class="text-gray-700 leading-relaxed">
                             <span data-translate="institutional_description_text" data-translate-params='{"estancia": "Fortín Yunká", "surface": "20.600"}'>Fortín Yunká es una estancia destacada ubicada estratégicamente 
                             en la provincia de Formosa. Con 20.600 hectáreas operativas, 
@@ -305,54 +292,33 @@
         </section>
 
         <!-- Coordenadas GPS -->
-        <section id="coordenadas" class="mb-16">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 border-b-2 border-green-600 pb-2">
+        <section id="coordenadas" class="mb-12">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3 border-b-2 border-green-600 pb-2">
                     <span data-translate="coordinates_section_title">Coordenadas GPS</span>
                 </h2>
-                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
-                    <span data-translate="coordinates_section_description">Coordenadas oficiales registradas en AFIP según la normativa vigente</span>
-                </p>
+                <div class="w-16 h-1 bg-green-600 mx-auto"></div>
             </div>
             
-            <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
-                <div class="text-center mb-6">
-                                            <h3 class="text-2xl font-bold text-gray-900 mb-2 border-b border-green-300 pb-2">Fortín Yunká</h3>
-                    <p class="text-gray-600">Coordenadas oficiales del campo</p>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 max-w-4xl mx-auto">
+                <div class="text-center mb-4">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Fortín Yunká</h3>
                 </div>
                 
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-green-50 p-6 rounded-lg border border-green-200">
-                        <div class="text-center">
-                            <h4 class="font-bold text-gray-900 mb-2">Punto 1</h4>
-                            <p class="text-sm text-gray-700 font-mono">24°35'20.67"S</p>
-                            <p class="text-sm text-gray-700 font-mono">59°09'27.88"W</p>
-                        </div>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between py-2 border-b border-gray-100">
+                        <span class="text-gray-700 font-medium">Punto 1</span>
+                        <span class="text-gray-900 font-mono text-sm">24°35'20.67"S, 59°09'27.88"W</span>
                     </div>
                     
-                    <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
-                        <div class="text-center">
-                            <h4 class="text-gray-900 mb-2">Punto 2</h4>
-                            <p class="text-sm text-gray-700 font-mono">24°37'43.61"S</p>
-                            <p class="text-sm text-gray-700 font-mono">59°09'27.52"W</p>
-                        </div>
+                    <div class="flex items-center justify-between py-2 border-b border-gray-100">
+                        <span class="text-gray-700 font-medium">Punto 2</span>
+                        <span class="text-gray-900 font-mono text-sm">24°37'43.61"S, 59°09'27.52"W</span>
                     </div>
                     
-                    <div class="bg-orange-50 p-6 rounded-lg border border-orange-200">
-                        <div class="text-center">
-                            <h4 class="font-bold text-gray-900 mb-2">Punto 3</h4>
-                            <p class="text-sm text-gray-700 font-mono">24°24'53.46"S</p>
-                            <p class="text-sm text-gray-700 font-mono">59°23'39.26"W</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                    <div class="flex items-center justify-center space-x-2">
-                        <p class="text-yellow-800 text-sm text-center">
-                            <span data-translate="coordinates_afip_note">Todas las coordenadas están registradas en AFIP según la normativa vigente</span>
-                        </p>
+                    <div class="flex items-center justify-between py-2">
+                        <span class="text-gray-700 font-medium">Punto 3</span>
+                        <span class="text-gray-900 font-mono text-sm">24°24'53.46"S, 59°23'39.26"W</span>
                     </div>
                 </div>
             </div>
@@ -490,45 +456,7 @@
         
         </section>
 
-        <!-- Soil Analysis Section -->
-        <section class="mb-16">
-            <div class="bg-white rounded-lg shadow-sm p-8 border border-gray-200">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-green-600 pb-2"><span data-translate="soil_analysis_individual_title">Análisis de Suelos</span></h2>
-                <div class="prose prose-lg max-w-none">
-                    <p class="text-gray-700 mb-6">
-                        <span data-translate="fortin_yunka_soil_intro">Fortín Yunká presenta una diversidad de tipos de suelos según el estudio realizado por el Ing. Heitor Gabohao Pino en marzo de 2006. 
-                        La estancia cuenta con diferentes ambientes que van desde suelos de alta aptitud agrícola hasta áreas especializadas para ganadería.</span>
-                    </p>
-                    
-                    <div class="grid md:grid-cols-2 gap-6 mt-8">
-                        <div class="bg-green-50 rounded-lg p-6 border border-green-200">
-                            <h4 class="text-lg font-semibold text-green-800 mb-3 border-b border-green-300 pb-2">Suelos de Alta Aptitud (Tipo 1)</h4>
-                            <p class="text-gray-700 text-sm">
-                                Terrenos altos en posición de loma, bien drenados, con capa superficial fértil de 36 cm. 
-                                <strong>Capacidad de Uso: II o III</strong> - Excelente para agricultura y pasturas de alta producción.
-                            </p>
-                        </div>
-                        
-                        <div class="bg-blue-50 rounded-lg p-6 border border-blue-200">
-                            <h4 class="text-lg font-semibold text-blue-800 mb-3 border-b border-blue-300 pb-2">Suelos Agrícolas (Tipo 3)</h4>
-                            <p class="text-gray-700 text-sm">
-                                Paleocauces del Río Pilcomayo con vegetación natural de gramíneas y leguminosas. 
-                                <strong>Capacidad de Uso: III w o IV w</strong> - Medianamente apto para agricultura.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
-                        <h4 class="text-lg font-semibold text-gray-900 mb-3 border-b border-gray-300 pb-2"><span data-translate="fortin_yunka_recommendations_title">Recomendaciones para Fortín Yunká</span></h4>
-                        <div class="space-y-2 text-gray-700 text-sm">
-                            <p><strong><span data-translate="fortin_yunka_rec_1">• Zonas altas: Máximo aprovechamiento agrícola y pasturas de alta producción</span></strong></p>
-                            <p><strong><span data-translate="fortin_yunka_rec_2">• Paleocauces: Agricultura con manejo cuidadoso de la humedad</span></strong></p>
-                            <p><strong><span data-translate="fortin_yunka_rec_3">• Gestión integral: Combinación de agricultura y ganadería según aptitud del suelo</span></strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- Galería -->
         <section id="galeria" class="mb-16">
@@ -562,17 +490,17 @@
 <a href="../media/fortinyunca/WhatsApp Image 2025-07-24 at 07.53.03.jpeg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/WhatsApp Image 2025-07-24 at 07.53.03.jpeg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
 <a href="../media/fortinyunca/11-3.jpg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/11-3.jpg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
 <a href="../media/fortinyunca/WhatsApp-Image-2023-06-25-at-11.47.50-1.jpeg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/WhatsApp-Image-2023-06-25-at-11.47.50-1.jpeg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
-<a href="../media/fortinyunca/WhatsApp-Image-2023-06-25-at-11.46.31.jpeg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/WhatsApp-Image-2023-06-25-at-11.46.31.jpeg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+
 <a href="../media/fortinyunca/32-2.jpg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/32-2.jpg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
 <a href="../media/elyarara/WhatsApp Image 2025-07-24 at 07.15.52 (1).jpeg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/elyarara/WhatsApp Image 2025-07-24 at 07.15.52 (1).jpeg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
 <a href="../media/fortinyunca/36-2.jpg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/36-2.jpg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
 
 <a href="../media/fortinyunca/WhatsApp Image 2025-07-24 at 07.45.42 (4).jpeg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/WhatsApp Image 2025-07-24 at 07.45.42 (4).jpeg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
 <a href="../media/fortinyunca/WhatsApp Image 2025-07-24 at 07.45.42 (6).jpeg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/WhatsApp Image 2025-07-24 at 07.45.42 (6).jpeg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
-<a href="../media/fortinyunca/WhatsApp-Image-2023-05-04-at-14.24.50-6.jpeg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/WhatsApp-Image-2023-05-04-at-14.24.50-6.jpeg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+
 <a href="../media/fortinyunca/PHOTO-2025-08-02-16-21-48.jpg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/PHOTO-2025-08-02-16-21-48.jpg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
 
-<a href="../media/fortinyunca/WhatsApp Image 2025-07-24 at 07.45.42 (2).jpeg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/WhatsApp Image 2025-07-24 at 07.45.42 (2).jpeg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+
 <a href="../media/fortinyunca/27-2.jpg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/27-2.jpg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
 <a href="../media/fortinyunca/41-2.jpg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/41-2.jpg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
 
@@ -603,7 +531,7 @@
 <a href="../media/fortinyunca/nuevas/WhatsApp Image 2025-08-10 at 19.17.41 (4).jpeg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/nuevas/WhatsApp Image 2025-08-10 at 19.17.41 (4).jpeg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
 
 <!-- Nuevas Imágenes de Feedback -->
-<a href="../media/fortinyunca/nuevas_feedback/WhatsApp Image 2025-08-14 at 18.51.50.jpeg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/nuevas_feedback/WhatsApp Image 2025-08-14 at 18.51.50.jpeg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+
 <a href="../media/fortinyunca/nuevas_feedback/WhatsApp Image 2025-08-14 at 18.51.50 (1).jpeg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/nuevas_feedback/WhatsApp Image 2025-08-14 at 18.51.50 (1).jpeg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
 <a href="../media/fortinyunca/nuevas_feedback/WhatsApp Image 2025-08-14 at 18.51.50 (2).jpeg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/nuevas_feedback/WhatsApp Image 2025-08-14 at 18.51.50 (2).jpeg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
 <a href="../media/fortinyunca/nuevas_feedback/WhatsApp Image 2025-08-14 at 18.51.49.jpeg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/nuevas_feedback/WhatsApp Image 2025-08-14 at 18.51.49.jpeg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
@@ -619,6 +547,9 @@
 
 <!-- Nueva Imagen -->
 <a href="../media/fortinyunca/nueva.jpeg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería"><img src="../media/fortinyunca/nueva.jpeg" alt="Fortín Yunká - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
+
+<!-- Imagen de 2025 -->
+<a href="../media/fortinyunca/2025/WhatsApp Image 2025-08-18 at 08.37.59.jpeg" data-fancybox="general-fortin-yunka" data-caption="Fortín Yunká - Galería 2025"><img src="../media/fortinyunca/2025/WhatsApp Image 2025-08-18 at 08.37.59.jpeg" alt="Fortín Yunká - Imagen 2025" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy"></a>
                 </div>
             </div>
         
@@ -652,49 +583,82 @@
         
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="bg-white rounded-lg shadow-sm p-8">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                    <span data-translate="interested_in_estancia" data-translate-params='{"estancia": "Fortín Yunká"}'>¿Interesado en Fortín Yunká?</span>
-                </h2>
-                <p class="text-lg text-gray-600">
-                    <span data-translate="contact_for_info">Contáctanos para más información sobre esta estancia</span>
-                </p>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4"><span data-translate="contact_info_title">Información de Contacto</span></h3>
-                    <div class="space-y-3">
-                        <div class="flex items-center space-x-3">
-                            <span class="text-gray-700">owcc@aol.com</span>
+        <!-- Soil Analysis Section -->
+        <section class="mb-16">
+            <div class="bg-white rounded-lg shadow-sm p-8 border border-gray-200">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-green-600 pb-2"><span data-translate="soil_analysis_individual_title">Análisis de Suelos</span></h2>
+                <div class="prose prose-lg max-w-none">
+                    <div class="text-gray-700 leading-relaxed space-y-4">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">INFORME ANÁLISIS SUELOS</h3>
+                        
+                        <p>Se realizó el recorrido de reconocimiento tomando puntos de referencia con GPS y con apoyo de imagen satelital y posteriormente se realizaron calicatas (pozos de alrededor de 1 m de profundidad) en los lugares considerados representativos de los paisajes.</p>
+                        
+                        <p>La imagen computarizada de base es del satélite LANSAT 7, pancromática (escala de grises), de resolución de 15 metros de píxel (el doble de resolución de las usadas por INTA Saenz Peña), de fecha de 2 de octubre de 2001, apta para realizar mediciones de distancias y superficies.</p>
+                        
+                        <p>Básicamente se pudieron diferenciar 4 ambientes o paisajes bien definidos, que representan 4 tipos de suelos que se marcan sobre la imagen con números: 1 - 2- 3 y 4. Ver imagen.</p>
+                        
+                        <p><strong>1 = ENTRADA</strong> = Se trata de un terreno alto en posición de loma, bien drenado, sin ningún peligro de anegamiento, permeable; el suelo encontrado presenta una capa superficial de color oscuro de 36 cm de espesor, de textura franco-arenosa, excelente estructura migajosa y granular, consistencia blanda, con alto nivel de materia orgánica, muy fértil; no presenta cambios texturales abruptos pero si gradualmente presenta mayores contenidos de arcilla en profundidad que le otorgan buena retención de humedad, con textura franco-arcillo-limosa después de los 70 cm donde presenta ligera de reacción de carbonatos en la masa.</p>
+                        
+                        <p>Resumiendo= es un suelo de buena aptitud agrícola y/o para pasturas de alta producción con Capacidad de Uso = II (los mejores de la provincia) o III, esto se definirá (si es 2 o es 3) de acuerdo a los análisis principalmente de los niveles de salinidad del subsuelo.</p>
+                        
+                        <p><strong>2 = MONTE RALO BAJO CON GATTON PANIC IMPLANTADO</strong> = Esta ubicado en posición de relieve de media loma baja y presenta microrrelieves con depresiones que forman charcos en épocas lluviosas. El drenaje es moderado, con problemas de anegamiento solo en las microdepresiones. El suelo presenta una delgada capa superficial limosa, de color gris claro, de 8 cm de espesor, seguido de un cambio textural (horizonte B2) con mayor contenido de arcilla, esta capa se vuelve extremadamente dura e impermeable después de los 45 cm de profundidad y desde los 28 cm se presentan eflorescencias de sales, visibles a simple vista. La profundidad efectiva de raíces es escasa y también la capacidad de acumulación de agua es baja.</p>
+                        
+                        <p>Resumiendo= es un suelo no apto para agricultura, por peligro de ocasionales anegamientos. La Capacidad de Uso es = VI sw (Clase 5, Es apto para pasturas adaptadas a las condiciones de sequías y anegamientos. Gatton Panic, Tanzania, Dicantium, Grama Rhodes.</p>
+                        
+                        <p><strong>3= PALEOCAUCE O RIO MUERTO</strong> = Se trata de antiguos cauces del Rio Pilcomayo colmatados que presentan vegetación de pastizal de gramíneas y leguminosas (pega-pega) anteriormente utilizadas para agricultura. Es un suelo medianamente apto para agricultura con peligro de sufrir excesos de humedad temporarios. Capacidad de Uso = III w o IV w (Clase 3 o 4).</p>
+                        
+                        <p><strong>4= ANTIGUO MONTE QUEBRACHAL</strong> = Desmontado extensamente con muy buena implantación de Gatton Panic. Con cortinas de monte mediano de quebracho colorado, quebracho blanco, guayacán, palo blanco, ñangapirí, y con extenso desmonte con excelente implantación de Gatton Panic y Grama Rodes muy buena receptividad para ganadería.</p>
+                        
+                        <p>Resumiendo = es un suelo con limitaciones moderadas para agricultura. La Capacidad de Uso = V sw. Es apto para la implantación de pasturas</p>
+                        
+                        <p>En cuanto a los suelos denominados: 2 = Monte bajo desmontado Su mejor vocación es para uso ganadero con muy buenas pasturas adaptadas a las condiciones de sequía y anegamiento; prueba de ello es la excelente pastura implantada y la natural que se desarrolla.</p>
+                        
+                        <p>Se observó en los cordones del Monte Quebrachal desmontado que uno de los pastos naturales predominantes es del género Chloris. (Pariente cercano del Pasto Grama Rodes).</p>
+                        
+                        <p>En las extensas áreas desmontadas y similares se han obtenido excelentes resultados con variedades de Grama Rodes como Katambora y Callide y variedades de Panicum maximum como Tanzania.</p>
+                        
+                        <div class="mt-6 text-center text-gray-600 border-t border-gray-200 pt-4">
+                            <p><strong>Ing. Heitor Gabohao Pino</strong></p>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="text-gray-700">+1 (412) 417-6676</span>
-                        </div>
-
                     </div>
-                </div>
-                
-                <div>
-                    <form action="mailto:owcc@aol.com" method="post" enctype="text/plain" class="space-y-4">
-                        <div class="grid md:grid-cols-2 gap-4">
-                                                    <input type="text" name="nombre" data-translate-placeholder="name_field" placeholder="Nombre" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
-                        <input type="text" name="apellido" data-translate-placeholder="surname_field" placeholder="Apellido" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
-                        </div>
-                        <div class="grid md:grid-cols-2 gap-4">
-                                                    <input type="email" name="email" data-translate-placeholder="email_field" placeholder="Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
-                        <input type="tel" name="telefono" data-translate-placeholder="phone_field" placeholder="Teléfono" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
-                        </div>
-                        <textarea name="mensaje" rows="4" data-translate-placeholder="message_field" data-translate-params='{"estancia": "Fortín Yunká"}' placeholder="Mensaje sobre Fortín Yunká..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"></textarea>
-                        <button type="submit" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold w-full">
-                            <span data-translate="send_button">Enviar</span>
-                        </button>
-                    </form>
                 </div>
             </div>
         </section>
+
+        <!-- Información General de Estancias -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 border-b-2 border-green-600 pb-2">
+                    <span data-translate="estancias_general_info">INFORMACIÓN GENERAL DE ESTANCIAS</span>
+                </h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg shadow-lg p-8 border border-gray-200 max-w-4xl mx-auto">
+                <div class="prose prose-lg max-w-none">
+                    <div class="text-gray-700 leading-relaxed space-y-4">
+                        <p><strong>Régimen de lluvias:</strong> 700 a 1200 mm x año</p>
+                        
+                        <p><strong>Estado operativo:</strong> Estancia en plena capacidad operativa. Ideal para pastoreo rotativo con alta carga animal</p>
+                        
+                        <p><strong>Potencial de desarrollo:</strong> Gran potencial para multiplicación futura de más potreros vía más subdivisiones</p>
+                        
+                        <p><strong>Servicios básicos:</strong> Luz eléctrica e Internet disponibles</p>
+                        
+                        <p><strong>Acceso:</strong> Frente a ruta 86 pavimentada</p>
+                        
+                        <p><strong>Infraestructura:</strong> Gran apotreramiento. Buenas casas y puestos para personal. Múltiples aguadas, tanques, represas, perforaciones</p>
+                        
+                        <p><strong>Educación:</strong> Excelentes escuelas nuevas muy próximas a la estancia</p>
+                        
+                        <p><strong>Pasturas:</strong> Pasturas implantadas: Gatton Panic, Tanzania, Grama Rhodes, Dicantium, Pasto Pangola, Melilotus Alba, etc. Buenos pastos naturales</p>
+                        
+                        <p><strong>Alambrados:</strong> Alambrados periféricos y múltiples divisorios en muy buen estado de mantenimiento. Gran porcentaje de alambrados nuevos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
@@ -808,6 +772,11 @@
         
         // Initialize UI
         updateLanguageUI();
+        
+        // Initialize translations
+        if (typeof updatePageContent === 'function') {
+            updatePageContent();
+        }
         
         // Smooth scrolling for anchor links with active state
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

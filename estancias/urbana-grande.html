@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../ico.png">
+    <title>Urbana Grande | Estancia Ganadera - Formosa, Argentina</title>
+    <meta name="description" content="Urbana Grande es una estancia ganadera ubicada estratégicamente en Formosa, Argentina. Ubicación privilegiada con excelente potencial ganadero.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://caminosganadera.com/estancias/urbana-grande.html">
+    <meta property="og:title" content="Urbana Grande | Estancia Ganadera - Formosa, Argentina">
+    <meta property="og:description" content="Urbana Grande es una estancia ganadera ubicada estratégicamente en Formosa, Argentina. Ubicación privilegiada con excelente potencial ganadero.">
+    <meta property="og:image" content="https://caminosganadera.com/media/urbana/hero.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://caminosganadera.com/estancias/urbana-grande.html">
+    <meta property="twitter:title" content="Urbana Grande | Estancia Ganadera - Formosa, Argentina">
+    <meta property="twitter:description" content="Urbana Grande es una estancia ganadera ubicada estratégicamente en Formosa, Argentina. Ubicación privilegiada con excelente potencial ganadero.">
+    <meta property="twitter:image" content="https://caminosganadera.com/media/urbana/hero.jpeg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    
+    <!-- Translations -->
+    <script src="../translations.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f4c3a 0%, #1a5f3c 50%, #2d7a4f 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #0f4c3a 0%, #1a5f3c 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #1a5f3c 0%, #2d7a4f 100%);
+            transform: translateY(-2px);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+        }
+        
+        .video-container video {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            background-color: #000;
+        }
+        
+        .text-high-contrast {
+            color: #1a202c !important;
+        }
+        
+        /* Mobile navigation improvements */
+        @media (max-width: 640px) {
+            .nav-link {
+                padding: 0.75rem 1rem;
+                margin: 0.25rem;
+                border-radius: 0.5rem;
+                font-weight: 500;
+            }
+        }
+        
+        /* Active navigation state */
+        .nav-link.active {
+            background-color: #dcfce7;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+        }
+        
+        /* Enhanced card hover effects */
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Language button styles */
+        .language-btn {
+            background-color: #f3f4f6;
+            color: #6b7280;
+            border: 1px solid #d1d5db;
+        }
+        
+        .language-btn:hover {
+            background-color: #e5e7eb;
+            color: #374151;
+            transform: translateY(-1px);
+        }
+        
+        .language-btn.active {
+            font-weight: 600;
+        }
+        
+        /* Spanish button */
+        .language-btn[data-lang="es"].active {
+            background-color: #dc2626;
+            color: white;
+            border-color: #dc2626;
+        }
+        
+        /* English button */
+        .language-btn[data-lang="en"].active {
+            background-color: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+        
+        /* Portuguese button */
+        .language-btn[data-lang="pt"].active {
+            background-color: #059669;
+            color: white;
+            border-color: #059669;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 overflow-x-hidden">
+    <!-- Mobile Notice -->
+    <div class="md:hidden bg-blue-50 border-b border-blue-200 py-3 px-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-center">
+            <div class="flex items-center space-x-3 text-blue-800">
+                <div class="flex-shrink-0">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <div class="text-sm font-medium">
+                    <span data-translate="mobile_notice">Para una mejor experiencia, usa la versión de escritorio</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="../index.html" class="flex items-center space-x-2">
+                        <img src="../ico.png" alt="Caminos Ganadera" class="h-8 w-8">
+                        <span class="text-xl font-bold text-green-800">Caminos Ganadera</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="nav-link text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                        <span data-translate="home">Inicio</span>
+                    </a>
+                    <a href="../index.html#estancias" class="nav-link text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                        <span data-translate="estancias">Estancias</span>
+                    </a>
+                    <a href="../index.html#videos" class="nav-link text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                        <span data-translate="videos">Videos</span>
+                    </a>
+                    <a href="../index.html#maps" class="nav-link text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                        <span data-translate="maps">Planos</span>
+                    </a>
+                </div>
+
+                <!-- Language Selector -->
+                <div class="flex items-center space-x-2">
+                    <button class="language-btn px-3 py-1 rounded text-sm transition-all" data-lang="es">ES</button>
+                    <button class="language-btn px-3 py-1 rounded text-sm transition-all" data-lang="en">EN</button>
+                    <button class="language-btn px-3 py-1 rounded text-sm transition-all" data-lang="pt">PT</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 text-white" style="background: linear-gradient(rgba(15, 76, 58, 0.8), rgba(26, 95, 60, 0.8)), url('../media/urbana/hero.jpeg') center/cover no-repeat;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-8">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-shadow">
+                    Urbana Grande
+                </h1>
+                <p class="text-xl md:text-2xl text-shadow">
+                    Ubicación estratégica - Potencial ganadero excepcional
+                </p>
+            </div>
+            <div class="flex justify-center space-x-4">
+                <a href="#caracteristicas" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold">
+                    Ver Detalles
+                </a>
+                <a href="#galeria" class="bg-white text-green-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Ver Galería
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características y Coordenadas -->
+    <section id="caracteristicas" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Características de la Estancia -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 border-b border-gray-300 pb-2">
+                        Características de la Estancia
+                    </h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-600">•</span>
+                            <span>Ubicación estratégica</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-600">•</span>
+                            <span>Potencial ganadero excepcional</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-600">•</span>
+                            <span>Infraestructura básica</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-600">•</span>
+                            <span>Acceso a rutas principales</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-green-600">•</span>
+                            <span>Recursos hídricos disponibles</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Coordenadas GPS -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4 text-center">Urbana Grande</h3>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between py-2 border-b border-gray-100">
+                            <span class="text-gray-700 font-medium">Punto 1</span>
+                            <span class="text-gray-900 font-mono text-sm">24°52'29.30"S, 59°15'04.81"W</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between py-2 border-b border-gray-100">
+                            <span class="text-gray-700 font-medium">Punto 2</span>
+                            <span class="text-gray-900 font-mono text-sm">24°53'01.47"S, 59°14'27.25"W</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between py-2">
+                            <span class="text-gray-700 font-medium">Punto 3</span>
+                            <span class="text-gray-900 font-mono text-sm">24°52'48.39"S, 59°15'13.89"W</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="mb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 border-b-2 border-green-600 pb-2">
+                    Galería Multimedia
+                </h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+        
+        <!-- Imágenes Destacadas -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6"><span data-translate="featured_images">Imágenes Destacadas</span></h3>
+            <div id="gallery-destacada" class="gallery-grid">
+                <a href="../media/urbana/hero.jpeg" data-fancybox="destacada-urbana-grande" data-caption="Urbana Grande - Imagen Destacada">
+                    <img src="../media/urbana/hero.jpeg" alt="Urbana Grande - Destacada" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy">
+                </a>
+                <a href="../media/urbana/WhatsApp Image 2025-08-10 at 18.20.44.jpeg" data-fancybox="destacada-urbana-grande" data-caption="Urbana Grande - Vista General">
+                    <img src="../media/urbana/WhatsApp Image 2025-08-10 at 18.20.44.jpeg" alt="Urbana Grande - Vista General" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy">
+                </a>
+                <a href="../media/urbana/WhatsApp Image 2025-08-10 at 19.07.16.jpeg" data-fancybox="destacada-urbana-grande" data-caption="Urbana Grande - Actividades">
+                    <img src="../media/urbana/WhatsApp Image 2025-08-10 at 19.07.16.jpeg" alt="Urbana Grande - Actividades" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy">
+                </a>
+            </div>
+        </div>
+        
+        <!-- Galería General -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6"><span data-translate="general_gallery">Galería General</span></h3>
+            <div id="gallery-general" class="gallery-grid">
+                <a href="../media/urbana/WhatsApp Image 2025-08-18 at 11.43.31.jpeg" data-fancybox="general-urbana-grande" data-caption="Urbana Grande - Galería">
+                    <img src="../media/urbana/WhatsApp Image 2025-08-18 at 11.43.31.jpeg" alt="Urbana Grande - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy">
+                </a>
+                <a href="../media/urbana/Copia de WhatsApp Image 2025-08-18 at 11.43.31.jpeg" data-fancybox="general-urbana-grande" data-caption="Urbana Grande - Galería">
+                    <img src="../media/urbana/Copia de WhatsApp Image 2025-08-18 at 11.43.31.jpeg" alt="Urbana Grande - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy">
+                </a>
+                <a href="../media/urbana/WhatsApp Image 2025-08-18 at 11.43.29.jpeg" data-fancybox="general-urbana-grande" data-caption="Urbana Grande - Galería">
+                    <img src="../media/urbana/WhatsApp Image 2025-08-18 at 11.43.29.jpeg" alt="Urbana Grande - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy">
+                </a>
+                <a href="../media/urbana/WhatsApp Image 2025-08-18 at 11.44.44.jpeg" data-fancybox="general-urbana-grande" data-caption="Urbana Grande - Galería">
+                    <img src="../media/urbana/WhatsApp Image 2025-08-18 at 11.44.44.jpeg" alt="Urbana Grande - Imagen" class="w-full h-64 object-cover rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform duration-300" loading="lazy">
+                </a>
+            </div>
+        </div>
+        
+        <!-- Videos -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6"><span data-translate="videos">Videos</span></h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="video-container">
+                    <video controls preload="metadata" class="w-full rounded-lg shadow-sm">
+                        <source src="../media/urbana/WhatsApp Video 2025-08-10 at 18.26.18.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento video.
+                    </video>
+                </div>
+                
+                <div class="video-container">
+                    <video controls preload="metadata" class="w-full rounded-lg shadow-sm">
+                        <source src="../media/urbana/WhatsApp Video 2025-08-18 at 09.11.06.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento video.
+                    </video>
+                </div>
+                
+                <div class="video-container">
+                    <video controls preload="metadata" class="w-full rounded-lg shadow-sm">
+                        <source src="../media/urbana/WhatsApp Video 2025-08-18 at 09.11.06 (1).mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento video.
+                    </video>
+                </div>
+                
+                <div class="video-container">
+                    <video controls preload="metadata" class="w-full rounded-lg shadow-sm">
+                        <source src="../media/urbana/WhatsApp Video 2025-08-18 at 09.11.06 (2).mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento video.
+                    </video>
+                </div>
+                
+                <div class="video-container">
+                    <video controls preload="metadata" class="w-full rounded-lg shadow-sm">
+                        <source src="../media/urbana/WhatsApp Video 2025-08-18 at 11.38.30.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento video.
+                    </video>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+        <!-- Información General de Estancias -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 border-b-2 border-green-600 pb-2">
+                    INFORMACIÓN GENERAL DE ESTANCIAS
+                </h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg shadow-lg p-8 border border-gray-200 max-w-4xl mx-auto">
+                <div class="prose prose-lg max-w-none">
+                    <div class="text-gray-700 leading-relaxed space-y-4">
+                        <p><strong>Régimen de lluvias:</strong> 700 a 1200 mm x año</p>
+                        
+                        <p><strong>Estado operativo:</strong> Estancia en plena capacidad operativa. Ideal para pastoreo rotativo con alta carga animal</p>
+                        
+                        <p><strong>Potencial de desarrollo:</strong> Gran potencial para multiplicación futura de más potreros vía más subdivisiones</p>
+                        
+                        <p><strong>Servicios básicos:</strong> Luz eléctrica e Internet disponibles</p>
+                        
+                        <p><strong>Acceso:</strong> Frente a ruta 86 pavimentada</p>
+                        
+                        <p><strong>Infraestructura:</strong> Gran apotreramiento. Buenas casas y puestos para personal. Múltiples aguadas, tanques, represas, perforaciones</p>
+                        
+                        <p><strong>Educación:</strong> Excelentes escuelas nuevas muy próximas a la estancia</p>
+                        
+                        <p><strong>Pasturas:</strong> Pasturas implantadas: Gatton Panic, Tanzania, Grama Rhodes, Dicantium, Pasto Pangola, Melilotus Alba, etc. Buenos pastos naturales</p>
+                        
+                        <p><strong>Alambrados:</strong> Alambrados periféricos y múltiples divisorios en muy buen estado de mantenimiento. Gran porcentaje de alambrados nuevos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Caminos Ganadera</h3>
+                    <p class="text-gray-400 text-sm">
+                        Complejo agropecuario líder en Formosa, Argentina, con más de 40.000 hectáreas de tierras productivas.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+                    <p class="text-gray-400 text-sm">
+                        Para más información sobre nuestras estancias y oportunidades de inversión.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Ubicación</h3>
+                    <p class="text-gray-400 text-sm">
+                        Provincia de Formosa, Argentina<br>
+                        Departamento de Patiño
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 Caminos Ganadera. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    
+    <script>
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Your options go here
+        });
+
+        // Language switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageButtons = document.querySelectorAll('.language-btn');
+            
+            languageButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    
+                    // Remove active class from all buttons
+                    languageButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Update language
+                    updateLanguage(lang);
+                });
+            });
+            
+            // Set Spanish as default active language
+            document.querySelector('[data-lang="es"]').classList.add('active');
+        });
+
+        function updateLanguage(lang) {
+            // This function would handle language switching
+            // For now, it's a placeholder for future implementation
+            console.log('Language changed to:', lang);
+        }
+        
+        // Initialize translations
+        if (typeof updatePageContent === 'function') {
+            updatePageContent();
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
