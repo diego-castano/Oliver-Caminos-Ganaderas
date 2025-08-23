@@ -225,7 +225,7 @@ const translations = {
         main_title: "CAMINOS GANADERA:",
         subtitle: "ESTANCIAS FORMOSENAS:",
         main_description: "PRODUCTORES DE LOS MEJORES ANIMALES DE RAZAS BRAFORD, BRANGUS Y BRAHMÁ CRIADOS EN EL NORTE DE ARGENTINA Y EN LA PROVINCIA SUBTROPICAL DE FORMOSA.",
-        about_text: "Caminos Ganadera es un complejo agropecuario y ganadero de más de 44,000 hectáreas (o 109,000 acres), que consiste en más de 10 estancias contiguas, su oficina central de gestión y administración local actualmente en la Estancia Yarara. Formosa. Todas ubicadas en la parte norte-central de Formosa, en el departamento Patiño. Es una zona ganadera extraordinariamente productiva debido a su clima subtropical con inviernos muy cortos y suaves. Nuestros animales son conocidos por obtener los mejores precios del Norte Argentino en ferias y subastas.",
+        about_text: "Caminos Ganadera es un complejo agropecuario y ganadero de más de 43,000 hectáreas (o 106,247 acres), que consiste en más de 10 estancias contiguas, su oficina central de gestión y administración local actualmente en la Estancia Yarara. Formosa. Todas ubicadas en la parte norte-central de Formosa, en el departamento Patiño. Es una zona ganadera extraordinariamente productiva debido a su clima subtropical con inviernos muy cortos y suaves. Nuestros animales son conocidos por obtener los mejores precios del Norte Argentino en ferias y subastas.",
         facilities_text: "Excelentes multiples instalaciones Ganaderas de \"quebracho\". Producción importante propia de quebracho Colorado , Algarrobo, Palo blanco, etc",
         pastures_title: "PASTOS",
         pastures_text: "Pasturas subtropicales de alta calidad de Gatton Panic, Dichanthium, Pangola, pasto Tangola, extensas áreas de Tanzania y Grama Rhodes, etc., junto con amplios pastos naturales como Pasto Estrella, etc. Más de 5000 hectáreas aptas para maíz, soja, sorgo, y varios miles más de acres de tierra con claro potencial agrícola, etc.",
@@ -272,9 +272,9 @@ const translations = {
         hero_subtitle: "In Argentina",
         hero_main_title: "FORMOSA ESTATES",
         hero_subtitle_new: "CAMINOS GANADERA",
-        hero_description_part1: "Producers of the best Braford, Brangus and Brahma breed animals raised",
+        hero_description_part1: "Producers of the best Braford, Brangus and Brahman breed animals raised",
         hero_description_part2: "in Northern Argentina and in the subtropical province of Formosa.",
-        hero_description: "Producers of the best Braford, Brangus and Brahma breed animals raised in Northern Argentina and in the subtropical province of Formosa.",
+        hero_description: "Producers of the best Braford, Brangus and Brahman breed animals raised in Northern Argentina and in the subtropical province of Formosa.",
         hero_cta: "View Our Estates",
         
         // Navigation
