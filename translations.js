@@ -52,6 +52,8 @@ const translations = {
         institutional_description_text: "{estancia} es una estancia destacada ubicada estratégicamente en la provincia de Formosa. Con {surface} hectáreas operativas, representa una oportunidad única para la producción agroganadera en la provincia de Formosa.",
         
         // Map Section
+        map_title: "Ubicación de Nuestras Estancias",
+        main_map_title: "Mapa Principal - Ubicación General",
         operational_map: "Plano Operativo",
         map_characteristics: "Características del Plano",
         distributed_infrastructure: "Infraestructura distribuida estratégicamente",
@@ -321,6 +323,8 @@ const translations = {
         institutional_description_text: "{estancia} is a prominent estate strategically located in the province of Formosa. With {surface} operational hectares, it represents a unique opportunity for agricultural production in the province of Formosa.",
         
         // Map Section
+        map_title: "Location of Our Estates",
+        main_map_title: "Main Map - General Location",
         operational_map: "Operational Map",
         map_characteristics: "Map Characteristics",
         distributed_infrastructure: "Strategically distributed infrastructure",
@@ -591,6 +595,8 @@ const translations = {
         institutional_description_text: "{estancia} é uma propriedade proeminente estrategicamente localizada na província de Formosa. Com {surface} hectares operacionais, representa uma oportunidade única para produção agrícola na província de Formosa.",
         
         // Map Section
+        map_title: "Localização de Nossas Propriedades",
+        main_map_title: "Mapa Principal - Localização Geral",
         operational_map: "Mapa Operacional",
         map_characteristics: "Características do Mapa",
         distributed_infrastructure: "Infraestrutura estrategicamente distribuída",
